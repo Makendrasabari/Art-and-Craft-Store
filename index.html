@@ -1,0 +1,1036 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chatly | Premium Art & Craft Marketplace</title>
+  <meta name="description" content="Discover authentic handcrafted artworks, traditional crafts, sculpted treasures, handwoven textiles, and digital creator collections.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+<body class="craft-texture">
+
+  <!-- UNIQUE ART & CRAFT PRELOADER -->
+  <div id="artisan-preloader" class="artisan-preloader" aria-label="Loading Art & Craft Store">
+    <div class="preloader-curtain curtain-left"></div>
+    <div class="preloader-curtain curtain-right"></div>
+    <div class="preloader-content">
+      <div class="sketch-stage">
+        <svg class="sketch-lines-svg" viewBox="0 0 320 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle class="stroke-ring" cx="160" cy="160" r="118" stroke="rgba(125, 74, 43, 0.35)" stroke-width="2" stroke-dasharray="14 10" />
+          <path class="stroke-pencil" d="M 45 160 C 45 96 96 45 160 45 C 224 45 275 96 275 160 C 275 224 224 275 160 275" stroke="#5A3521" stroke-width="2.5" stroke-linecap="round" />
+          <path class="stroke-brush" d="M 60 130 Q 160 30 260 130 Q 280 220 160 260 Q 40 220 60 130" stroke="#B86737" stroke-width="3" stroke-linecap="round" />
+          <path class="craft-spiral" d="M 160 160 m -28 0 a 28,28 0 1,0 56,0 a 28,28 0 1,0 -56,0 m -18 0 a 46,46 0 1,0 92,0 a 46,46 0 1,0 -92,0" stroke="#7D4A2B" stroke-width="2" stroke-linecap="round" />
+        </svg>
+
+        <div class="logo-assemble-container">
+          <img src="assets/stacklylogo_18.webp" alt="Chatly Craft Marketplace" class="preloader-logo-img">
+        </div>
+
+        <div class="finishing-flourish">
+          <span class="finishing-dot dot-1"></span>
+          <span class="finishing-dot dot-2"></span>
+          <span class="finishing-dot dot-3"></span>
+          <span class="finishing-dot dot-4"></span>
+        </div>
+      </div>
+      <div class="preloader-status">
+        <span class="craft-label">HANDCRAFTING ARTISANAL EXPERIENCE</span>
+        <div class="drawing-progress-bar">
+          <div class="progress-fill"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PUBLIC HEADER -->
+  <header class="public-header" id="main-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand-logo-link" id="brand-logo-nav">
+        <img src="assets/stacklylogo_18.webp" alt="Chatly Logo" class="chatly-logo-img">
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="nav-menu">
+        <a href="index.html" class="nav-link active">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="blog.html" class="nav-link">Blog</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <!-- Clean Login Button (Always points to login.html) -->
+      <div class="header-actions">
+        <a href="login.html" class="btn btn-primary btn-sm" id="nav-login-btn">
+          <span class="material-symbols-outlined" style="font-size:18px;">login</span>
+          <span>Login</span>
+        </a>
+        <button class="mobile-nav-toggle" id="mobile-nav-toggle" aria-label="Toggle navigation menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div class="mobile-drawer" id="mobile-drawer">
+      <a href="index.html" class="nav-link active">Home</a>
+      <a href="about.html" class="nav-link">About</a>
+      <a href="services.html" class="nav-link">Services</a>
+      <a href="blog.html" class="nav-link">Blog</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+      <div style="margin-top: 20px; display:flex; flex-direction:column; gap:12px;">
+        <a href="login.html" class="btn btn-primary btn-block">Login</a>
+        <a href="signup.html" class="btn btn-outline btn-block">Create Account</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- SECTION 1: HERO SECTION -->
+    <section class="hero-section" id="hero">
+      <!-- 5 Live Background Images Carousel (Runs continuously with 2-second interval, clearly visible) -->
+      <div class="hero-bg-slideshow" id="hero-bg-slideshow">
+        <div class="hero-bg-slide active" style="background-image: url('https://images.unsplash.com/photo-1578749556568-bc2c40e68b61?auto=format&fit=crop&w=1920&q=85');"></div>
+        <div class="hero-bg-slide" style="background-image: url('https://images.unsplash.com/photo-1590736969955-71cc94801759?auto=format&fit=crop&w=1920&q=85');"></div>
+        <div class="hero-bg-slide" style="background-image: url('https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&w=1920&q=85');"></div>
+        <div class="hero-bg-slide" style="background-image: url('https://images.unsplash.com/photo-1582562124811-c09040d0a901?auto=format&fit=crop&w=1920&q=85');"></div>
+        <div class="hero-bg-slide" style="background-image: url('https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?auto=format&fit=crop&w=1920&q=85');"></div>
+      </div>
+
+      <div class="container">
+        <div class="hero-content-center">
+          <div class="hero-badge">
+            <span class="material-symbols-outlined" style="font-size:18px; color:var(--c-terracotta);">auto_awesome</span>
+            <span>Handmade Cultural Marketplace</span>
+          </div>
+
+          <h1 class="hero-title-arranged">
+            <span class="hero-line hero-line-gold anim-hero-right-1">Discover Art.</span>
+            <span class="hero-line hero-line-gold anim-hero-right-2">Celebrate Craft.</span>
+            <span class="hero-line hero-line-brown anim-hero-left">Support Creators.</span>
+          </h1>
+
+          <p class="hero-subtitle-arranged">
+            <span class="hero-sub-line anim-sub-right-1">Immerse yourself in authentic heritage craftsmanship,</span>
+            <span class="hero-sub-line anim-sub-right-2">master-carved sculptures, heritage woven textiles,</span>
+            <span class="hero-sub-line anim-sub-right-3">and contemporary digital art directly from independent makers.</span>
+          </p>
+
+          <div class="hero-ctas" style="justify-content: center; margin-bottom: 28px;">
+            <a href="404.html" onclick="window.location.href='404.html'" class="btn btn-primary btn-lg anim-hero-btn-left">
+              <span>Explore Marketplace</span>
+              <span class="material-symbols-outlined" style="font-size:18px;">arrow_forward</span>
+            </a>
+            <a href="404.html" onclick="window.location.href='404.html'" class="btn btn-secondary btn-lg anim-hero-btn-right">
+              <span>Join as Creator</span>
+              <span class="material-symbols-outlined" style="font-size:18px;">brush</span>
+            </a>
+          </div>
+
+          <div class="hero-trust" style="justify-content: center; width: 100%;">
+            <div class="trust-item">
+              <div class="trust-icon"><span class="material-symbols-outlined" style="font-size:18px;">verified</span></div>
+              <div class="trust-text">100% Verified Authentic Provenance</div>
+            </div>
+            <div class="trust-item">
+              <div class="trust-icon"><span class="material-symbols-outlined" style="font-size:18px;">favorite</span></div>
+              <div class="trust-text">85%+ Direct Artisan Fair Pay</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: FEATURED ARTWORKS (FILTER TABS) -->
+    <section class="section" id="featured-artworks" style="padding: 60px 0;">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag"><span class="material-symbols-outlined" style="font-size:16px;">grade</span> Curated Selection</span>
+          <h2 class="section-title">Featured Artworks & Masterpieces</h2>
+          <p class="section-subtitle">
+            Every piece is lovingly shaped by hand with locally harvested raw materials and rooted in profound cultural storytelling.
+          </p>
+        </div>
+
+        <div class="filter-tabs">
+          <button class="filter-btn active" data-filter="all">All Masterpieces</button>
+          <button class="filter-btn" data-filter="ceramics">Ceramics & Pottery</button>
+          <button class="filter-btn" data-filter="textiles">Textiles & Mudcloth</button>
+          <button class="filter-btn" data-filter="sculpture">Wood & Sculpture</button>
+          <button class="filter-btn" data-filter="jewelry">Heritage Jewelry</button>
+          <button class="filter-btn" data-filter="digital">Digital Afro-Art</button>
+        </div>
+
+        <div class="category-grid">
+          <!-- Item 1: Card comes from LEFT side -->
+          <div class="product-card artwork-item anim-card-from-left anim-card-delay-1" data-category="ceramics">
+            <div class="product-img-wrapper">
+              <span class="product-badges">
+                <span class="badge badge-craft">Terracotta</span>
+              </span>
+              <button class="product-wishlist-btn" aria-label="Save to wishlist">
+                <span class="material-symbols-outlined" style="font-size:18px;">favorite_border</span>
+              </button>
+              <img src="https://images.unsplash.com/photo-1578749556568-bc2c40e68b61?auto=format&fit=crop&w=800&q=80" alt="Yoruba Earthenware Clay Pot" class="product-img">
+            </div>
+            <div class="product-body">
+              <div class="product-meta">
+                <span class="product-artisan-name">Nia Adebayo</span>
+                <span>Lagos, Nigeria</span>
+              </div>
+              <h3 class="product-title">Ancient Spirals Terracotta Vessel</h3>
+              <p class="product-desc">Hand-thrown earthen clay vessel cured in traditional wood-fired kiln with sacred spiral patterns.</p>
+              <div class="product-footer">
+                <div>
+                  <span class="product-price">$185</span>
+                </div>
+                <a href="404.html" onclick="window.location.href='404.html'" class="btn btn-primary btn-sm">Quick View</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 2: Card comes from UPSIDE (Top) -->
+          <div class="product-card artwork-item anim-card-from-top anim-card-delay-2" data-category="sculpture">
+            <div class="product-img-wrapper">
+              <span class="product-badges">
+                <span class="badge badge-terracotta">Mahogany Wood</span>
+              </span>
+              <button class="product-wishlist-btn" aria-label="Save to wishlist">
+                <span class="material-symbols-outlined" style="font-size:18px;">favorite_border</span>
+              </button>
+              <img src="https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=800&q=80" alt="Hand-carved Solid Mahogany Sculpture" class="product-img">
+            </div>
+            <div class="product-body">
+              <div class="product-meta">
+                <span class="product-artisan-name">Kwame Asante</span>
+                <span>Kumasi, Ghana</span>
+              </div>
+              <h3 class="product-title">Queen Mother Serenity Bust</h3>
+              <p class="product-desc">Sculpted from aged reclaimed mahogany wood with hand-polished beeswax finish.</p>
+              <div class="product-footer">
+                <div>
+                  <span class="product-price">$340</span>
+                </div>
+                <a href="404.html" onclick="window.location.href='404.html'" class="btn btn-primary btn-sm">Quick View</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 3: Card comes from RIGHT side -->
+          <div class="product-card artwork-item anim-card-from-right anim-card-delay-3" data-category="textiles">
+            <div class="product-img-wrapper">
+              <span class="product-badges">
+                <span class="badge badge-craft">Handwoven</span>
+              </span>
+              <button class="product-wishlist-btn" aria-label="Save to wishlist">
+                <span class="material-symbols-outlined" style="font-size:18px;">favorite_border</span>
+              </button>
+              <img src="https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?auto=format&fit=crop&w=800&q=80" alt="Authentic Kente Handwoven Tapestry" class="product-img">
+            </div>
+            <div class="product-body">
+              <div class="product-meta">
+                <span class="product-artisan-name">Kofi Mensah</span>
+                <span>Bonwire, Ghana</span>
+              </div>
+              <h3 class="product-title">Royal Ashanti Kente Wall Hanging</h3>
+              <p class="product-desc">Master double-weave ceremonial silk and cotton tapestry utilizing symbolic heritage motifs.</p>
+              <div class="product-footer">
+                <div>
+                  <span class="product-price">$260</span>
+                </div>
+                <a href="404.html" onclick="window.location.href='404.html'" class="btn btn-primary btn-sm">Quick View</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 4: Card comes from LEFT side -->
+          <div class="product-card artwork-item anim-card-from-left anim-card-delay-4" data-category="jewelry">
+            <div class="product-img-wrapper">
+              <span class="product-badges">
+                <span class="badge badge-terracotta">Brass & Glass</span>
+              </span>
+              <button class="product-wishlist-btn" aria-label="Save to wishlist">
+                <span class="material-symbols-outlined" style="font-size:18px;">favorite_border</span>
+              </button>
+              <img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=800&q=80" alt="Handcrafted Beaded Jewelry" class="product-img">
+            </div>
+            <div class="product-body">
+              <div class="product-meta">
+                <span class="product-artisan-name">Zola Mthembu</span>
+                <span>Durban Studio</span>
+              </div>
+              <h3 class="product-title">Zulu Ceremonial Beaded Collar</h3>
+              <p class="product-desc">Hand-threaded recycled glass seed beads and polished recycled brass clasp.</p>
+              <div class="product-footer">
+                <div>
+                  <span class="product-price">$125</span>
+                </div>
+                <a href="404.html" onclick="window.location.href='404.html'" class="btn btn-primary btn-sm">Quick View</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 5: Card comes from DOWNSIDE (Bottom) -->
+          <div class="product-card artwork-item anim-card-from-bottom anim-card-delay-5" data-category="digital">
+            <div class="product-img-wrapper">
+              <span class="product-badges">
+                <span class="badge badge-craft">Archival Canvas</span>
+              </span>
+              <button class="product-wishlist-btn" aria-label="Save to wishlist">
+                <span class="material-symbols-outlined" style="font-size:18px;">favorite_border</span>
+              </button>
+              <img src="https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?auto=format&fit=crop&w=800&q=80" alt="Sun Goddess of the Savannah Digital Afro-Art" class="product-img">
+            </div>
+            <div class="product-body">
+              <div class="product-meta">
+                <span class="product-artisan-name">Amara Okafor</span>
+                <span>Nairobi, Kenya</span>
+              </div>
+              <h3 class="product-title">Sun Goddess of the Savannah</h3>
+              <p class="product-desc">Museum-grade limited giclée on canvas exploring matriarchal divinity in glowing earthen pigments.</p>
+              <div class="product-footer">
+                <div>
+                  <span class="product-price">$195</span>
+                </div>
+                <a href="404.html" onclick="window.location.href='404.html'" class="btn btn-primary btn-sm">Quick View</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 6: Card comes from RIGHT side -->
+          <div class="product-card artwork-item anim-card-from-right anim-card-delay-6" data-category="sculpture">
+            <div class="product-img-wrapper">
+              <span class="product-badges">
+                <span class="badge badge-terracotta">Cast Bronze</span>
+              </span>
+              <button class="product-wishlist-btn" aria-label="Save to wishlist">
+                <span class="material-symbols-outlined" style="font-size:18px;">favorite_border</span>
+              </button>
+              <img src="https://images.unsplash.com/photo-1606744824163-985d376605aa?auto=format&fit=crop&w=800&q=80" alt="Benin Lost-Wax Bronze Leopard" class="product-img">
+            </div>
+            <div class="product-body">
+              <div class="product-meta">
+                <span class="product-artisan-name">Osasogie Idahosa</span>
+                <span>Benin City, Nigeria</span>
+              </div>
+              <h3 class="product-title">Benin Lost-Wax Bronze Leopard</h3>
+              <p class="product-desc">Ancestral 16th-century cire-perdue cast bronze sculpture with hand-chiseled ceremonial royal leopard markings.</p>
+              <div class="product-footer">
+                <div>
+                  <span class="product-price">$420</span>
+                </div>
+                <a href="404.html" onclick="window.location.href='404.html'" class="btn btn-primary btn-sm">Quick View</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: POPULAR CRAFT CATEGORIES -->
+    <section class="section" style="padding: 60px 0; background-color: var(--c-cream-soft);">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag"><span class="material-symbols-outlined" style="font-size:16px;">category</span> Craft Explorations</span>
+          <h2 class="section-title">Popular Craft Categories</h2>
+          <p class="section-subtitle">Navigate through traditional artisanal mediums created with ancestral methods and sustainable materials.</p>
+        </div>
+
+        <div class="popular-cat-grid" id="popular-categories-grid">
+          <!-- Card 1: Ceramics & Clay (Row 1) -->
+          <div class="category-card anim-cat-card anim-cat-delay-1" onclick="window.location.href='404.html'">
+            <div class="category-card-bg" style="background-image: url('https://images.unsplash.com/photo-1578749556568-bc2c40e68b61?auto=format&fit=crop&w=700&q=80');"></div>
+            <div class="category-card-overlay"></div>
+            <div class="category-card-content">
+              <div class="category-icon-wrap"><span class="material-symbols-outlined" style="font-size:32px;">potted_plant</span></div>
+              <h3 class="category-title">Ceramics & Clay</h3>
+              <span class="category-count">1,240 Creations</span>
+            </div>
+          </div>
+
+          <!-- Card 2: Handwoven Textiles (Row 1) -->
+          <div class="category-card anim-cat-card anim-cat-delay-2" onclick="window.location.href='404.html'">
+            <div class="category-card-bg" style="background-image: url('https://images.unsplash.com/photo-1590736969955-71cc94801759?auto=format&fit=crop&w=700&q=80');"></div>
+            <div class="category-card-overlay"></div>
+            <div class="category-card-content">
+              <div class="category-icon-wrap"><span class="material-symbols-outlined" style="font-size:32px;">texture</span></div>
+              <h3 class="category-title">Handwoven Textiles</h3>
+              <span class="category-count">890 Creations</span>
+            </div>
+          </div>
+
+          <!-- Card 3: Wood Carvings (Row 1) -->
+          <div class="category-card anim-cat-card anim-cat-delay-3" onclick="window.location.href='404.html'">
+            <div class="category-card-bg" style="background-image: url('https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&w=700&q=80');"></div>
+            <div class="category-card-overlay"></div>
+            <div class="category-card-content">
+              <div class="category-icon-wrap"><span class="material-symbols-outlined" style="font-size:32px;">forest</span></div>
+              <h3 class="category-title">Wood Carvings</h3>
+              <span class="category-count">710 Creations</span>
+            </div>
+          </div>
+
+          <!-- Card 4: Beaded Jewelry (Row 1) -->
+          <div class="category-card anim-cat-card anim-cat-delay-4" onclick="window.location.href='404.html'">
+            <div class="category-card-bg" style="background-image: url('https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=700&q=80');"></div>
+            <div class="category-card-overlay"></div>
+            <div class="category-card-content">
+              <div class="category-icon-wrap"><span class="material-symbols-outlined" style="font-size:32px;">diamond</span></div>
+              <h3 class="category-title">Beaded Jewelry</h3>
+              <span class="category-count">1,050 Creations</span>
+            </div>
+          </div>
+
+          <!-- Card 5: Digital Art (Row 2) -->
+          <div class="category-card anim-cat-card anim-cat-delay-5" onclick="window.location.href='404.html'">
+            <div class="category-card-bg" style="background-image: url('https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?auto=format&fit=crop&w=700&q=80');"></div>
+            <div class="category-card-overlay"></div>
+            <div class="category-card-content">
+              <div class="category-icon-wrap"><span class="material-symbols-outlined" style="font-size:32px;">draw</span></div>
+              <h3 class="category-title">Digital Art</h3>
+              <span class="category-count">620 Creations</span>
+            </div>
+          </div>
+
+          <!-- Card 6: Raffia & Baskets (Row 2) -->
+          <div class="category-card anim-cat-card anim-cat-delay-6" onclick="window.location.href='404.html'">
+            <div class="category-card-bg" style="background-image: url('https://images.unsplash.com/photo-1584992236310-6edddc08acff?auto=format&fit=crop&w=700&q=80');"></div>
+            <div class="category-card-overlay"></div>
+            <div class="category-card-content">
+              <div class="category-icon-wrap"><span class="material-symbols-outlined" style="font-size:32px;">shopping_basket</span></div>
+              <h3 class="category-title">Raffia & Baskets</h3>
+              <span class="category-count">580 Creations</span>
+            </div>
+          </div>
+
+          <!-- Card 7: Lost-Wax Bronze (Row 2) -->
+          <div class="category-card anim-cat-card anim-cat-delay-7" onclick="window.location.href='404.html'">
+            <div class="category-card-bg" style="background-image: url('https://images.unsplash.com/photo-1606744824163-985d376605aa?auto=format&fit=crop&w=700&q=80');"></div>
+            <div class="category-card-overlay"></div>
+            <div class="category-card-content">
+              <div class="category-icon-wrap"><span class="material-symbols-outlined" style="font-size:32px;">local_fire_department</span></div>
+              <h3 class="category-title">Lost-Wax Bronze</h3>
+              <span class="category-count">430 Creations</span>
+            </div>
+          </div>
+
+          <!-- Card 8: Leatherwork & Hide (Row 2) -->
+          <div class="category-card anim-cat-card anim-cat-delay-8" onclick="window.location.href='404.html'">
+            <div class="category-card-bg" style="background-image: url('https://images.unsplash.com/photo-1524805444758-089113d48a6d?auto=format&fit=crop&w=700&q=80');"></div>
+            <div class="category-card-overlay"></div>
+            <div class="category-card-content">
+              <div class="category-icon-wrap"><span class="material-symbols-outlined" style="font-size:32px;">style</span></div>
+              <h3 class="category-title">Leatherwork & Hide</h3>
+              <span class="category-count">510 Creations</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: HANDMADE COLLECTION -->
+    <section class="section" id="handmade-collection" style="padding: 60px 0; overflow: hidden;">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag"><span class="material-symbols-outlined" style="font-size:16px;">pan_tool</span> Master Collections</span>
+          <h2 class="section-title">The Authentic Handmade Collection</h2>
+          <p class="section-subtitle">Physically crafted heirlooms accompanied by signed provenance certificates.</p>
+        </div>
+
+        <div class="handmade-pair-grid" id="handmade-pair-grid">
+          <!-- Left Card: Solar Mandala Sweetgrass Basket (Slides In From Left) -->
+          <div class="card-artisan anim-from-left anim-handmade-left" id="card-solar-mandala">
+            <img src="https://images.unsplash.com/photo-1584992236310-6edddc08acff?auto=format&fit=crop&w=700&q=80" alt="Basketry" style="width:100%; height:220px; object-fit:cover; border-radius:var(--radius-md); margin-bottom:16px;">
+            <span class="badge badge-terracotta" style="margin-bottom:8px;">Gambia Basketry</span>
+            <h3 style="font-size:1.25rem; margin-bottom:8px;">Solar Mandala Sweetgrass Basket</h3>
+            <p style="font-size:0.9rem; color:var(--c-text-muted); margin-bottom:16px;">Coiled wild grass dyed with native acacia bark and turmeric root.</p>
+            <div style="display:flex; justify-content:space-between; align-items:center;">
+              <span class="product-price">$110</span>
+              <a href="404.html" class="btn btn-outline btn-sm" onclick="window.location.href='404.html';">Explore Piece</a>
+            </div>
+          </div>
+
+          <!-- Right Card: Golden Nubia Archival Digital Canvas (Slides In From Right) -->
+          <div class="card-artisan anim-from-right anim-handmade-right" id="card-golden-nubia">
+            <img src="https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?auto=format&fit=crop&w=700&q=80" alt="Digital Art" style="width:100%; height:220px; object-fit:cover; border-radius:var(--radius-md); margin-bottom:16px;">
+            <span class="badge badge-craft" style="margin-bottom:8px;">Archival Print</span>
+            <h3 style="font-size:1.25rem; margin-bottom:8px;">Golden Nubia Archival Digital Canvas</h3>
+            <p style="font-size:0.9rem; color:var(--c-text-muted); margin-bottom:16px;">Ultra-high resolution museum fine art canvas with gold vector overlays.</p>
+            <div style="display:flex; justify-content:space-between; align-items:center;">
+              <span class="product-price">$95</span>
+              <a href="404.html" class="btn btn-outline btn-sm" onclick="window.location.href='404.html';">Explore Piece</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 5: FEATURED MASTER ARTISANS (LIVE CONTINUOUS HORIZONTAL MARQUEE) -->
+    <section class="section" style="padding: 70px 0; background-color: var(--c-cream-soft); overflow: hidden;">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag"><span class="material-symbols-outlined" style="font-size:16px;">group</span> Meet the Makers</span>
+          <h2 class="section-title">Featured Master Artisans</h2>
+          <p class="section-subtitle">Live continuous showcase of independent master craftsmen, sculptors, and designers shaping global culture.</p>
+        </div>
+      </div>
+
+      <!-- Continuous Marquee Track -->
+      <div class="artist-marquee-container">
+        <div class="artist-marquee-track">
+          <!-- Artisan 1 -->
+          <div class="artist-card">
+            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&q=80" alt="Nia Adebayo Portrait" class="artist-avatar">
+            <h3 class="artist-name">Nia Adebayo</h3>
+            <div class="artist-location"><span class="material-symbols-outlined" style="font-size:16px;">location_on</span> Lagos, Nigeria</div>
+            <p class="artist-bio">Ceramic sculptor blending traditional Yoruba earthenware pit-firing with modern silhouettes.</p>
+            <div class="artist-stats">
+              <div><div class="artist-stat-num">48</div><div class="artist-stat-label">Artworks</div></div>
+              <div><div class="artist-stat-num">4.9 <span class="material-symbols-outlined" style="font-size:14px; color:var(--c-ochre); vertical-align:-1px;">star</span></div><div class="artist-stat-label">Rating</div></div>
+              <div><div class="artist-stat-num">2.4k</div><div class="artist-stat-label">Collectors</div></div>
+            </div>
+          </div>
+
+          <!-- Artisan 2 -->
+          <div class="artist-card">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80" alt="Kwame Asante Portrait" class="artist-avatar">
+            <h3 class="artist-name">Kwame Asante</h3>
+            <div class="artist-location"><span class="material-symbols-outlined" style="font-size:16px;">location_on</span> Kumasi, Ghana</div>
+            <p class="artist-bio">Third-generation wood sculptor working with salvaged jacaranda, ebony, and mahogany.</p>
+            <div class="artist-stats">
+              <div><div class="artist-stat-num">36</div><div class="artist-stat-label">Artworks</div></div>
+              <div><div class="artist-stat-num">5.0 <span class="material-symbols-outlined" style="font-size:14px; color:var(--c-ochre); vertical-align:-1px;">star</span></div><div class="artist-stat-label">Rating</div></div>
+              <div><div class="artist-stat-num">1.8k</div><div class="artist-stat-label">Collectors</div></div>
+            </div>
+          </div>
+
+          <!-- Artisan 3 -->
+          <div class="artist-card">
+            <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=400&q=80" alt="Zola Mthembu Portrait" class="artist-avatar">
+            <h3 class="artist-name">Zola Mthembu</h3>
+            <div class="artist-location"><span class="material-symbols-outlined" style="font-size:16px;">location_on</span> Durban Studio</div>
+            <p class="artist-bio">Weaver and glass bead artisan infusing Zulu geometric color semantics into wearable jewelry.</p>
+            <div class="artist-stats">
+              <div><div class="artist-stat-num">52</div><div class="artist-stat-label">Artworks</div></div>
+              <div><div class="artist-stat-num">4.9 <span class="material-symbols-outlined" style="font-size:14px; color:var(--c-ochre); vertical-align:-1px;">star</span></div><div class="artist-stat-label">Rating</div></div>
+              <div><div class="artist-stat-num">3.1k</div><div class="artist-stat-label">Collectors</div></div>
+            </div>
+          </div>
+
+          <!-- Artisan 4 -->
+          <div class="artist-card">
+            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=400&q=80" alt="Tariq El-Amin Portrait" class="artist-avatar">
+            <h3 class="artist-name">Tariq El-Amin</h3>
+            <div class="artist-location"><span class="material-symbols-outlined" style="font-size:16px;">location_on</span> Cairo, Egypt</div>
+            <p class="artist-bio">Digital fine artist exploring Nubian mythologies through architectural generative 3D forms.</p>
+            <div class="artist-stats">
+              <div><div class="artist-stat-num">41</div><div class="artist-stat-label">Artworks</div></div>
+              <div><div class="artist-stat-num">4.8 <span class="material-symbols-outlined" style="font-size:14px; color:var(--c-ochre); vertical-align:-1px;">star</span></div><div class="artist-stat-label">Rating</div></div>
+              <div><div class="artist-stat-num">1.9k</div><div class="artist-stat-label">Collectors</div></div>
+            </div>
+          </div>
+
+          <!-- Artisan 5 -->
+          <div class="artist-card">
+            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=400&q=80" alt="Amina Jallow Portrait" class="artist-avatar">
+            <h3 class="artist-name">Amina Jallow</h3>
+            <div class="artist-location"><span class="material-symbols-outlined" style="font-size:16px;">location_on</span> Banjul, Gambia</div>
+            <p class="artist-bio">Master basket weaver transforming wild sweetgrass and vegetable dyes into museum vessels.</p>
+            <div class="artist-stats">
+              <div><div class="artist-stat-num">64</div><div class="artist-stat-label">Artworks</div></div>
+              <div><div class="artist-stat-num">5.0 <span class="material-symbols-outlined" style="font-size:14px; color:var(--c-ochre); vertical-align:-1px;">star</span></div><div class="artist-stat-label">Rating</div></div>
+              <div><div class="artist-stat-num">3.6k</div><div class="artist-stat-label">Collectors</div></div>
+            </div>
+          </div>
+
+          <!-- Duplicated Set of 5 Artisans for Seamless Continuous Infinite Loop -->
+          <div class="artist-card">
+            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&q=80" alt="Nia Adebayo Portrait" class="artist-avatar">
+            <h3 class="artist-name">Nia Adebayo</h3>
+            <div class="artist-location"><span class="material-symbols-outlined" style="font-size:16px;">location_on</span> Lagos, Nigeria</div>
+            <p class="artist-bio">Ceramic sculptor blending traditional Yoruba earthenware pit-firing with modern silhouettes.</p>
+            <div class="artist-stats">
+              <div><div class="artist-stat-num">48</div><div class="artist-stat-label">Artworks</div></div>
+              <div><div class="artist-stat-num">4.9 <span class="material-symbols-outlined" style="font-size:14px; color:var(--c-ochre); vertical-align:-1px;">star</span></div><div class="artist-stat-label">Rating</div></div>
+              <div><div class="artist-stat-num">2.4k</div><div class="artist-stat-label">Collectors</div></div>
+            </div>
+          </div>
+
+          <div class="artist-card">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80" alt="Kwame Asante Portrait" class="artist-avatar">
+            <h3 class="artist-name">Kwame Asante</h3>
+            <div class="artist-location"><span class="material-symbols-outlined" style="font-size:16px;">location_on</span> Kumasi, Ghana</div>
+            <p class="artist-bio">Third-generation wood sculptor working with salvaged jacaranda, ebony, and mahogany.</p>
+            <div class="artist-stats">
+              <div><div class="artist-stat-num">36</div><div class="artist-stat-label">Artworks</div></div>
+              <div><div class="artist-stat-num">5.0 <span class="material-symbols-outlined" style="font-size:14px; color:var(--c-ochre); vertical-align:-1px;">star</span></div><div class="artist-stat-label">Rating</div></div>
+              <div><div class="artist-stat-num">1.8k</div><div class="artist-stat-label">Collectors</div></div>
+            </div>
+          </div>
+
+          <div class="artist-card">
+            <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=400&q=80" alt="Zola Mthembu Portrait" class="artist-avatar">
+            <h3 class="artist-name">Zola Mthembu</h3>
+            <div class="artist-location"><span class="material-symbols-outlined" style="font-size:16px;">location_on</span> Durban Studio</div>
+            <p class="artist-bio">Weaver and glass bead artisan infusing Zulu geometric color semantics into wearable jewelry.</p>
+            <div class="artist-stats">
+              <div><div class="artist-stat-num">52</div><div class="artist-stat-label">Artworks</div></div>
+              <div><div class="artist-stat-num">4.9 <span class="material-symbols-outlined" style="font-size:14px; color:var(--c-ochre); vertical-align:-1px;">star</span></div><div class="artist-stat-label">Rating</div></div>
+              <div><div class="artist-stat-num">3.1k</div><div class="artist-stat-label">Collectors</div></div>
+            </div>
+          </div>
+
+          <div class="artist-card">
+            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=400&q=80" alt="Tariq El-Amin Portrait" class="artist-avatar">
+            <h3 class="artist-name">Tariq El-Amin</h3>
+            <div class="artist-location"><span class="material-symbols-outlined" style="font-size:16px;">location_on</span> Cairo, Egypt</div>
+            <p class="artist-bio">Digital fine artist exploring Nubian mythologies through architectural generative 3D forms.</p>
+            <div class="artist-stats">
+              <div><div class="artist-stat-num">41</div><div class="artist-stat-label">Artworks</div></div>
+              <div><div class="artist-stat-num">4.8 <span class="material-symbols-outlined" style="font-size:14px; color:var(--c-ochre); vertical-align:-1px;">star</span></div><div class="artist-stat-label">Rating</div></div>
+              <div><div class="artist-stat-num">1.9k</div><div class="artist-stat-label">Collectors</div></div>
+            </div>
+          </div>
+
+          <div class="artist-card">
+            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=400&q=80" alt="Amina Jallow Portrait" class="artist-avatar">
+            <h3 class="artist-name">Amina Jallow</h3>
+            <div class="artist-location"><span class="material-symbols-outlined" style="font-size:16px;">location_on</span> Banjul, Gambia</div>
+            <p class="artist-bio">Master basket weaver transforming wild sweetgrass and vegetable dyes into museum vessels.</p>
+            <div class="artist-stats">
+              <div><div class="artist-stat-num">64</div><div class="artist-stat-label">Artworks</div></div>
+              <div><div class="artist-stat-num">5.0 <span class="material-symbols-outlined" style="font-size:14px; color:var(--c-ochre); vertical-align:-1px;">star</span></div><div class="artist-stat-label">Rating</div></div>
+              <div><div class="artist-stat-num">3.6k</div><div class="artist-stat-label">Collectors</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 6: CREATOR SPOTLIGHT -->
+    <section class="section" style="padding: 70px 0;">
+      <div class="container">
+        <div class="spotlight-card">
+          <div class="spotlight-media">
+            <img src="https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&w=1000&q=80" alt="Artisan Studio Workshop">
+          </div>
+          <div>
+            <span class="badge badge-terracotta" style="margin-bottom:12px;">Artisan In Focus</span>
+            <h3 style="font-size:2rem; margin-bottom:16px;">The Studio of Nia Adebayo</h3>
+            <p class="spotlight-quote">
+              "Every vessel holds the memory of red river clay, hand pressure, and smoke. In a world of mass plastic, clay brings us back to earth and lineage."
+            </p>
+            <div class="spotlight-author">
+              <div>
+                <div class="author-title">Nia Adebayo</div>
+                <div class="author-role">Founder of Oya Earthenware Studio • 12 Years of Mastery</div>
+              </div>
+            </div>
+            <div style="margin-top: 24px;">
+              <a href="404.html" class="btn btn-primary btn-sm">Read Creator Story</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 7: TRENDING PRODUCTS -->
+    <section class="section" id="trending-products-section" style="padding: 60px 0; background-color: var(--c-cream-soft); overflow: hidden;">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag"><span class="material-symbols-outlined" style="font-size:16px;">trending_up</span> Live Demand</span>
+          <h2 class="section-title">Trending in Global Collections</h2>
+          <p class="section-subtitle">Discover the most sought-after handcrafted pieces being acquired by galleries worldwide.</p>
+        </div>
+        <div class="trending-global-grid" id="trending-global-grid">
+          <!-- Card 1: Royal Ashanti Kente Weave (Initially presented 2nd, shuffles to 1st) -->
+          <div class="card-artisan anim-shuffle-card-1" id="card-trending-kente">
+            <span class="badge badge-success" style="margin-bottom:8px;"><span style="display:inline-block; width:6px; height:6px; border-radius:50%; background:#22c55e; margin-right:5px; vertical-align:1px; animation:pulseDot 1.5s infinite;"></span>Fast Moving</span>
+            <h4 style="font-size:1.25rem; margin-bottom:8px;">Royal Ashanti Kente Weave</h4>
+            <p style="font-size:0.88rem; color:var(--c-text-muted); margin:8px 0 14px 0;">
+              <strong class="live-counter-num" data-target="34" style="color:var(--c-warm-brown); font-size:1.15rem; font-weight:800;">0</strong> international collectors acquired this piece this week.
+            </p>
+            <div style="display:flex; justify-content:space-between; align-items:center;">
+              <span class="product-price live-counter-price" data-target="260" style="font-weight:700;">$0</span>
+              <a href="404.html" class="btn btn-outline btn-sm" onclick="window.location.href='404.html';">Details</a>
+            </div>
+          </div>
+
+          <!-- Card 2: Yoruba Clay Vessel (Initially presented 1st, shuffles to 2nd) -->
+          <div class="card-artisan anim-shuffle-card-2" id="card-trending-clay">
+            <span class="badge badge-success" style="margin-bottom:8px;"><span style="display:inline-block; width:6px; height:6px; border-radius:50%; background:#22c55e; margin-right:5px; vertical-align:1px; animation:pulseDot 1.5s infinite;"></span>Fast Moving</span>
+            <h4 style="font-size:1.25rem; margin-bottom:8px;">Yoruba Clay Vessel with Chevron Relief</h4>
+            <p style="font-size:0.88rem; color:var(--c-text-muted); margin:8px 0 14px 0;">
+              <strong class="live-counter-num" data-target="28" style="color:var(--c-warm-brown); font-size:1.15rem; font-weight:800;">0</strong> international collectors acquired this piece this week.
+            </p>
+            <div style="display:flex; justify-content:space-between; align-items:center;">
+              <span class="product-price live-counter-price" data-target="185" style="font-weight:700;">$0</span>
+              <a href="404.html" class="btn btn-outline btn-sm" onclick="window.location.href='404.html';">Details</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 8: ANCESTRAL CRAFT COLLECTION & HERITAGE -->
+    <section class="section" id="ancestral-traditions-section" style="padding: 70px 0; overflow: hidden;">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag"><span class="material-symbols-outlined" style="font-size:16px;">history_edu</span> Cultural Lineage</span>
+          <h2 class="section-title">Ancestral Craft Traditions</h2>
+          <p class="section-subtitle">Honoring living heritage practices passed down across unbroken centuries.</p>
+        </div>
+        <div class="ancestral-traditions-grid" id="ancestral-traditions-grid">
+          <!-- Card 1 (Numbered 01): Benin Lost-Wax Bronze -->
+          <div class="card-artisan anim-tradition-1" id="tradition-card-1">
+            <span class="tradition-num">01</span>
+            <h4 style="color:var(--c-warm-brown); font-size:1.25rem; margin-bottom:8px;">Benin Lost-Wax Bronze</h4>
+            <p style="font-size:0.9rem; color:var(--c-text-muted);">Molten alloy sculptures cast over handmade beeswax models on historic Igun Street.</p>
+          </div>
+          <!-- Card 2 (Numbered 02): Bonwire Royal Looms -->
+          <div class="card-artisan anim-tradition-2" id="tradition-card-2">
+            <span class="tradition-num">02</span>
+            <h4 style="color:var(--c-terracotta); font-size:1.25rem; margin-bottom:8px;">Bonwire Royal Looms</h4>
+            <p style="font-size:0.9rem; color:var(--c-text-muted);">Double-weave ceremonial cloth carrying proverb scripts reserved for Ashanti crowns.</p>
+          </div>
+          <!-- Card 3 (Numbered 03): Zulu Sacred Beadwork -->
+          <div class="card-artisan anim-tradition-3" id="tradition-card-3">
+            <span class="tradition-num">03</span>
+            <h4 style="color:var(--c-ochre); font-size:1.25rem; margin-bottom:8px;">Zulu Sacred Beadwork</h4>
+            <p style="font-size:0.9rem; color:var(--c-text-muted);">Intricate color-coded geometric letters woven with recycled glass and natural brass.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 9: WHY CHOOSE OUR MARKETPLACE -->
+    <section class="section" id="why-choose-section" style="padding: 70px 0; background-color: var(--c-cream-soft); overflow: hidden;">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag"><span class="material-symbols-outlined" style="font-size:16px;">balance</span> Ethical Commerce</span>
+          <h2 class="section-title">Why Choose Our Marketplace</h2>
+          <p class="section-subtitle">We bridge master indigenous artisans directly to discerning collectors across the globe.</p>
+        </div>
+
+        <div class="why-choose-grid" id="why-choose-grid">
+          <!-- Card 1 (Downside Slide): Direct Fair-Trade Payout -->
+          <div class="card-artisan why-choose-card anim-choose-from-bottom" id="choose-card-1">
+            <div class="category-icon-wrap"><span class="material-symbols-outlined" style="font-size:32px;">balance</span></div>
+            <h3 style="font-size: 1.25rem; margin-bottom: 8px;">Direct Fair-Trade Payout</h3>
+            <p style="font-size: 0.92rem; color: var(--c-text-muted);">Artisans receive over 85% of each sale directly, establishing generational wealth and studio independence.</p>
+          </div>
+
+          <!-- Card 2 (Downside Slide): Provenance Certificate -->
+          <div class="card-artisan why-choose-card anim-choose-from-bottom anim-choose-delay-1" id="choose-card-2">
+            <div class="category-icon-wrap"><span class="material-symbols-outlined" style="font-size:32px;">workspace_premium</span></div>
+            <h3 style="font-size: 1.25rem; margin-bottom: 8px;">Provenance Certificate</h3>
+            <p style="font-size: 0.92rem; color: var(--c-text-muted);">Every purchase includes a signed certificate confirming genuine handcrafted materials and cultural lineage.</p>
+          </div>
+
+          <!-- Card 3 (Upside Slide): Zero-Waste Natural Fibers -->
+          <div class="card-artisan why-choose-card anim-choose-from-top anim-choose-delay-2" id="choose-card-3">
+            <div class="category-icon-wrap"><span class="material-symbols-outlined" style="font-size:32px;">eco</span></div>
+            <h3 style="font-size: 1.25rem; margin-bottom: 8px;">Zero-Waste Natural Fibers</h3>
+            <p style="font-size: 0.92rem; color: var(--c-text-muted);">Prioritizing sustainable materials including wild-harvested grasses, vegetable dyes, and reclaimed wood.</p>
+          </div>
+
+          <!-- Card 4 (Upside Slide): Insured Global Shipping -->
+          <div class="card-artisan why-choose-card anim-choose-from-top anim-choose-delay-3" id="choose-card-4">
+            <div class="category-icon-wrap"><span class="material-symbols-outlined" style="font-size:32px;">flight</span></div>
+            <h3 style="font-size: 1.25rem; margin-bottom: 8px;">Insured Global Shipping</h3>
+            <p style="font-size: 0.92rem; color: var(--c-text-muted);">Custom protective packaging ensures fragile ceramics and sculptures arrive pristine in 42+ nations.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 10: STATISTICS BANNER -->
+    <div class="container">
+      <div class="stats-banner" id="stats-banner">
+        <div class="stats-grid">
+          <div class="stat-item" id="stat-item-artisans">
+            <div class="stat-number live-stat-num" data-target="4200" data-suffix="+">0</div>
+            <div class="stat-desc">Independent Artisans</div>
+          </div>
+          <div class="stat-item" id="stat-item-pieces">
+            <div class="stat-number live-stat-num" data-target="18500" data-suffix="+">0</div>
+            <div class="stat-desc">Handcrafted Pieces</div>
+          </div>
+          <div class="stat-item" id="stat-item-countries">
+            <div class="stat-number live-stat-num" data-target="42" data-suffix="">0</div>
+            <div class="stat-desc">Countries Shipped To</div>
+          </div>
+          <div class="stat-item" id="stat-item-paid">
+            <div class="stat-number live-stat-num" data-target="2.4" data-prefix="$" data-suffix="M+">$0.0M</div>
+            <div class="stat-desc">Paid Directly to Creators</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SECTION 11: CUSTOMER TESTIMONIALS (LIVE CONTINUOUS RUN & EMPTY STARS FILL TO BROWN) -->
+    <section class="section" id="testimonials-section" style="padding: 70px 0; overflow: hidden;">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag"><span class="material-symbols-outlined" style="font-size:16px;">reviews</span> Live Patron Activity</span>
+          <h2 class="section-title">Collector Testimonials</h2>
+          <p class="section-subtitle">Live continuous reviews from global patrons who acquire authentic artisanal masterworks through Chatly.</p>
+        </div>
+      </div>
+
+      <!-- Live Running Testimonials Track (Smooth Continuous Loop, Pauses on Hover) -->
+      <div class="testimonial-live-container">
+        <div class="testimonial-live-track">
+          <!-- Card 1: Elena Rostova -->
+          <div class="card-artisan testimonial-card">
+            <div class="testimonial-header">
+              <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=200&q=80" alt="Elena Rostova Portrait" class="testimonial-avatar">
+              <div>
+                <strong class="testimonial-author-name">Elena Rostova</strong>
+                <div class="testimonial-author-role">Private Collector • Zurich, Switzerland</div>
+              </div>
+            </div>
+            <div class="testimonial-stars">
+              <span class="material-symbols-outlined star-icon">star</span>
+              <span class="material-symbols-outlined star-icon">star</span>
+              <span class="material-symbols-outlined star-icon">star</span>
+              <span class="material-symbols-outlined star-icon">star</span>
+              <span class="material-symbols-outlined star-icon">star</span>
+            </div>
+            <p class="testimonial-quote">
+              "The earthenware vessel from Lagos arrived in Zurich in a hand-built timber crate. The tactile presence of the smoked clay is extraordinary."
+            </p>
+          </div>
+
+          <!-- Card 2: Julian Vance -->
+          <div class="card-artisan testimonial-card">
+            <div class="testimonial-header">
+              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80" alt="Julian Vance Portrait" class="testimonial-avatar">
+              <div>
+                <strong class="testimonial-author-name">Julian Vance</strong>
+                <div class="testimonial-author-role">Interior Architect • London, UK</div>
+              </div>
+            </div>
+            <div class="testimonial-stars">
+              <span class="material-symbols-outlined star-icon">star</span>
+              <span class="material-symbols-outlined star-icon">star</span>
+              <span class="material-symbols-outlined star-icon">star</span>
+              <span class="material-symbols-outlined star-icon">star</span>
+              <span class="material-symbols-outlined star-icon">star</span>
+            </div>
+            <p class="testimonial-quote">
+              "Knowing that 85% of my purchase went directly to Kwame Asante's Kumasi studio makes collecting through Chatly deeply meaningful."
+            </p>
+          </div>
+
+          <!-- Card 3: Chloé Dubois -->
+          <div class="card-artisan testimonial-card">
+            <div class="testimonial-header">
+              <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=200&q=80" alt="Chloé Dubois Portrait" class="testimonial-avatar">
+              <div>
+                <strong class="testimonial-author-name">Chloé Dubois</strong>
+                <div class="testimonial-author-role">Contemporary Art Curator • Paris, France</div>
+              </div>
+            </div>
+            <div class="testimonial-stars">
+              <span class="material-symbols-outlined star-icon">star</span>
+              <span class="material-symbols-outlined star-icon">star</span>
+              <span class="material-symbols-outlined star-icon">star</span>
+              <span class="material-symbols-outlined star-icon">star</span>
+              <span class="material-symbols-outlined star-icon">star</span>
+            </div>
+            <p class="testimonial-quote">
+              "The provenance certificate with the artisan's personal wax seal was as breathtaking as the bronze sculpture itself. Transparent, ethical art collecting at its finest."
+            </p>
+          </div>
+
+          <!-- Duplicated Set for Seamless Continuous Infinite Live Run -->
+          <div class="card-artisan testimonial-card">
+            <div class="testimonial-header">
+              <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=200&q=80" alt="Elena Rostova Portrait" class="testimonial-avatar">
+              <div>
+                <strong class="testimonial-author-name">Elena Rostova</strong>
+                <div class="testimonial-author-role">Private Collector • Zurich, Switzerland</div>
+              </div>
+            </div>
+            <div class="testimonial-stars">
+              <span class="material-symbols-outlined star-icon">star</span>
+              <span class="material-symbols-outlined star-icon">star</span>
+              <span class="material-symbols-outlined star-icon">star</span>
+              <span class="material-symbols-outlined star-icon">star</span>
+              <span class="material-symbols-outlined star-icon">star</span>
+            </div>
+            <p class="testimonial-quote">
+              "The earthenware vessel from Lagos arrived in Zurich in a hand-built timber crate. The tactile presence of the smoked clay is extraordinary."
+            </p>
+          </div>
+
+          <div class="card-artisan testimonial-card">
+            <div class="testimonial-header">
+              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80" alt="Julian Vance Portrait" class="testimonial-avatar">
+              <div>
+                <strong class="testimonial-author-name">Julian Vance</strong>
+                <div class="testimonial-author-role">Interior Architect • London, UK</div>
+              </div>
+            </div>
+            <div class="testimonial-stars">
+              <span class="material-symbols-outlined star-icon">star</span>
+              <span class="material-symbols-outlined star-icon">star</span>
+              <span class="material-symbols-outlined star-icon">star</span>
+              <span class="material-symbols-outlined star-icon">star</span>
+              <span class="material-symbols-outlined star-icon">star</span>
+            </div>
+            <p class="testimonial-quote">
+              "Knowing that 85% of my purchase went directly to Kwame Asante's Kumasi studio makes collecting through Chatly deeply meaningful."
+            </p>
+          </div>
+
+          <div class="card-artisan testimonial-card">
+            <div class="testimonial-header">
+              <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=200&q=80" alt="Chloé Dubois Portrait" class="testimonial-avatar">
+              <div>
+                <strong class="testimonial-author-name">Chloé Dubois</strong>
+                <div class="testimonial-author-role">Contemporary Art Curator • Paris, France</div>
+              </div>
+            </div>
+            <div class="testimonial-stars">
+              <span class="material-symbols-outlined star-icon">star</span>
+              <span class="material-symbols-outlined star-icon">star</span>
+              <span class="material-symbols-outlined star-icon">star</span>
+              <span class="material-symbols-outlined star-icon">star</span>
+              <span class="material-symbols-outlined star-icon">star</span>
+            </div>
+            <p class="testimonial-quote">
+              "The provenance certificate with the artisan's personal wax seal was as breathtaking as the bronze sculpture itself. Transparent, ethical art collecting at its finest."
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 12: CALL TO ACTION FOR CREATORS -->
+    <section class="section maker-cta-section" id="maker-cta-section" style="padding: 70px 0 90px 0; text-align: center; background-color: var(--c-cream-soft); overflow: hidden;">
+      <div class="container container-narrow">
+        <span class="section-tag maker-cta-tag"><span class="material-symbols-outlined" style="font-size:16px;">storefront</span> Empowering Makers</span>
+        <h2 class="section-title maker-cta-title anim-cta-words-right" id="maker-cta-title">
+          <span class="cta-word-right" style="--w-idx: 0;">Are</span>
+          <span class="cta-word-right" style="--w-idx: 1;">You</span>
+          <span class="cta-word-right" style="--w-idx: 2;">a</span>
+          <span class="cta-word-right" style="--w-idx: 3;">Maker?</span>
+          <span class="cta-word-right" style="--w-idx: 4;">Open</span>
+          <span class="cta-word-right" style="--w-idx: 5;">Your</span>
+          <span class="cta-word-right" style="--w-idx: 6;">Craft</span>
+          <span class="cta-word-right" style="--w-idx: 7;">Store</span>
+          <span class="cta-word-right" style="--w-idx: 8;">Today</span>
+        </h2>
+        <p class="section-subtitle maker-cta-sentence anim-cta-words-left" id="maker-cta-sentence" style="margin-bottom: 32px;">
+          <span class="cta-word-left" style="--w-idx: 0;">Join</span>
+          <span class="cta-word-left" style="--w-idx: 1;">thousands</span>
+          <span class="cta-word-left" style="--w-idx: 2;">of</span>
+          <span class="cta-word-left" style="--w-idx: 3;">independent</span>
+          <span class="cta-word-left" style="--w-idx: 4;">artists</span>
+          <span class="cta-word-left" style="--w-idx: 5;">and</span>
+          <span class="cta-word-left" style="--w-idx: 6;">digital</span>
+          <span class="cta-word-left" style="--w-idx: 7;">creators</span>
+          <span class="cta-word-left" style="--w-idx: 8;">who</span>
+          <span class="cta-word-left" style="--w-idx: 9;">showcase</span>
+          <span class="cta-word-left" style="--w-idx: 10;">their</span>
+          <span class="cta-word-left" style="--w-idx: 11;">work</span>
+          <span class="cta-word-left" style="--w-idx: 12;">to</span>
+          <span class="cta-word-left" style="--w-idx: 13;">global</span>
+          <span class="cta-word-left" style="--w-idx: 14;">collectors.</span>
+          <span class="cta-word-left" style="--w-idx: 15;">We</span>
+          <span class="cta-word-left" style="--w-idx: 16;">handle</span>
+          <span class="cta-word-left" style="--w-idx: 17;">logistics,</span>
+          <span class="cta-word-left" style="--w-idx: 18;">currency</span>
+          <span class="cta-word-left" style="--w-idx: 19;">conversion,</span>
+          <span class="cta-word-left" style="--w-idx: 20;">and</span>
+          <span class="cta-word-left" style="--w-idx: 21;">global</span>
+          <span class="cta-word-left" style="--w-idx: 22;">reach</span>
+          <span class="cta-word-left" style="--w-idx: 23;">so</span>
+          <span class="cta-word-left" style="--w-idx: 24;">you</span>
+          <span class="cta-word-left" style="--w-idx: 25;">can</span>
+          <span class="cta-word-left" style="--w-idx: 26;">focus</span>
+          <span class="cta-word-left" style="--w-idx: 27;">on</span>
+          <span class="cta-word-left" style="--w-idx: 28;">making.</span>
+        </p>
+        <div class="maker-cta-actions" style="display:flex; justify-content:center; gap:16px; flex-wrap:wrap;">
+          <a href="404.html" id="btn-start-selling-creator" class="btn btn-primary btn-lg cta-btn-left">Start Selling as a Creator</a>
+          <a href="404.html" id="btn-explore-creator-tools" class="btn btn-secondary btn-lg cta-btn-right">Explore Creator Tools</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================================================
+       FOOTER (STACKLY SALEM ADDRESS, QUICK LINKS, CREATOR HUB -> 404)
+       ========================================================================== -->
+  <footer class="public-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a href="index.html" class="brand-logo-link footer-logo-link">
+            <img src="assets/stacklylogo_18.webp" alt="Chatly Logo" class="footer-brand-logo">
+          </a>
+          <p class="footer-desc">
+            Chatly is an authentic digital art and handcrafted craft marketplace. We honor cultural lineage, champion independent artisans, and connect global collectors with authentic heritage creations.
+          </p>
+        </div>
+
+        <!-- Quick Links Column (Navbar headings) -->
+        <div>
+          <h4 class="footer-heading">Quick Links</h4>
+          <div class="footer-links">
+            <a href="index.html" class="footer-link"><span class="material-symbols-outlined" style="font-size:16px;">chevron_right</span> Home</a>
+            <a href="about.html" class="footer-link"><span class="material-symbols-outlined" style="font-size:16px;">chevron_right</span> About</a>
+            <a href="services.html" class="footer-link"><span class="material-symbols-outlined" style="font-size:16px;">chevron_right</span> Services</a>
+            <a href="blog.html" class="footer-link"><span class="material-symbols-outlined" style="font-size:16px;">chevron_right</span> Blog</a>
+            <a href="contact.html" class="footer-link"><span class="material-symbols-outlined" style="font-size:16px;">chevron_right</span> Contact</a>
+          </div>
+        </div>
+
+        <!-- Creator Hub Column (All navigate to 404.html) -->
+        <div>
+          <h4 class="footer-heading">Creator Hub</h4>
+          <div class="footer-links">
+            <a href="404.html" class="footer-link"><span class="material-symbols-outlined" style="font-size:16px;">chevron_right</span> Open Artisan Shop</a>
+            <a href="404.html" class="footer-link"><span class="material-symbols-outlined" style="font-size:16px;">chevron_right</span> Seller Dashboard</a>
+            <a href="404.html" class="footer-link"><span class="material-symbols-outlined" style="font-size:16px;">chevron_right</span> Buyer Dashboard</a>
+            <a href="404.html" class="footer-link"><span class="material-symbols-outlined" style="font-size:16px;">chevron_right</span> Creator Tools</a>
+            <a href="404.html" class="footer-link"><span class="material-symbols-outlined" style="font-size:16px;">chevron_right</span> Logistics</a>
+            <a href="404.html" class="footer-link"><span class="material-symbols-outlined" style="font-size:16px;">chevron_right</span> Fair Trade</a>
+          </div>
+        </div>
+
+        <!-- Stackly Salem Address Column -->
+        <div>
+          <h4 class="footer-heading">Stackly Salem Atelier</h4>
+          <div class="footer-address-card">
+            <strong>Stackly Technologies & Craft Hub</strong>
+            124/B Heritage Crafts Enclave, Cherry Road,<br>
+            Hasthampatti, Salem, Tamil Nadu 636007, India.<br><br>
+            <div style="display:flex; align-items:center; gap:6px; margin-bottom:4px;">
+              <span class="material-symbols-outlined" style="font-size:16px; color:var(--c-ochre);">call</span>
+              <span>+91 427 244 8900 / +91 98427 12345</span>
+            </div>
+            <div style="display:flex; align-items:center; gap:6px;">
+              <span class="material-symbols-outlined" style="font-size:16px; color:var(--c-ochre);">mail</span>
+              <span>support@stackly.com</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 Chatly Art & Craft Marketplace. All rights reserved. Handcrafted with reverence.</div>
+        <div style="display:flex; gap:20px;">
+          <a href="404.html" style="color:var(--c-beige-dark);">Terms of Artistry</a>
+          <a href="404.html" style="color:var(--c-beige-dark);">Privacy & Provenance</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

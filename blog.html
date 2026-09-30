@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Editorial Journal & Stories | Chatly Art & Craft Marketplace</title>
+  <meta name="description" content="Explore insightful essays, artisan interviews, craft tutorials, authentic creative traditions, and creator economy trends on Chatly's editorial journal.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+<body class="craft-texture">
+
+  <!-- UNIQUE ART & CRAFT PRELOADER -->
+  <div id="artisan-preloader" class="artisan-preloader" aria-label="Loading Editorial Journal">
+    <div class="preloader-curtain curtain-left"></div>
+    <div class="preloader-curtain curtain-right"></div>
+    <div class="preloader-content">
+      <div class="sketch-stage">
+        <svg class="sketch-lines-svg" viewBox="0 0 320 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle class="stroke-ring" cx="160" cy="160" r="118" stroke="rgba(125, 74, 43, 0.35)" stroke-width="2" stroke-dasharray="14 10" />
+          <path class="stroke-pencil" d="M 45 160 C 45 96 96 45 160 45 C 224 45 275 96 275 160 C 275 224 224 275 160 275" stroke="#5A3521" stroke-width="2.5" stroke-linecap="round" />
+          <path class="stroke-brush" d="M 60 130 Q 160 30 260 130 Q 280 220 160 260 Q 40 220 60 130" stroke="#B86737" stroke-width="3" stroke-linecap="round" />
+          <path class="craft-spiral" d="M 160 160 m -28 0 a 28,28 0 1,0 56,0 a 28,28 0 1,0 -56,0 m -18 0 a 46,46 0 1,0 92,0 a 46,46 0 1,0 -92,0" stroke="#7D4A2B" stroke-width="2" stroke-linecap="round" />
+        </svg>
+
+        <div class="logo-assemble-container">
+          <img src="assets/stacklylogo_18.webp" alt="Chatly Craft Marketplace" class="preloader-logo-img">
+        </div>
+
+        <div class="finishing-flourish">
+          <span class="finishing-dot dot-1"></span>
+          <span class="finishing-dot dot-2"></span>
+          <span class="finishing-dot dot-3"></span>
+          <span class="finishing-dot dot-4"></span>
+        </div>
+      </div>
+      <div class="preloader-status">
+        <span class="craft-label">CURATING EDITORIAL ESSAYS & STORIES</span>
+        <div class="drawing-progress-bar">
+          <div class="progress-fill"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PUBLIC HEADER -->
+  <header class="public-header" id="main-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand-logo-link">
+        <img src="assets/stacklylogo_18.webp" alt="Chatly Logo" class="chatly-logo-img">
+      </a>
+
+      <nav class="nav-menu">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="blog.html" class="nav-link active">Blog</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <a href="login.html" class="btn btn-primary btn-sm">
+          <span class="material-symbols-outlined" style="font-size:18px;">login</span>
+          <span>Login</span>
+        </a>
+        <button class="mobile-nav-toggle" id="mobile-nav-toggle" aria-label="Toggle navigation menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div class="mobile-drawer" id="mobile-drawer">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="about.html" class="nav-link">About</a>
+      <a href="services.html" class="nav-link">Services</a>
+      <a href="blog.html" class="nav-link active">Blog</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+      <div style="margin-top: 20px; display:flex; flex-direction:column; gap:12px;">
+        <a href="login.html" class="btn btn-primary btn-block">Login</a>
+        <a href="signup.html" class="btn btn-outline btn-block">Create Account</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- SECTION 1: BLOG HERO -->
+    <section class="hero-section" style="padding: 85px 0 95px 0;">
+      <!-- Single clear background image on backside (Visible clearly, not dim, no white wash) -->
+      <div class="hero-single-bg" style="background-image: url('https://images.unsplash.com/photo-1590736969955-71cc94801759?auto=format&fit=crop&w=1920&q=85');"></div>
+
+      <div class="container">
+        <div class="hero-content-center">
+          <span class="section-tag" style="margin-bottom:16px;"><span class="material-symbols-outlined" style="font-size:16px;">menu_book</span> The Artisan Gazette</span>
+          <h1 class="hero-title-arranged">
+            <span class="hero-line hero-line-gold anim-hero-right-1">Chronicles of Craft,</span>
+            <span class="hero-line hero-line-brown anim-hero-left">Lineage & Creation</span>
+          </h1>
+          <p class="hero-subtitle-arranged">
+            <span class="hero-sub-line anim-sub-right-1">In-depth stories, artisan master interviews, and craft preservation tutorials</span>
+            <span class="hero-sub-line anim-sub-right-2">across the modern global maker movement.</span>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: FEATURED LEAD STORY (WITH SLIDE-IN ENTRANCE & LIVE RUNNING BOUNDARY LINE ON HOVER/CLICK) -->
+    <section class="section blog-featured-section" id="blog-featured-section" style="padding: 25px 0 55px 0; overflow: hidden;">
+      <div class="container">
+        <article class="blog-featured" id="blog-featured-lead" tabindex="0" role="button" aria-pressed="false" aria-label="Featured Story: The Revival of Ancient Terra-Cotta Kiln Techniques">
+          
+          <!-- Continuous SVG Boundary Runner Overlay (Runs on Hover & on Click) -->
+          <svg class="blog-featured-border-runner" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+            <rect class="border-runner-track" x="1" y="1" width="98" height="98" rx="4" ry="4" pathLength="100" vector-effect="non-scaling-stroke"></rect>
+            <rect class="border-runner-pulse" x="1" y="1" width="98" height="98" rx="4" ry="4" pathLength="100" vector-effect="non-scaling-stroke"></rect>
+          </svg>
+
+          <!-- Left: Featured Media with Slide-in from Left -->
+          <div class="blog-featured-media anim-featured-left">
+            <img src="https://images.unsplash.com/photo-1578749556568-bc2c40e68b61?auto=format&fit=crop&w=1000&q=80" alt="Ceramic Artisan at Work" class="blog-featured-img">
+            <div class="blog-featured-badge-overlay">
+              <span class="badge badge-terracotta"><span class="material-symbols-outlined" style="font-size:14px;">auto_awesome</span> Featured Lead Story</span>
+            </div>
+          </div>
+
+          <!-- Right: Featured Body with Slide-in from Right -->
+          <div class="blog-featured-body anim-featured-right">
+            <div class="blog-meta">
+              <span class="badge badge-craft">Art & Craft Stories</span>
+              <span>• September 24, 2026</span>
+              <span>• 7 min read</span>
+            </div>
+            <h2 class="blog-featured-title" style="font-size:2.05rem; line-height:1.25; margin-bottom:14px; color:var(--c-deep-brown);">
+              The Revival of Ancient Terra-Cotta Kiln Techniques in Modern Lagos Studios
+            </h2>
+            <p class="blog-featured-excerpt" style="color:var(--c-text-muted); font-size:0.96rem; line-height:1.7; margin-bottom:24px;">
+              How a new generation of Nigerian ceramic sculptors are abandoning industrial electric kilns in favor of pit-firing with dried palm fronds and neem leaves to achieve sacred smoky patinas that machines cannot replicate.
+            </p>
+            <div class="blog-featured-author-row" style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:16px;">
+              <div style="display:flex; align-items:center; gap:12px;">
+                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=120&q=80" alt="Author Chidinma Eze" style="width:44px; height:44px; border-radius:50%; object-fit:cover; border:2px solid rgba(184, 103, 55, 0.25);">
+                <div>
+                  <strong style="font-size:0.92rem; display:block; color:var(--c-deep-brown);">Chidinma Eze</strong>
+                  <span style="font-size:0.78rem; color:var(--c-text-light);">Senior Cultural Curator</span>
+                </div>
+              </div>
+              <div>
+                <a href="404.html" class="btn btn-primary btn-sm blog-lead-btn" onclick="event.stopPropagation();">
+                  <span>Read Full Story</span>
+                  <span class="material-symbols-outlined" style="font-size:16px;">arrow_forward</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </article>
+      </div>
+    </section>
+
+    <!-- SECTION 3: ARTISAN CHRONICLES & STORIES (6 CARDS WITH DIRECTIONAL ARRIVALS & ENLIGHTEN HOVER) -->
+    <section class="section blog-articles-section" id="blog-articles-section" style="padding: 25px 0 75px 0; overflow: hidden;">
+      <div class="container">
+        <div class="section-header" style="text-align:center; max-width:720px; margin: 0 auto 45px auto;">
+          <span class="section-tag"><span class="material-symbols-outlined" style="font-size:16px;">auto_stories</span> Master Dispatches</span>
+          <h2 class="section-title">Artisan Chronicles & Cultural Stories</h2>
+          <p class="section-subtitle">In-depth narratives on master craftspeople, studio techniques, and the modern heritage renaissance.</p>
+        </div>
+
+        <div class="blog-grid" id="blog-articles-grid">
+          
+          <!-- Card 1: Row 1 Left (Arrives from Left Side) -->
+          <article class="blog-card anim-blog-left blog-card-1" tabindex="0" role="button" aria-label="Sacred Geometric Codes of Ashanti Kente Weavers" onclick="window.location.href='404.html';">
+            <div class="blog-card-media">
+              <img src="https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?auto=format&fit=crop&w=700&q=80" alt="Kente Loom" class="blog-card-img">
+              <div class="blog-image-enlighten-overlay"></div>
+            </div>
+            <div class="blog-card-body">
+              <div class="blog-meta">
+                <span class="badge badge-craft">Artisanal Creativity</span>
+                <span>Sept 18, 2026</span>
+              </div>
+              <h3 class="blog-card-title">Sacred Geometric Codes of Ashanti Kente Weavers</h3>
+              <p class="blog-card-excerpt">Every strip woven on narrow horizontal looms in Bonwire encodes proverbial wisdom, clan genealogies, and moral philosophies.</p>
+              <div class="blog-card-footer">
+                <span style="font-size:0.8rem; color:var(--c-text-light);">5 min read</span>
+                <a href="404.html" class="btn btn-outline btn-sm blog-card-btn" onclick="event.stopPropagation(); window.location.href='404.html';">Read More</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 2: Row 1 Center (Arrives from Top Side) -->
+          <article class="blog-card anim-blog-top blog-card-2" tabindex="0" role="button" aria-label="Pricing Your Handcrafted Art for Global Collectors" onclick="window.location.href='404.html';">
+            <div class="blog-card-media">
+              <img src="https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&w=700&q=80" alt="Studio Business" class="blog-card-img">
+              <div class="blog-image-enlighten-overlay"></div>
+            </div>
+            <div class="blog-card-body">
+              <div class="blog-meta">
+                <span class="badge badge-craft">Handmade Business</span>
+                <span>Sept 14, 2026</span>
+              </div>
+              <h3 class="blog-card-title">Pricing Your Handcrafted Art for Global Collectors</h3>
+              <p class="blog-card-excerpt">A practical framework for independent artisans on calculating labor hours, material sourcing, insurance, and international freight margins.</p>
+              <div class="blog-card-footer">
+                <span style="font-size:0.8rem; color:var(--c-text-light);">8 min read</span>
+                <a href="404.html" class="btn btn-outline btn-sm blog-card-btn" onclick="event.stopPropagation(); window.location.href='404.html';">Read More</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 3: Row 1 Right (Arrives from Right Side) -->
+          <article class="blog-card anim-blog-right blog-card-3" tabindex="0" role="button" aria-label="Kwame Asante: Listening to the Grain of Jacaranda Wood" onclick="window.location.href='404.html';">
+            <div class="blog-card-media">
+              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=700&q=80" alt="Sculptor Kwame Asante" class="blog-card-img">
+              <div class="blog-image-enlighten-overlay"></div>
+            </div>
+            <div class="blog-card-body">
+              <div class="blog-meta">
+                <span class="badge badge-craft">Artist Interviews</span>
+                <span>Sept 10, 2026</span>
+              </div>
+              <h3 class="blog-card-title">Kwame Asante: Listening to the Grain of Jacaranda Wood</h3>
+              <p class="blog-card-excerpt">An intimate conversation in his Kumasi studio on why he only carves trees fallen in storms, preserving the spirit of living timber.</p>
+              <div class="blog-card-footer">
+                <span style="font-size:0.8rem; color:var(--c-text-light);">6 min read</span>
+                <a href="404.html" class="btn btn-outline btn-sm blog-card-btn" onclick="event.stopPropagation(); window.location.href='404.html';">Read More</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 4: Row 2 Left (Arrives from Left Side) -->
+          <article class="blog-card anim-blog-left blog-card-4" tabindex="0" role="button" aria-label="Tutorial: Coiling Sweetgrass & Raffia Baskets at Home" onclick="window.location.href='404.html';">
+            <div class="blog-card-media">
+              <img src="https://images.unsplash.com/photo-1584992236310-6edddc08acff?auto=format&fit=crop&w=700&q=80" alt="Weaving basket" class="blog-card-img">
+              <div class="blog-image-enlighten-overlay"></div>
+            </div>
+            <div class="blog-card-body">
+              <div class="blog-meta">
+                <span class="badge badge-craft">Craft Tutorials</span>
+                <span>Sept 06, 2026</span>
+              </div>
+              <h3 class="blog-card-title">Tutorial: Coiling Sweetgrass & Raffia Baskets at Home</h3>
+              <p class="blog-card-excerpt">A step-by-step masterclass on preparing wild fibers, natural plant bath dyeing, and tightening structural center coils.</p>
+              <div class="blog-card-footer">
+                <span style="font-size:0.8rem; color:var(--c-text-light);">12 min read</span>
+                <a href="404.html" class="btn btn-outline btn-sm blog-card-btn" onclick="event.stopPropagation(); window.location.href='404.html';">Read More</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 5: Row 2 Center (Arrives from Downside) -->
+          <article class="blog-card anim-blog-bottom blog-card-5" tabindex="0" role="button" aria-label="Ancestral Futurism: Merging Ancient Mythology with 3D Canvas" onclick="window.location.href='404.html';">
+            <div class="blog-card-media">
+              <img src="https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?auto=format&fit=crop&w=700&q=80" alt="Digital Art Sculpture" class="blog-card-img">
+              <div class="blog-image-enlighten-overlay"></div>
+            </div>
+            <div class="blog-card-body">
+              <div class="blog-meta">
+                <span class="badge badge-craft">Digital Art</span>
+                <span>Sept 01, 2026</span>
+              </div>
+              <h3 class="blog-card-title">Ancestral Futurism: Merging Ancient Mythology with 3D Canvas</h3>
+              <p class="blog-card-excerpt">How contemporary digital illustrators are synthesizing ancestral folklore with cybernetic aesthetics and metaverse collectibles.</p>
+              <div class="blog-card-footer">
+                <span style="font-size:0.8rem; color:var(--c-text-light);">6 min read</span>
+                <a href="404.html" class="btn btn-outline btn-sm blog-card-btn" onclick="event.stopPropagation(); window.location.href='404.html';">Read More</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 6: Row 2 Right (Arrives from Right Side) -->
+          <article class="blog-card anim-blog-right blog-card-6" tabindex="0" role="button" aria-label="How Mobile Money Micro-Payouts are Transforming Craft Guilds" onclick="window.location.href='404.html';">
+            <div class="blog-card-media">
+              <img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=700&q=80" alt="Jewelry Craft Economy" class="blog-card-img">
+              <div class="blog-image-enlighten-overlay"></div>
+            </div>
+            <div class="blog-card-body">
+              <div class="blog-meta">
+                <span class="badge badge-craft">Creator Economy</span>
+                <span>Aug 28, 2026</span>
+              </div>
+              <h3 class="blog-card-title">How Mobile Money Micro-Payouts are Transforming Craft Guilds</h3>
+              <p class="blog-card-excerpt">Direct payments to mobile wallets are bypassing traditional banking deserts, enabling women-led beadwork collectives to scale rapidly.</p>
+              <div class="blog-card-footer">
+                <span style="font-size:0.8rem; color:var(--c-text-light);">7 min read</span>
+                <a href="404.html" class="btn btn-outline btn-sm blog-card-btn" onclick="event.stopPropagation(); window.location.href='404.html';">Read More</a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 5: ARTISAN VOICES & ESSAYS -->
+    <section class="section artisan-voices-section" id="artisan-voices-section" style="padding: 60px 0; background-color: var(--c-cream-soft); overflow: hidden;">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag"><span class="material-symbols-outlined" style="font-size:16px;">format_quote</span> Studio Philosophy</span>
+          <h2 class="section-title">Artisan Voices from the Studio Floor</h2>
+          <p class="section-subtitle">Reflections on lineage, raw material stewardship, and creative integrity.</p>
+        </div>
+        <div class="artisan-voices-grid" style="display:grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap:24px;">
+          <!-- Left Card: Comes from Left Side & Arranges -->
+          <div class="card-artisan artisan-voice-card anim-voice-left">
+            <p style="font-family:var(--font-serif); font-size:1.1rem; color:var(--c-deep-brown); margin-bottom:14px;">
+              "The speed of modern machines produces hollow objects. Handcrafting embeds patience and spirit into form."
+            </p>
+            <strong>Zola Mthembu</strong>
+            <div style="font-size:0.8rem; color:var(--c-text-light);">Master Bead Artisan • Durban</div>
+          </div>
+          <!-- Right Card: Comes from Right Side & Arranges -->
+          <div class="card-artisan artisan-voice-card anim-voice-right">
+            <p style="font-family:var(--font-serif); font-size:1.1rem; color:var(--c-deep-brown); margin-bottom:14px;">
+              "When you purchase from a maker, you are buying hundreds of hours of trial, error, and cultural memory."
+            </p>
+            <strong>Kofi Mensah</strong>
+            <div style="font-size:0.8rem; color:var(--c-text-light);">Ashanti Master Weaver • Bonwire</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 6: CRAFT MASTERY ARCHIVE -->
+    <section class="section mastery-guides-section" id="mastery-guides-section" style="padding: 60px 0; overflow: hidden;">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag"><span class="material-symbols-outlined" style="font-size:16px;">school</span> Knowledge Preservation</span>
+          <h2 class="section-title">Technique Mastery Guides</h2>
+          <p class="section-subtitle">Preserving traditional dye recipes, wood carving adze angles, and kiln smoke treatments.</p>
+        </div>
+        <div class="mastery-guides-grid" style="display:grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap:20px;">
+          
+          <!-- Card 1: Comes from Left Side & Arranges -->
+          <div class="card-artisan mastery-card anim-mastery-left" tabindex="0" role="article" aria-label="Technique Guide: Natural Indigo Vat Fermentation">
+            <!-- Continuous SVG Brown Boundary Runner on Hover -->
+            <svg class="mastery-border-runner" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+              <rect class="border-runner-track" x="1.5" y="1.5" width="97" height="97" rx="6" ry="6" pathLength="100" vector-effect="non-scaling-stroke"></rect>
+              <rect class="border-runner-pulse" x="1.5" y="1.5" width="97" height="97" rx="6" ry="6" pathLength="100" vector-effect="non-scaling-stroke"></rect>
+            </svg>
+            <div class="mastery-card-content">
+              <div class="mastery-card-line"></div>
+              <h4>Natural Indigo Vat Fermentation</h4>
+              <p style="font-size:0.88rem; color:var(--c-text-muted); margin-top:8px;">Preparing organic ash lye and indigo leaves for permanent textile blueing.</p>
+            </div>
+          </div>
+
+          <!-- Card 2: Comes from Downside & Arranges -->
+          <div class="card-artisan mastery-card anim-mastery-bottom" tabindex="0" role="article" aria-label="Technique Guide: Shea Butter & Beeswax Wood Polishing">
+            <!-- Continuous SVG Brown Boundary Runner on Hover -->
+            <svg class="mastery-border-runner" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+              <rect class="border-runner-track" x="1.5" y="1.5" width="97" height="97" rx="6" ry="6" pathLength="100" vector-effect="non-scaling-stroke"></rect>
+              <rect class="border-runner-pulse" x="1.5" y="1.5" width="97" height="97" rx="6" ry="6" pathLength="100" vector-effect="non-scaling-stroke"></rect>
+            </svg>
+            <div class="mastery-card-content">
+              <div class="mastery-card-line"></div>
+              <h4>Shea Butter & Beeswax Wood Polishing</h4>
+              <p style="font-size:0.88rem; color:var(--c-text-muted); margin-top:8px;">Non-toxic sealing mixtures that accentuate natural mahogany grain patterns.</p>
+            </div>
+          </div>
+
+          <!-- Card 3: Comes from Right Side & Arranges -->
+          <div class="card-artisan mastery-card anim-mastery-right" tabindex="0" role="article" aria-label="Technique Guide: Cowrie Shell Inlay Principles">
+            <!-- Continuous SVG Brown Boundary Runner on Hover -->
+            <svg class="mastery-border-runner" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+              <rect class="border-runner-track" x="1.5" y="1.5" width="97" height="97" rx="6" ry="6" pathLength="100" vector-effect="non-scaling-stroke"></rect>
+              <rect class="border-runner-pulse" x="1.5" y="1.5" width="97" height="97" rx="6" ry="6" pathLength="100" vector-effect="non-scaling-stroke"></rect>
+            </svg>
+            <div class="mastery-card-content">
+              <div class="mastery-card-line"></div>
+              <h4>Cowrie Shell Inlay Principles</h4>
+              <p style="font-size:0.88rem; color:var(--c-text-muted); margin-top:8px;">Traditional bead-tethering methods practiced across coastal craft guilds.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 7: CURATORIAL EDITORIAL BOARD -->
+    <section class="section maker-cta-section" id="maker-cta-section" style="padding: 70px 0 90px 0; text-align: center; overflow: hidden;">
+      <div class="container container-narrow">
+        <span class="section-tag maker-cta-tag"><span class="material-symbols-outlined" style="font-size:16px;">auto_stories</span> Curatorial Council</span>
+        <h2 class="section-title maker-cta-title anim-cta-words-right">The Artisan Gazette Editorial Board</h2>
+        <p class="section-subtitle maker-cta-sentence anim-cta-words-left" style="margin-bottom: 28px;">
+          Written and curated by cultural anthropologists, studio guild masters, and fine art critics based in Nairobi, Lagos, and London.
+        </p>
+        <div class="maker-cta-actions" style="display:flex; justify-content:center; gap:16px; flex-wrap:wrap;">
+          <a href="404.html" class="btn btn-primary btn-lg cta-btn-left">Browse Editorial Archives</a>
+          <a href="404.html" class="btn btn-secondary btn-lg cta-btn-right">Explore Creator Tools</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="public-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a href="index.html" class="brand-logo-link footer-logo-link"><img src="assets/stacklylogo_18.webp" alt="Chatly Logo" class="footer-brand-logo"></a>
+          <p class="footer-desc">
+            Chatly is an authentic digital art and handcrafted craft marketplace connecting global collectors with authentic heritage creations.
+          </p>
+        </div>
+        <div>
+          <h4 class="footer-heading">Quick Links</h4>
+          <div class="footer-links">
+            <a href="index.html" class="footer-link"><span class="material-symbols-outlined" style="font-size:16px;">chevron_right</span> Home</a>
+            <a href="about.html" class="footer-link"><span class="material-symbols-outlined" style="font-size:16px;">chevron_right</span> About</a>
+            <a href="services.html" class="footer-link"><span class="material-symbols-outlined" style="font-size:16px;">chevron_right</span> Services</a>
+            <a href="blog.html" class="footer-link"><span class="material-symbols-outlined" style="font-size:16px;">chevron_right</span> Blog</a>
+            <a href="contact.html" class="footer-link"><span class="material-symbols-outlined" style="font-size:16px;">chevron_right</span> Contact</a>
+          </div>
+        </div>
+        <div>
+          <h4 class="footer-heading">Creator Hub</h4>
+          <div class="footer-links">
+            <a href="404.html" class="footer-link"><span class="material-symbols-outlined" style="font-size:16px;">chevron_right</span> Open Artisan Shop</a>
+            <a href="404.html" class="footer-link"><span class="material-symbols-outlined" style="font-size:16px;">chevron_right</span> Seller Dashboard</a>
+            <a href="404.html" class="footer-link"><span class="material-symbols-outlined" style="font-size:16px;">chevron_right</span> Buyer Dashboard</a>
+            <a href="404.html" class="footer-link"><span class="material-symbols-outlined" style="font-size:16px;">chevron_right</span> Creator Tools</a>
+            <a href="404.html" class="footer-link"><span class="material-symbols-outlined" style="font-size:16px;">chevron_right</span> Logistics</a>
+            <a href="404.html" class="footer-link"><span class="material-symbols-outlined" style="font-size:16px;">chevron_right</span> Fair Trade</a>
+          </div>
+        </div>
+        <div>
+          <h4 class="footer-heading">Stackly Salem Atelier</h4>
+          <div class="footer-address-card">
+            <strong>Stackly Technologies & Craft Hub</strong>
+            124/B Heritage Crafts Enclave, Cherry Road,<br>
+            Hasthampatti, Salem, Tamil Nadu 636007, India.<br><br>
+            <div style="display:flex; align-items:center; gap:6px; margin-bottom:4px;">
+              <span class="material-symbols-outlined" style="font-size:16px; color:var(--c-ochre);">call</span>
+              <span>+91 427 244 8900 / +91 98427 12345</span>
+            </div>
+            <div style="display:flex; align-items:center; gap:6px;">
+              <span class="material-symbols-outlined" style="font-size:16px; color:var(--c-ochre);">mail</span>
+              <span>support@stackly.com</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>&copy; 2026 Chatly Art & Craft Marketplace. All rights reserved. Handcrafted with reverence.</div>
+        <div style="display:flex; gap:20px;">
+          <a href="404.html" style="color:var(--c-beige-dark);">Terms of Artistry</a>
+          <a href="404.html" style="color:var(--c-beige-dark);">Privacy & Provenance</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

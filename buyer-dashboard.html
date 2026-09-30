@@ -1,0 +1,938 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Buyer Dashboard | Chatly Art & Craft Marketplace</title>
+  <meta name="description" content="Personal collector dashboard to track purchases, discover master artisans, manage wishlist, and analyze art collections.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+<body class="craft-texture buyer-dashboard-page">
+
+  <!-- UNIQUE ART & CRAFT PRELOADER -->
+  <div id="artisan-preloader" class="artisan-preloader" aria-label="Loading Buyer Dashboard">
+    <div class="preloader-curtain curtain-left"></div>
+    <div class="preloader-curtain curtain-right"></div>
+    <div class="preloader-content">
+      <div class="sketch-stage">
+        <svg class="sketch-lines-svg" viewBox="0 0 320 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle class="stroke-ring" cx="160" cy="160" r="118" stroke="rgba(125, 74, 43, 0.35)" stroke-width="2" stroke-dasharray="14 10" />
+          <path class="stroke-pencil" d="M 45 160 C 45 96 96 45 160 45 C 224 45 275 96 275 160 C 275 224 224 275 160 275" stroke="#5A3521" stroke-width="2.5" stroke-linecap="round" />
+          <path class="stroke-brush" d="M 60 130 Q 160 30 260 130 Q 280 220 160 260 Q 40 220 60 130" stroke="#B86737" stroke-width="3" stroke-linecap="round" />
+          <path class="craft-spiral" d="M 160 160 m -28 0 a 28,28 0 1,0 56,0 a 28,28 0 1,0 -56,0 m -18 0 a 46,46 0 1,0 92,0 a 46,46 0 1,0 -92,0" stroke="#7D4A2B" stroke-width="2" stroke-linecap="round" />
+        </svg>
+
+        <div class="logo-assemble-container">
+          <img src="assets/stacklylogo_18.webp" alt="Chatly Craft Marketplace" class="preloader-logo-img">
+        </div>
+
+        <div class="finishing-flourish">
+          <span class="finishing-dot dot-1"></span>
+          <span class="finishing-dot dot-2"></span>
+          <span class="finishing-dot dot-3"></span>
+          <span class="finishing-dot dot-4"></span>
+        </div>
+      </div>
+      <div class="preloader-status">
+        <span class="craft-label">SYNCHRONIZING YOUR COLLECTOR DASHBOARD</span>
+        <div class="drawing-progress-bar">
+          <div class="progress-fill"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="dashboard-wrapper">
+    <!-- STATIC FIXED NAVBAR -->
+    <header class="dashboard-navbar">
+      <div class="dashboard-nav-inner">
+        <!-- Sidebar Header with Stackly Logo & Extended Vertical Divider Line -->
+        <div class="dashboard-nav-left">
+          <button class="dashboard-sidebar-toggle" id="dashboard-sidebar-toggle" aria-label="Toggle sidebar menu">
+            <span class="material-symbols-outlined">menu</span>
+          </button>
+          <a href="index.html" class="brand-logo-link" title="Return to Home Page">
+            <img src="assets/stacklylogo_18.webp" alt="Chatly Logo" class="chatly-logo-img">
+          </a>
+        </div>
+
+        <!-- Main Topbar Area -->
+        <div class="dashboard-nav-main">
+          <!-- Current Active Section Heading: Positioned near the sidebar line -->
+          <div class="dashboard-nav-center">
+            <span class="dashboard-current-heading" id="dashboard-current-heading">Overview</span>
+          </div>
+
+          <!-- Right: Profile Icon First, Name Second (No 'Dashboard |', No 'Buyer' badge) -->
+          <div class="dashboard-nav-right">
+            <div class="dashboard-user-pill" id="dashboard-user-pill" title="Click to view account details">
+              <div class="profile-initials-avatar" id="nav-profile-initials">KP</div>
+              <span class="user-pill-name" id="nav-user-name">Kumar Pandian</span>
+              <span class="material-symbols-outlined dropdown-chevron">expand_more</span>
+            </div>
+
+            <!-- Dynamic Profile Dropdown Menu -->
+            <div class="profile-dropdown-menu" id="profile-dropdown-menu">
+              <div class="dropdown-user-info">
+                <div class="dropdown-user-name" id="dropdown-user-name">Kumar Pandian</div>
+                <div class="dropdown-user-email" id="dropdown-user-email">kumarpandian@gmail.com</div>
+                <span class="dropdown-user-role" id="dropdown-user-role">Buyer</span>
+              </div>
+              <a href="index.html" style="padding: 8px 0; font-size: 0.88rem; color: var(--c-deep-brown); display: flex; align-items: center; gap: 8px;">
+                <span class="material-symbols-outlined" style="font-size:18px;">home</span>
+                <span>Marketplace Home</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- DASHBOARD MAIN LAYOUT -->
+    <div class="dashboard-layout">
+      
+      <!-- SIMPLIFIED BUYER SIDEBAR (EXACTLY 5 TOP-LEVEL HEADINGS, NO SUBHEADINGS) -->
+      <aside class="dashboard-sidebar">
+        <!-- Mobile Sidebar Brand Header: Visible only inside sidebar on mobile -->
+        <div class="sidebar-brand-header">
+          <a href="buyer-dashboard.html" class="brand-logo-link" title="Buyer Overview">
+            <img src="assets/stacklylogo_18.webp" alt="Stackly Logo" class="chatly-logo-img">
+          </a>
+        </div>
+
+        <nav class="sidebar-clean-nav">
+          <button type="button" class="sidebar-main-btn active" data-title="Overview" data-target-view="view-buyer-summary">
+            <span class="material-symbols-outlined">dashboard</span>
+            <span>Overview</span>
+          </button>
+
+          <button type="button" class="sidebar-main-btn" data-title="Discover Art" data-target-view="view-buyer-discover">
+            <span class="material-symbols-outlined">explore</span>
+            <span>Discover Art</span>
+          </button>
+
+          <button type="button" class="sidebar-main-btn" data-title="My Purchases" data-target-view="view-buyer-purchases">
+            <span class="material-symbols-outlined">shopping_bag</span>
+            <span>My Purchases</span>
+          </button>
+
+          <button type="button" class="sidebar-main-btn" data-title="Wishlist" data-target-view="view-buyer-wishlist">
+            <span class="material-symbols-outlined">favorite</span>
+            <span>Wishlist</span>
+          </button>
+
+          <button type="button" class="sidebar-main-btn" data-title="Activity & Insights" data-target-view="view-buyer-insights">
+            <span class="material-symbols-outlined">insights</span>
+            <span>Activity & Insights</span>
+          </button>
+        </nav>
+
+        <!-- Sidebar End: Logout Button -->
+        <div class="sidebar-end-block">
+          <button type="button" class="sidebar-logout-btn" id="sidebar-logout-btn" title="Sign out of buyer account">
+            <span class="material-symbols-outlined">logout</span>
+            <span>Logout</span>
+          </button>
+        </div>
+      </aside>
+
+      <!-- BUYER DASHBOARD CONTENT PANELS -->
+      <main class="dashboard-content-area">
+        
+        <!-- VIEW 1: OVERVIEW -->
+        <div id="view-buyer-summary" class="dashboard-view-panel active">
+          <div class="dashboard-header-block">
+            <div>
+              <h1 class="dashboard-welcome-title" id="dashboard-welcome-heading">Welcome back, Kumar Pandian!</h1>
+              <p class="dashboard-welcome-desc">Explore curated heritage crafts, your recent purchases, and personalized artisan insights.</p>
+            </div>
+            <a href="index.html#featured-artworks" class="btn btn-primary btn-sm">
+              <span class="material-symbols-outlined" style="font-size:18px;">travel_explore</span>
+              <span>Explore Marketplace</span>
+            </a>
+          </div>
+
+          <!-- 4 Buyer KPI Cards -->
+          <div class="kpi-grid">
+            <div class="kpi-card">
+              <div class="kpi-icon-wrap brown"><span class="material-symbols-outlined">shopping_bag</span></div>
+              <div>
+                <div class="kpi-value">$1,420</div>
+                <div class="kpi-label">Total Purchases</div>
+              </div>
+            </div>
+            <div class="kpi-card">
+              <div class="kpi-icon-wrap terracotta"><span class="material-symbols-outlined">favorite</span></div>
+              <div>
+                <div class="kpi-value">18 Items</div>
+                <div class="kpi-label">Saved Artwork</div>
+              </div>
+            </div>
+            <div class="kpi-card">
+              <div class="kpi-icon-wrap ochre"><span class="material-symbols-outlined">palette</span></div>
+              <div>
+                <div class="kpi-value">12 Makers</div>
+                <div class="kpi-label">Favorite Artists</div>
+              </div>
+            </div>
+            <div class="kpi-card">
+              <div class="kpi-icon-wrap success"><span class="material-symbols-outlined">inventory_2</span></div>
+              <div>
+                <div class="kpi-value">6 Completed</div>
+                <div class="kpi-label">Recent Activity</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 4 Required Buyer Charts -->
+          <div class="charts-grid">
+            <div class="chart-card anim-from-left">
+              <div class="chart-header">
+                <h3 class="chart-title">Spending by Craft Medium</h3>
+                <span class="badge badge-craft">Category Breakdown</span>
+              </div>
+              <div class="chart-container" id="buyer-pie-chart"></div>
+            </div>
+
+            <div class="chart-card anim-from-right">
+              <div class="chart-header">
+                <h3 class="chart-title">Artisan Discovery Activity</h3>
+                <span class="badge badge-terracotta">Past 6 Months</span>
+              </div>
+              <div class="chart-container" id="buyer-line-chart"></div>
+            </div>
+
+            <div class="chart-card anim-from-left anim-delay-1">
+              <div class="chart-header">
+                <h3 class="chart-title">Monthly Purchases ($)</h3>
+                <span class="badge badge-craft">2026 Acquisition Volume</span>
+              </div>
+              <div class="chart-container" id="buyer-bar-chart"></div>
+            </div>
+
+            <div class="chart-card anim-from-right anim-delay-1">
+              <div class="chart-header">
+                <h3 class="chart-title">Weekly Gallery Browsing Hours</h3>
+                <span class="badge badge-terracotta">Interaction Heatmap</span>
+              </div>
+              <div class="chart-container" id="buyer-activity-chart"></div>
+            </div>
+          </div>
+
+          <!-- Recommended Artwork -->
+          <div style="margin-bottom: 32px;">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom: 20px;">
+              <h3 style="font-size:1.3rem;">Recommended Handcrafted Works for You</h3>
+              <button class="btn btn-outline btn-sm" onclick="window.location.href='404.html';">
+                <span>View All Recommendations</span>
+                <span class="material-symbols-outlined" style="font-size:16px;">arrow_forward</span>
+              </button>
+            </div>
+
+            <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px;">
+              <div class="card-artisan anim-triplet-left" style="padding:18px; display:flex; gap:16px; align-items:center;">
+                <img src="https://images.unsplash.com/photo-1578749556568-bc2c40e68b61?auto=format&fit=crop&w=300&q=80" alt="Clay pot" style="width:84px; height:84px; border-radius:var(--radius-md); object-fit:cover;">
+                <div>
+                  <span class="badge badge-terracotta" style="font-size:0.7rem; margin-bottom:4px;">Ceramics</span>
+                  <div style="font-weight:700; font-size:1rem; color:var(--c-deep-brown);">Oshun River Terracotta Bowl</div>
+                  <div style="font-size:0.82rem; color:var(--c-medium-brown);">By Nia Adebayo</div>
+                  <div style="font-weight:800; color:var(--c-warm-brown); margin-top:4px;">$165</div>
+                </div>
+              </div>
+
+              <div class="card-artisan anim-triplet-center" style="padding:18px; display:flex; gap:16px; align-items:center;">
+                <img src="https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=300&q=80" alt="Wood bust" style="width:84px; height:84px; border-radius:var(--radius-md); object-fit:cover;">
+                <div>
+                  <span class="badge badge-craft" style="font-size:0.7rem; margin-bottom:4px;">Sculpture</span>
+                  <div style="font-weight:700; font-size:1rem; color:var(--c-deep-brown);">Jacaranda Tribal Figure</div>
+                  <div style="font-size:0.82rem; color:var(--c-medium-brown);">By Kwame Asante</div>
+                  <div style="font-weight:800; color:var(--c-warm-brown); margin-top:4px;">$290</div>
+                </div>
+              </div>
+
+              <div class="card-artisan anim-triplet-right" style="padding:18px; display:flex; gap:16px; align-items:center;">
+                <img src="https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?auto=format&fit=crop&w=300&q=80" alt="Weaving" style="width:84px; height:84px; border-radius:var(--radius-md); object-fit:cover;">
+                <div>
+                  <span class="badge badge-terracotta" style="font-size:0.7rem; margin-bottom:4px;">Textiles</span>
+                  <div style="font-weight:700; font-size:1rem; color:var(--c-deep-brown);">Royal Ashanti Wall Weaving</div>
+                  <div style="font-size:0.82rem; color:var(--c-medium-brown);">By Kofi Mensah</div>
+                  <div style="font-weight:800; color:var(--c-warm-brown); margin-top:4px;">$240</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Recent Transactions Table -->
+          <div class="table-card">
+            <div class="table-header">
+              <h3 class="chart-title">Recent Transactions & Art Orders</h3>
+              <span class="badge badge-craft">Verified Purchases</span>
+            </div>
+            <div class="table-responsive">
+              <table class="artisan-table">
+                <thead>
+                  <tr>
+                    <th>Order ID</th>
+                    <th>Artwork Name</th>
+                    <th>Artisan / Studio</th>
+                    <th>Medium</th>
+                    <th>Date</th>
+                    <th>Amount</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="table-row-slide-right">
+                    <td><strong>#CHT-8942</strong></td>
+                    <td>Ancient Spirals Terracotta Vessel</td>
+                    <td>Nia Adebayo (Lagos)</td>
+                    <td>Clay / Pit-Fired</td>
+                    <td>Sep 22, 2026</td>
+                    <td style="font-weight:700; color:var(--c-warm-brown);">$185</td>
+                    <td><span class="badge badge-success">Delivered</span></td>
+                  </tr>
+                  <tr class="table-row-slide-right">
+                    <td><strong>#CHT-8815</strong></td>
+                    <td>Queen Mother Serenity Bust</td>
+                    <td>Kwame Asante (Kumasi)</td>
+                    <td>Carved Mahogany</td>
+                    <td>Sep 10, 2026</td>
+                    <td style="font-weight:700; color:var(--c-warm-brown);">$340</td>
+                    <td><span class="badge badge-success">Delivered</span></td>
+                  </tr>
+                  <tr class="table-row-slide-right">
+                    <td><strong>#CHT-8720</strong></td>
+                    <td>Zulu Ceremonial Collar</td>
+                    <td>Zola Mthembu (Durban)</td>
+                    <td>Glass Beads & Brass</td>
+                    <td>Aug 29, 2026</td>
+                    <td style="font-weight:700; color:var(--c-warm-brown);">$125</td>
+                    <td><span class="badge badge-success">Delivered</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- VIEW 2: DISCOVER ART (4 SECTIONS) -->
+        <div id="view-buyer-discover" class="dashboard-view-panel">
+          <!-- Section 1: Curatorial Search & Category Filters -->
+          <div class="dashboard-header-block">
+            <div>
+              <h2 class="dashboard-welcome-title">Discover Art & Artisan Creations</h2>
+              <p class="dashboard-welcome-desc">Browse curated masterpieces directly from our most revered master studios.</p>
+            </div>
+            <div style="display:flex; gap:12px;">
+              <button class="btn btn-outline btn-sm" onclick="showArtisanToast('Filtering by certified master pieces...', 'verified')">
+                <span class="material-symbols-outlined" style="font-size:18px;">verified</span>
+                <span>Certified Originals</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="category-chip-group">
+            <button class="category-chip active" data-filter="all"><span class="material-symbols-outlined" style="font-size:16px;">apps</span>All Mediums</button>
+            <button class="category-chip" data-filter="ceramics"><span class="material-symbols-outlined" style="font-size:16px;">palette</span>Pit-Fired Ceramics</button>
+            <button class="category-chip" data-filter="textiles"><span class="material-symbols-outlined" style="font-size:16px;">texture</span>Handwoven Textiles</button>
+            <button class="category-chip" data-filter="wood"><span class="material-symbols-outlined" style="font-size:16px;">forest</span>Wood Sculptures</button>
+            <button class="category-chip" data-filter="beaded"><span class="material-symbols-outlined" style="font-size:16px;">diamond</span>Beaded Adornments</button>
+          </div>
+
+          <!-- Section 2: Curated Masterpiece Catalog Grid -->
+          <div class="section-subtitle-block" style="margin-top: 10px;">
+            <h3 class="section-subtitle-title">Curated Contemporary & Ancestral Works</h3>
+            <span class="badge badge-terracotta">4 Available Pieces</span>
+          </div>
+          <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; margin-bottom: 32px;">
+            <div class="card-artisan anim-cascade-item discover-work-card" data-category="ceramics">
+              <img src="https://images.unsplash.com/photo-1578749556568-bc2c40e68b61?auto=format&fit=crop&w=600&q=80" alt="Pottery" style="height:190px; width:100%; object-fit:cover; border-radius:var(--radius-md); margin-bottom:12px;">
+              <span class="badge badge-terracotta" style="margin-bottom:6px;">Ceramics</span>
+              <h4 style="font-size:1.1rem; color:var(--c-deep-brown);">Ancient Spirals Terracotta Vessel</h4>
+              <p style="font-size:0.84rem; color:var(--c-text-muted); margin-bottom:12px;">Pit-fired in sacred kiln with organic neem leaves. By Nia Adebayo (Lagos).</p>
+              <div style="display:flex; justify-content:space-between; align-items:center;">
+                <span style="font-weight:800; color:var(--c-warm-brown); font-size:1.1rem;">$185</span>
+                <a href="404.html" class="btn btn-primary btn-sm">Acquire Work</a>
+              </div>
+            </div>
+
+            <div class="card-artisan anim-cascade-item discover-work-card" data-category="wood">
+              <img src="https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=600&q=80" alt="Sculpture" style="height:190px; width:100%; object-fit:cover; border-radius:var(--radius-md); margin-bottom:12px;">
+              <span class="badge badge-craft" style="margin-bottom:6px;">Woodcraft</span>
+              <h4 style="font-size:1.1rem; color:var(--c-deep-brown);">Mahogany Tribal Bust</h4>
+              <p style="font-size:0.84rem; color:var(--c-text-muted); margin-bottom:12px;">Hand-sculpted by master Kwame Asante from sustainably sourced jacaranda wood.</p>
+              <div style="display:flex; justify-content:space-between; align-items:center;">
+                <span style="font-weight:800; color:var(--c-warm-brown); font-size:1.1rem;">$340</span>
+                <a href="404.html" class="btn btn-primary btn-sm">Acquire Work</a>
+              </div>
+            </div>
+
+            <div class="card-artisan anim-cascade-item discover-work-card" data-category="textiles">
+              <img src="https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?auto=format&fit=crop&w=600&q=80" alt="Textile" style="height:190px; width:100%; object-fit:cover; border-radius:var(--radius-md); margin-bottom:12px;">
+              <span class="badge badge-terracotta" style="margin-bottom:6px;">Textiles</span>
+              <h4 style="font-size:1.1rem; color:var(--c-deep-brown);">Ashanti Royal Kente Tapestry</h4>
+              <p style="font-size:0.84rem; color:var(--c-text-muted); margin-bottom:12px;">Double-weave silk and cotton heritage patterns by Kofi Mensah (Bonwire).</p>
+              <div style="display:flex; justify-content:space-between; align-items:center;">
+                <span style="font-weight:800; color:var(--c-warm-brown); font-size:1.1rem;">$260</span>
+                <a href="404.html" class="btn btn-primary btn-sm">Acquire Work</a>
+              </div>
+            </div>
+
+            <div class="card-artisan anim-cascade-item discover-work-card" data-category="beaded">
+              <img src="https://images.unsplash.com/photo-1535223289827-42f1e9919769?auto=format&fit=crop&w=600&q=80" alt="Zulu Beads" style="height:190px; width:100%; object-fit:cover; border-radius:var(--radius-md); margin-bottom:12px;">
+              <span class="badge badge-craft" style="margin-bottom:6px;">Beaded Regalia</span>
+              <h4 style="font-size:1.1rem; color:var(--c-deep-brown);">Zulu Ceremonial Collar</h4>
+              <p style="font-size:0.84rem; color:var(--c-text-muted); margin-bottom:12px;">Intricate glass seed beads and spun brass wire by Zola Mthembu (Durban).</p>
+              <div style="display:flex; justify-content:space-between; align-items:center;">
+                <span style="font-weight:800; color:var(--c-warm-brown); font-size:1.1rem;">$125</span>
+                <a href="404.html" class="btn btn-primary btn-sm">Acquire Work</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Section 3: Master Artisan Studios in the Spotlight -->
+          <div class="section-subtitle-block">
+            <h3 class="section-subtitle-title">Master Artisan Studios in the Spotlight</h3>
+            <span class="badge badge-craft">Verified Living Masters</span>
+          </div>
+          <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-bottom: 32px;">
+            <div class="card-artisan anim-triplet-left" style="padding: 20px;">
+              <div style="display:flex; align-items:center; gap: 14px; margin-bottom: 12px;">
+                <div style="width:48px; height:48px; border-radius:50%; background:var(--c-terracotta); color:var(--c-white); display:flex; align-items:center; justify-content:center; font-weight:700;">NA</div>
+                <div>
+                  <h4 style="font-size:1.05rem; margin-bottom:2px;">Adebayo Pit-Kiln Ceramics</h4>
+                  <div style="font-size:0.8rem; color:var(--c-text-muted);">Lagos, Nigeria • 4th Gen Ceramist</div>
+                </div>
+              </div>
+              <p style="font-size:0.85rem; color:var(--c-text-muted); margin-bottom:14px; line-height:1.6;">Specializes in Nok-tradition pit-fired clay vessels with herbal smoke coloring.</p>
+              <div style="display:flex; justify-content:space-between; align-items:center;">
+                <span class="badge badge-success">4.98 ★ (142 reviews)</span>
+                <a href="404.html" class="btn btn-outline btn-sm">Visit Studio</a>
+              </div>
+            </div>
+
+            <div class="card-artisan anim-triplet-center" style="padding: 20px;">
+              <div style="display:flex; align-items:center; gap: 14px; margin-bottom: 12px;">
+                <div style="width:48px; height:48px; border-radius:50%; background:var(--c-warm-brown); color:var(--c-white); display:flex; align-items:center; justify-content:center; font-weight:700;">KA</div>
+                <div>
+                  <h4 style="font-size:1.05rem; margin-bottom:2px;">Asante Heritage Woodcraft</h4>
+                  <div style="font-size:0.8rem; color:var(--c-text-muted);">Kumasi, Ghana • Master Sculptor</div>
+                </div>
+              </div>
+              <p style="font-size:0.85rem; color:var(--c-text-muted); margin-bottom:14px; line-height:1.6;">Carving sacred Akan figures and ceremonial mahogany masks with ancestral adze tools.</p>
+              <div style="display:flex; justify-content:space-between; align-items:center;">
+                <span class="badge badge-success">4.95 ★ (84 reviews)</span>
+                <a href="404.html" class="btn btn-outline btn-sm">Visit Studio</a>
+              </div>
+            </div>
+
+            <div class="card-artisan anim-triplet-right" style="padding: 20px;">
+              <div style="display:flex; align-items:center; gap: 14px; margin-bottom: 12px;">
+                <div style="width:48px; height:48px; border-radius:50%; background:var(--c-ochre); color:var(--c-white); display:flex; align-items:center; justify-content:center; font-weight:700;">ZM</div>
+                <div>
+                  <h4 style="font-size:1.05rem; margin-bottom:2px;">Mthembu Royal Beadworks</h4>
+                  <div style="font-size:0.8rem; color:var(--c-text-muted);">Heritage Guild Studio • Traditional Master</div>
+                </div>
+              </div>
+              <p style="font-size:0.85rem; color:var(--c-text-muted); margin-bottom:14px; line-height:1.6;">Preserving geometric Zulu symbolic messages woven into ceremonial adornments.</p>
+              <div style="display:flex; justify-content:space-between; align-items:center;">
+                <span class="badge badge-success">4.99 ★ (67 reviews)</span>
+                <a href="404.html" class="btn btn-outline btn-sm">Visit Studio</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Section 4: Regional Craft Traditions & Cultural Map Guide -->
+          <div class="section-subtitle-block">
+            <h3 class="section-subtitle-title">Regional Craft Lineages & Cultural Guide</h3>
+            <span class="badge badge-terracotta">Living Heritage</span>
+          </div>
+          <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;">
+            <div class="card-artisan anim-triplet-left" style="padding: 20px; background-color: var(--c-cream-soft);">
+              <h4 style="color:var(--c-deep-brown); margin-bottom: 8px;">Yoruba & Nok Ceramic Lineage</h4>
+              <p style="font-size:0.86rem; color:var(--c-text-muted); line-height:1.65;">
+                Rooted in 2,500 years of Nigerian terracotta artistry. Every vessel is hand-coiled without mechanical pottery wheels and burnished with smooth river stones.
+              </p>
+            </div>
+            <div class="card-artisan anim-triplet-center" style="padding: 20px; background-color: var(--c-cream-soft);">
+              <h4 style="color:var(--c-deep-brown); margin-bottom: 8px;">Ashanti Royal Kente Tapestry</h4>
+              <p style="font-size:0.86rem; color:var(--c-text-muted); line-height:1.65;">
+                Hand-loomed in narrow 4-inch strips and joined by hand. Patterns convey historical proverb messages once reserved exclusively for Ashanti royalty.
+              </p>
+            </div>
+            <div class="card-artisan anim-triplet-right" style="padding: 20px; background-color: var(--c-cream-soft);">
+              <h4 style="color:var(--c-deep-brown); margin-bottom: 8px;">Fair Trade & Blockchain Provenance</h4>
+              <p style="font-size:0.86rem; color:var(--c-text-muted); line-height:1.65;">
+                Every creation on Chatly includes a tamper-evident serial certificate guaranteeing 86%+ fair trade payout directly to indigenous artisan families.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- VIEW 3: MY PURCHASES (4 SECTIONS) -->
+        <div id="view-buyer-purchases" class="dashboard-view-panel">
+          <div class="dashboard-header-block">
+            <div>
+              <h2 class="dashboard-welcome-title">My Purchases & Orders</h2>
+              <p class="dashboard-welcome-desc">Review your acquired handcrafted treasures and track ongoing deliveries.</p>
+            </div>
+            <button class="btn btn-outline btn-sm" onclick="window.location.href='404.html'">
+              <span class="material-symbols-outlined" style="font-size:18px;">download</span>
+              <span>Download Tax Statements</span>
+            </button>
+          </div>
+
+          <!-- Section 1: Active Shipments & Live Dispatch Tracking -->
+          <div class="card-artisan" style="margin-bottom: 28px; padding: 24px;">
+            <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px;">
+              <div>
+                <span class="badge badge-terracotta" style="margin-bottom:6px;">In Transit &bull; DHL Express</span>
+                <h3 style="font-size:1.25rem; color:var(--c-deep-brown);">Order #CHT-8942: Ancient Spirals Terracotta Vessel</h3>
+                <p style="font-size:0.85rem; color:var(--c-text-muted);">Shipped from Nia Adebayo Studio (Lagos) &bull; Tracking: <strong>DHL-AF-9842109</strong></p>
+              </div>
+              <div style="text-align:right;">
+                <div style="font-weight:700; color:var(--c-warm-brown); font-size:1.2rem;">$185.00</div>
+                <div style="font-size:0.82rem; color:var(--c-success); font-weight:600;">Expected Delivery: Oct 2, 2026</div>
+              </div>
+            </div>
+
+            <!-- Stepper Progress Bar with Active Connecting Line -->
+            <div class="tracking-stepper">
+              <div class="tracking-stepper-line">
+                <div class="tracking-stepper-fill"></div>
+              </div>
+              <div class="tracking-step done">
+                <div class="tracking-step-dot"><span class="material-symbols-outlined" style="font-size:18px;">check</span></div>
+                <div class="tracking-step-label">Order Placed</div>
+                <div class="tracking-step-sub">Sep 22, 10:14 AM</div>
+              </div>
+              <div class="tracking-step done">
+                <div class="tracking-step-dot"><span class="material-symbols-outlined" style="font-size:18px;">check</span></div>
+                <div class="tracking-step-label">Crated & Sealed</div>
+                <div class="tracking-step-sub">Sep 23, Studio Lagos</div>
+              </div>
+              <div class="tracking-step active">
+                <div class="tracking-step-dot"><span class="material-symbols-outlined" style="font-size:18px;">flight_takeoff</span></div>
+                <div class="tracking-step-label">Airway Transit</div>
+                <div class="tracking-step-sub">Frankfurt Cargo Hub</div>
+              </div>
+              <div class="tracking-step out-delivery-active">
+                <div class="tracking-step-dot"><span class="material-symbols-outlined" style="font-size:18px;">home</span></div>
+                <div class="tracking-step-label">Out for Delivery</div>
+                <div class="tracking-step-sub">Arriving Today</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Section 2: Completed Order History & Invoices -->
+          <div class="table-card" style="margin-bottom: 28px;">
+            <div class="table-header">
+              <h3 class="chart-title">Completed Order History & Receipts</h3>
+              <span class="badge badge-success">3 Fulfilled Works</span>
+            </div>
+            <div class="table-responsive">
+              <table class="artisan-table">
+                <thead>
+                  <tr>
+                    <th>Order ID</th>
+                    <th>Artwork Name</th>
+                    <th>Artisan / Studio</th>
+                    <th>Date</th>
+                    <th>Total</th>
+                    <th>Status</th>
+                    <th>Receipt</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="table-row-slide-right">
+                    <td><strong>#CHT-8942</strong></td>
+                    <td>Ancient Spirals Terracotta Vessel</td>
+                    <td>Nia Adebayo (Lagos)</td>
+                    <td>Sep 22, 2026</td>
+                    <td style="font-weight:700; color:var(--c-warm-brown);">$185.00</td>
+                    <td><span class="badge badge-terracotta">In Transit</span></td>
+                    <td><button class="btn btn-outline btn-sm" onclick="window.location.href='404.html'">PDF Invoice</button></td>
+                  </tr>
+                  <tr class="table-row-slide-right">
+                    <td><strong>#CHT-8815</strong></td>
+                    <td>Queen Mother Serenity Bust</td>
+                    <td>Kwame Asante (Kumasi)</td>
+                    <td>Sep 10, 2026</td>
+                    <td style="font-weight:700; color:var(--c-warm-brown);">$340.00</td>
+                    <td><span class="badge badge-success">Delivered</span></td>
+                    <td><button class="btn btn-outline btn-sm" onclick="window.location.href='404.html'">PDF Invoice</button></td>
+                  </tr>
+                  <tr class="table-row-slide-right">
+                    <td><strong>#CHT-8720</strong></td>
+                    <td>Zulu Ceremonial Collar</td>
+                    <td>Zola Mthembu (Durban)</td>
+                    <td>Aug 29, 2026</td>
+                    <td style="font-weight:700; color:var(--c-warm-brown);">$125.00</td>
+                    <td><span class="badge badge-success">Delivered</span></td>
+                    <td><button class="btn btn-outline btn-sm" onclick="window.location.href='404.html'">PDF Invoice</button></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- Section 3: Serialized Provenance Certificates Vault -->
+          <div class="section-subtitle-block">
+            <h3 class="section-subtitle-title">Serialized Provenance Certificates Vault</h3>
+            <span class="badge badge-craft">Archival Authenticity</span>
+          </div>
+          <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 20px; margin-bottom: 28px;">
+            <div class="card-artisan anim-triplet-left" style="padding: 20px; border-left: 4px solid var(--c-terracotta);">
+              <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
+                <span class="cert-seal-badge"><span class="material-symbols-outlined" style="font-size:14px;">verified</span>CERT #PC-2026-8942</span>
+                <span class="badge badge-craft">Verified Seal</span>
+              </div>
+              <h4 style="font-size:1.05rem; margin-bottom:4px;">Ancient Spirals Terracotta Vessel</h4>
+              <p style="font-size:0.82rem; color:var(--c-text-muted); margin-bottom:14px;">Maker: Nia Adebayo &bull; Medium: Pit-fired river clay</p>
+              <button class="btn btn-outline btn-sm" style="width:100%;" onclick="window.location.href='404.html'">
+                <span class="material-symbols-outlined" style="font-size:16px;">download</span>
+                <span>Download Provenance PDF</span>
+              </button>
+            </div>
+
+            <div class="card-artisan anim-triplet-center" style="padding: 20px; border-left: 4px solid var(--c-warm-brown);">
+              <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
+                <span class="cert-seal-badge"><span class="material-symbols-outlined" style="font-size:14px;">verified</span>CERT #PC-2026-8815</span>
+                <span class="badge badge-craft">Verified Seal</span>
+              </div>
+              <h4 style="font-size:1.05rem; margin-bottom:4px;">Queen Mother Serenity Bust</h4>
+              <p style="font-size:0.82rem; color:var(--c-text-muted); margin-bottom:14px;">Maker: Kwame Asante &bull; Medium: Carved Jacaranda</p>
+              <button class="btn btn-outline btn-sm" style="width:100%;" onclick="window.location.href='404.html'">
+                <span class="material-symbols-outlined" style="font-size:16px;">download</span>
+                <span>Download Provenance PDF</span>
+              </button>
+            </div>
+
+            <div class="card-artisan anim-triplet-right" style="padding: 20px; border-left: 4px solid var(--c-ochre);">
+              <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
+                <span class="cert-seal-badge"><span class="material-symbols-outlined" style="font-size:14px;">verified</span>CERT #PC-2026-8720</span>
+                <span class="badge badge-craft">Verified Seal</span>
+              </div>
+              <h4 style="font-size:1.05rem; margin-bottom:4px;">Zulu Ceremonial Collar</h4>
+              <p style="font-size:0.82rem; color:var(--c-text-muted); margin-bottom:14px;">Maker: Zola Mthembu &bull; Medium: Glass beadwork</p>
+              <button class="btn btn-outline btn-sm" style="width:100%;" onclick="window.location.href='404.html'">
+                <span class="material-symbols-outlined" style="font-size:16px;">download</span>
+                <span>Download Provenance PDF</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Section 4: Artisan Direct Impact & Fair-Trade Receipts -->
+          <div class="card-artisan anim-from-left" style="padding: 24px; background: linear-gradient(135deg, var(--c-cream-soft) 0%, var(--c-white) 100%);">
+            <h3 style="font-size:1.2rem; margin-bottom:12px; color:var(--c-deep-brown);">Fair-Trade Direct Creator Remittance</h3>
+            <p style="font-size:0.88rem; color:var(--c-text-muted); line-height:1.7; margin-bottom:16px;">
+              Of your total $1,420 acquisition investment, <strong>$1,225.00 (86.2%)</strong> was directly transferred to our artisan creators via secure local bank or mobile money (M-Pesa). $95 funded studio equipment subsidies, and $100 insured carbon-neutral air cargo.
+            </p>
+            <div style="display:flex; gap:12px; flex-wrap:wrap;">
+              <button class="btn btn-primary btn-sm" onclick="window.location.href='404.html'">
+                <span class="material-symbols-outlined" style="font-size:16px;">volunteer_activism</span>
+                <span>Send Direct Artisan Tip</span>
+              </button>
+              <button class="btn btn-outline btn-sm" onclick="window.location.href='404.html'">
+                <span>View Fair-Trade Audit</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- VIEW 4: WISHLIST (4 SECTIONS) -->
+        <div id="view-buyer-wishlist" class="dashboard-view-panel">
+          <div class="dashboard-header-block">
+            <div>
+              <h2 class="dashboard-welcome-title">My Wishlist & Saved Artworks</h2>
+              <p class="dashboard-welcome-desc">Artworks and creations reserved for future studio acquisitions.</p>
+            </div>
+            <button class="btn btn-outline btn-sm" onclick="window.location.href='404.html'">
+              <span class="material-symbols-outlined" style="font-size:18px;">shopping_cart_checkout</span>
+              <span>Acquire All Saved Pieces</span>
+            </button>
+          </div>
+
+          <!-- Section 1: Saved Handcrafted Masterpieces Grid -->
+          <div class="section-subtitle-block" style="margin-top:0;">
+            <h3 class="section-subtitle-title">Saved Artworks In Studio Vault</h3>
+            <span class="badge badge-terracotta">3 Items Saved</span>
+          </div>
+          <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap:20px; margin-bottom:30px;">
+            <div class="card-artisan anim-triplet-left">
+              <span class="badge badge-terracotta" style="margin-bottom:8px;">Only 2 Left in Studio</span>
+              <h4 style="font-size:1.1rem; color:var(--c-deep-brown);">Solar Mandala Sweetgrass Basket</h4>
+              <p style="font-size:0.85rem; color:var(--c-text-muted);">Crafted by Amina Jallow (Banjul) &bull; Natural wild sweetgrass</p>
+              <div style="margin: 12px 0; font-weight:800; color:var(--c-warm-brown); font-size:1.15rem;">$110.00</div>
+              <div style="display:flex; gap:10px;">
+                <a href="404.html" class="btn btn-primary btn-sm" style="flex:1;">Move to Acquisition</a>
+                <button class="btn btn-outline btn-sm" onclick="showArtisanToast('Removed from wishlist.', 'info')">Remove</button>
+              </div>
+            </div>
+
+            <div class="card-artisan anim-triplet-center">
+              <span class="badge badge-craft" style="margin-bottom:8px;">Made to Order (14 Days)</span>
+              <h4 style="font-size:1.1rem; color:var(--c-deep-brown);">Royal Ashanti Kente Wall Hanging</h4>
+              <p style="font-size:0.85rem; color:var(--c-text-muted);">Crafted by Kofi Mensah (Bonwire) &bull; Double-loomed gold silk</p>
+              <div style="margin: 12px 0; font-weight:800; color:var(--c-warm-brown); font-size:1.15rem;">$260.00</div>
+              <div style="display:flex; gap:10px;">
+                <a href="404.html" class="btn btn-primary btn-sm" style="flex:1;">Move to Acquisition</a>
+                <button class="btn btn-outline btn-sm" onclick="showArtisanToast('Removed from wishlist.', 'info')">Remove</button>
+              </div>
+            </div>
+
+            <div class="card-artisan anim-triplet-right">
+              <span class="badge badge-success" style="margin-bottom:8px;">1 of 1 Unique Piece</span>
+              <h4 style="font-size:1.1rem; color:var(--c-deep-brown);">Benin Lost-Wax Bronze Leopard</h4>
+              <p style="font-size:0.85rem; color:var(--c-text-muted);">Crafted by Osa Idahosa (Benin City) &bull; Ancestral hollow bronze</p>
+              <div style="margin: 12px 0; font-weight:800; color:var(--c-warm-brown); font-size:1.15rem;">$450.00</div>
+              <div style="display:flex; gap:10px;">
+                <a href="404.html" class="btn btn-primary btn-sm" style="flex:1;">Move to Acquisition</a>
+                <button class="btn btn-outline btn-sm" onclick="showArtisanToast('Removed from wishlist.', 'info')">Remove</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Section 2: Upcoming Studio Drops & Reserved Batches -->
+          <div class="section-subtitle-block">
+            <h3 class="section-subtitle-title">Upcoming Studio Drops & Kiln Unveilings</h3>
+            <span class="badge badge-terracotta">Priority Access</span>
+          </div>
+          <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 20px; margin-bottom: 30px;">
+            <div class="card-artisan anim-from-left" style="padding: 20px; background-color: var(--c-cream-soft);">
+              <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+                <span class="badge badge-craft">Drop in 4 Days</span>
+                <span style="font-weight:700; color:var(--c-warm-brown); font-size:0.9rem;">Estimated $280</span>
+              </div>
+              <h4 style="font-size:1.1rem; color:var(--c-deep-brown); margin-bottom:4px;">Sacred Baobab Ebony Mask Collection</h4>
+              <p style="font-size:0.85rem; color:var(--c-text-muted); margin-bottom:14px;">Master Kwame Asante is finalizing 10 serialized hand-carved ebony spirit masks.</p>
+              <button class="btn btn-primary btn-sm" onclick="window.location.href='404.html'">
+                <span class="material-symbols-outlined" style="font-size:16px;">notifications_active</span>
+                <span>Join Priority Waitlist</span>
+              </button>
+            </div>
+
+            <div class="card-artisan anim-from-right" style="padding: 20px; background-color: var(--c-cream-soft);">
+              <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+                <span class="badge badge-terracotta">Kiln Opening Oct 8</span>
+                <span style="font-weight:700; color:var(--c-warm-brown); font-size:0.9rem;">Estimated $195</span>
+              </div>
+              <h4 style="font-size:1.1rem; color:var(--c-deep-brown); margin-bottom:4px;">Smoked Ouidah Black Clay Pitchers</h4>
+              <p style="font-size:0.85rem; color:var(--c-text-muted); margin-bottom:14px;">Nia Adebayo's special batch of ceremonial burnished pit-fired water vessels.</p>
+              <button class="btn btn-primary btn-sm" onclick="window.location.href='404.html'">
+                <span class="material-symbols-outlined" style="font-size:16px;">notifications_active</span>
+                <span>Reserve Pre-Order Spot</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Section 3: Restock & Price Drop Notifications -->
+          <div class="section-subtitle-block">
+            <h3 class="section-subtitle-title">Studio Alerts & Restock Preferences</h3>
+            <span class="badge badge-craft">Notification Center</span>
+          </div>
+          <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; margin-bottom: 30px;">
+            <div class="card-artisan anim-triplet-left" style="padding: 16px; display:flex; justify-content:space-between; align-items:center;">
+              <div>
+                <strong style="color:var(--c-deep-brown); font-size:0.95rem;">Price Drop Alerts</strong>
+                <div style="font-size:0.8rem; color:var(--c-text-muted);">Notify when saved items drop in price</div>
+              </div>
+              <span class="badge badge-success">Active</span>
+            </div>
+            <div class="card-artisan anim-triplet-center" style="padding: 16px; display:flex; justify-content:space-between; align-items:center;">
+              <div>
+                <strong style="color:var(--c-deep-brown); font-size:0.95rem;">Low-Stock Warning</strong>
+                <div style="font-size:0.8rem; color:var(--c-text-muted);">Alert when only 1 unit remains in workshop</div>
+              </div>
+              <span class="badge badge-success">Active</span>
+            </div>
+            <div class="card-artisan anim-triplet-right" style="padding: 16px; display:flex; justify-content:space-between; align-items:center;">
+              <div>
+                <strong style="color:var(--c-deep-brown); font-size:0.95rem;">New Artist Drops</strong>
+                <div style="font-size:0.8rem; color:var(--c-text-muted);">Instant SMS when followed artists publish works</div>
+              </div>
+              <span class="badge badge-success">Active</span>
+            </div>
+          </div>
+
+          <!-- Section 4: Followed Artisan Workshops Directory -->
+          <div class="section-subtitle-block">
+            <h3 class="section-subtitle-title">Followed Master Studios</h3>
+            <span class="badge badge-terracotta">3 Studios Followed</span>
+          </div>
+          <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 20px;">
+            <div class="card-artisan anim-triplet-left" style="padding: 18px; display:flex; justify-content:space-between; align-items:center;">
+              <div>
+                <h4 style="color:var(--c-deep-brown); font-size:1rem;">Nia Adebayo Studio</h4>
+                <div style="font-size:0.82rem; color:var(--c-text-muted);">Lagos, Nigeria &bull; 24 Published Pieces</div>
+              </div>
+              <button class="btn btn-outline btn-sm" onclick="window.location.href='404.html'">Browse</button>
+            </div>
+            <div class="card-artisan anim-triplet-center" style="padding: 18px; display:flex; justify-content:space-between; align-items:center;">
+              <div>
+                <h4 style="color:var(--c-deep-brown); font-size:1rem;">Asante Heritage Woodcraft</h4>
+                <div style="font-size:0.82rem; color:var(--c-text-muted);">Kumasi, Ghana &bull; 18 Published Pieces</div>
+              </div>
+              <button class="btn btn-outline btn-sm" onclick="window.location.href='404.html'">Browse</button>
+            </div>
+            <div class="card-artisan anim-triplet-right" style="padding: 18px; display:flex; justify-content:space-between; align-items:center;">
+              <div>
+                <h4 style="color:var(--c-deep-brown); font-size:1rem;">Royal Bonwire Weavers</h4>
+                <div style="font-size:0.82rem; color:var(--c-text-muted);">Bonwire, Ghana &bull; 12 Published Pieces</div>
+              </div>
+              <button class="btn btn-outline btn-sm" onclick="window.location.href='404.html'">Browse</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- VIEW 5: ACTIVITY & INSIGHTS (4 SECTIONS) -->
+        <div id="view-buyer-insights" class="dashboard-view-panel">
+          <div class="dashboard-header-block">
+            <div>
+              <h2 class="dashboard-welcome-title">Activity & Collection Insights</h2>
+              <p class="dashboard-welcome-desc">Comprehensive analytics on your collector investment and regional artisan support.</p>
+            </div>
+            <button class="btn btn-outline btn-sm" onclick="window.location.href='404.html'">
+              <span class="material-symbols-outlined" style="font-size:18px;">analytics</span>
+              <span>Export Collector Dossier</span>
+            </button>
+          </div>
+
+          <!-- Section 1: Collector Investment & Category Distribution -->
+          <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap:20px; margin-bottom:28px;">
+            <div class="card-artisan anim-from-left">
+              <h4 style="color:var(--c-deep-brown); font-size:1.1rem; margin-bottom:8px;">Portfolio Medium Distribution</h4>
+              <p style="font-size:0.86rem; color:var(--c-text-muted); line-height:1.65; margin-bottom:12px;">
+                Your acquisitions are distributed across 35% Ceramics, 25% Handwoven Textiles, 20% Wood Carvings, and 20% Beaded Jewelry.
+              </p>
+              <div style="display:flex; justify-content:space-between; font-size:0.82rem; font-weight:700; color:var(--c-warm-brown);">
+                <span>4 Distinct Heritage Mediums</span>
+                <span>Balanced Collection</span>
+              </div>
+            </div>
+
+            <div class="card-artisan anim-from-right">
+              <h4 style="color:var(--c-deep-brown); font-size:1.1rem; margin-bottom:8px;">Valuation Trajectory</h4>
+              <p style="font-size:0.86rem; color:var(--c-text-muted); line-height:1.65; margin-bottom:12px;">
+                Average acquisition value: <strong>$236 per piece</strong>. Verified rare pit-fired and royal weave editions appreciate at an estimated <strong>+14.2%</strong> annually.
+              </p>
+              <div style="display:flex; justify-content:space-between; font-size:0.82rem; font-weight:700; color:var(--c-success);">
+                <span>Certified Provenance</span>
+                <span>+14.2% Growth</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Section 2: Fair-Trade & Community Impact Scorecard -->
+          <div class="card-artisan impact-scorecard-card" style="margin-bottom:28px; padding:24px;">
+            <div class="section-subtitle-block" style="margin-top:0;">
+              <h3 class="section-subtitle-title">Direct Cultural Impact Scorecard</h3>
+              <span class="badge badge-success live-counter" data-count="86.2" data-decimals="1" data-suffix="% Direct Fair-Trade" data-delay="80">86.2% Direct Fair-Trade</span>
+            </div>
+            <div class="impact-scorecard-grid" style="display:grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap:18px; text-align:center;">
+              <div class="impact-stat-card impact-card-1 anim-impact-card">
+                <div class="impact-stat-val live-counter" data-count="1225" data-prefix="$" data-comma="true" data-delay="100" style="font-size:1.6rem; font-weight:800; color:var(--c-warm-brown);">$1,225</div>
+                <div style="font-size:0.82rem; color:var(--c-text-muted); margin-top:4px;">Direct Artisan Payouts</div>
+              </div>
+              <div class="impact-stat-card impact-card-2 anim-impact-card">
+                <div class="impact-stat-val live-counter" data-count="12" data-suffix=" Studios" data-delay="260" style="font-size:1.6rem; font-weight:800; color:var(--c-terracotta);">12 Studios</div>
+                <div style="font-size:0.82rem; color:var(--c-text-muted); margin-top:4px;">Family Workshops Funded</div>
+              </div>
+              <div class="impact-stat-card impact-card-3 anim-impact-card">
+                <div class="impact-stat-val live-counter" data-count="4" data-suffix=" Nations" data-delay="420" style="font-size:1.6rem; font-weight:800; color:var(--c-ochre);">4 Nations</div>
+                <div style="font-size:0.82rem; color:var(--c-text-muted); margin-top:4px;">Nigeria, Ghana, SA, Gambia</div>
+              </div>
+              <div class="impact-stat-card impact-card-4 anim-impact-card">
+                <div class="impact-stat-val live-counter" data-count="100" data-suffix="%" data-delay="580" style="font-size:1.6rem; font-weight:800; color:var(--c-success);">100%</div>
+                <div style="font-size:0.82rem; color:var(--c-text-muted); margin-top:4px;">Sustainable Raw Materials</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Section 3: Collector Activity & Audit Timeline -->
+          <div class="card-artisan audit-log-card" style="margin-bottom:28px; padding:24px; overflow:hidden;">
+            <div class="section-subtitle-block" style="margin-top:0;">
+              <h3 class="section-subtitle-title">Collector Activity & Provenance Audit Log</h3>
+              <span class="badge badge-terracotta">Real-time Stream</span>
+            </div>
+            <ul class="audit-log-list" style="display:flex; flex-direction:column; gap:14px; list-style:none; padding:0; margin:0;">
+              <li class="audit-log-item audit-item-1 anim-log-arrange" style="display:flex; justify-content:space-between; align-items:center; border-bottom:1px dashed var(--c-border-subtle); padding-bottom:10px;">
+                <div>
+                  <strong style="color:var(--c-deep-brown);">Downloaded Certificate of Provenance #PC-2026-8942</strong>
+                  <div style="font-size:0.82rem; color:var(--c-text-muted);">Ancient Spirals Terracotta Vessel &bull; Serialized Master Signature Verified</div>
+                </div>
+                <span style="font-size:0.8rem; color:var(--c-text-muted);">Sep 24, 2026</span>
+              </li>
+              <li class="audit-log-item audit-item-2 anim-log-arrange" style="display:flex; justify-content:space-between; align-items:center; border-bottom:1px dashed var(--c-border-subtle); padding-bottom:10px;">
+                <div>
+                  <strong style="color:var(--c-deep-brown);">Acquisition Dispatched: Order #CHT-8942</strong>
+                  <div style="font-size:0.82rem; color:var(--c-text-muted);">Handed over to DHL International Airway Hub in Lagos</div>
+                </div>
+                <span style="font-size:0.8rem; color:var(--c-text-muted);">Sep 23, 2026</span>
+              </li>
+              <li class="audit-log-item audit-item-3 anim-log-arrange" style="display:flex; justify-content:space-between; align-items:center; border-bottom:1px dashed var(--c-border-subtle); padding-bottom:10px;">
+                <div>
+                  <strong style="color:var(--c-deep-brown);">Acquired Queen Mother Serenity Bust</strong>
+                  <div style="font-size:0.82rem; color:var(--c-text-muted);">Paid $340.00 to Asante Heritage Woodcraft studio</div>
+                </div>
+                <span style="font-size:0.8rem; color:var(--c-text-muted);">Sep 10, 2026</span>
+              </li>
+              <li class="audit-log-item audit-item-4 anim-log-arrange" style="display:flex; justify-content:space-between; align-items:center; padding-bottom:2px;">
+                <div>
+                  <strong style="color:var(--c-deep-brown);">Published 5-Star Review for Master Kwame Asante</strong>
+                  <div style="font-size:0.82rem; color:var(--c-text-muted);">"Breathtaking jacaranda grain and museum-grade wooden packing."</div>
+                </div>
+                <span style="font-size:0.8rem; color:var(--c-text-muted);">Sep 02, 2026</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Section 4: Curatorial Patron Tiers & Collector Badges -->
+          <div class="card-artisan patron-tiers-card" style="padding:24px; overflow:hidden;">
+            <div class="section-subtitle-block" style="margin-top:0;">
+              <h3 class="section-subtitle-title">Curatorial Patron Tiers & Collector Badges</h3>
+              <span class="badge badge-craft">Tier Status</span>
+            </div>
+            <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap:18px; margin-bottom:16px;">
+              <div class="patron-badge-card patron-card-1 anim-patron-card">
+                <span class="material-symbols-outlined" style="font-size:32px; color:var(--c-terracotta);">workspace_premium</span>
+                <div>
+                  <strong style="color:var(--c-deep-brown); font-size:0.95rem;">Patron of Living Heritage</strong>
+                  <div style="font-size:0.8rem; color:var(--c-text-muted);">Unlocked &bull; 4 Ancestral Mediums</div>
+                </div>
+              </div>
+              <div class="patron-badge-card patron-card-2 anim-patron-card">
+                <span class="material-symbols-outlined" style="font-size:32px; color:var(--c-warm-brown);">handshake</span>
+                <div>
+                  <strong style="color:var(--c-deep-brown); font-size:0.95rem;">Direct Studio Benefactor</strong>
+                  <div style="font-size:0.8rem; color:var(--c-text-muted);">Unlocked &bull; $1,000+ Direct Remittance</div>
+                </div>
+              </div>
+              <div class="patron-badge-card patron-card-3 anim-patron-card">
+                <span class="material-symbols-outlined" style="font-size:32px; color:var(--c-ochre);">shield</span>
+                <div>
+                  <strong style="color:var(--c-deep-brown); font-size:0.95rem;">Provenance Guardian</strong>
+                  <div style="font-size:0.8rem; color:var(--c-text-muted);">Unlocked &bull; 100% Serialized Verified</div>
+                </div>
+              </div>
+            </div>
+            <div style="padding:14px; background:var(--c-white); border:1px solid var(--c-border-subtle); border-radius:var(--radius-md);">
+              <div style="display:flex; justify-content:space-between; font-size:0.85rem; font-weight:700; margin-bottom:6px;">
+                <span>Progress to Silver Collector Tier</span>
+                <span class="tier-progress-text">$1,420 / $2,000 (71%)</span>
+              </div>
+              <div class="tier-progress-track" style="width:100%; height:8px; background:var(--c-cream-soft); border-radius:4px; overflow:hidden;">
+                <div class="tier-progress-fill"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </main>
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

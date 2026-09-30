@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact & Concierge | Chatly Art & Craft Marketplace</title>
+  <meta name="description" content="Reach our curatorial and artisan concierge team for custom commissions, collector inquiries, and creator support.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+<body class="craft-texture">
+
+  <!-- UNIQUE ART & CRAFT PRELOADER -->
+  <div id="artisan-preloader" class="artisan-preloader" aria-label="Loading Contact Page">
+    <div class="preloader-curtain curtain-left"></div>
+    <div class="preloader-curtain curtain-right"></div>
+    <div class="preloader-content">
+      <div class="sketch-stage">
+        <svg class="sketch-lines-svg" viewBox="0 0 320 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle class="stroke-ring" cx="160" cy="160" r="118" stroke="rgba(125, 74, 43, 0.35)" stroke-width="2" stroke-dasharray="14 10" />
+          <path class="stroke-pencil" d="M 45 160 C 45 96 96 45 160 45 C 224 45 275 96 275 160 C 275 224 224 275 160 275" stroke="#5A3521" stroke-width="2.5" stroke-linecap="round" />
+          <path class="stroke-brush" d="M 60 130 Q 160 30 260 130 Q 280 220 160 260 Q 40 220 60 130" stroke="#B86737" stroke-width="3" stroke-linecap="round" />
+          <path class="craft-spiral" d="M 160 160 m -28 0 a 28,28 0 1,0 56,0 a 28,28 0 1,0 -56,0 m -18 0 a 46,46 0 1,0 92,0 a 46,46 0 1,0 -92,0" stroke="#7D4A2B" stroke-width="2" stroke-linecap="round" />
+        </svg>
+
+        <div class="logo-assemble-container">
+          <img src="assets/stacklylogo_18.webp" alt="Chatly Craft Marketplace" class="preloader-logo-img">
+        </div>
+
+        <div class="finishing-flourish">
+          <span class="finishing-dot dot-1"></span>
+          <span class="finishing-dot dot-2"></span>
+          <span class="finishing-dot dot-3"></span>
+          <span class="finishing-dot dot-4"></span>
+        </div>
+      </div>
+      <div class="preloader-status">
+        <span class="craft-label">CONNECTING TO OUR ARTISAN CONCIERGE</span>
+        <div class="drawing-progress-bar">
+          <div class="progress-fill"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PUBLIC HEADER -->
+  <header class="public-header" id="main-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand-logo-link">
+        <img src="assets/stacklylogo_18.webp" alt="Chatly Logo" class="chatly-logo-img">
+      </a>
+
+      <nav class="nav-menu">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="blog.html" class="nav-link">Blog</a>
+        <a href="contact.html" class="nav-link active">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <a href="login.html" class="btn btn-primary btn-sm">
+          <span class="material-symbols-outlined" style="font-size:18px;">login</span>
+          <span>Login</span>
+        </a>
+        <button class="mobile-nav-toggle" id="mobile-nav-toggle" aria-label="Toggle navigation menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div class="mobile-drawer" id="mobile-drawer">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="about.html" class="nav-link">About</a>
+      <a href="services.html" class="nav-link">Services</a>
+      <a href="blog.html" class="nav-link">Blog</a>
+      <a href="contact.html" class="nav-link active">Contact</a>
+      <div style="margin-top: 20px; display:flex; flex-direction:column; gap:12px;">
+        <a href="login.html" class="btn btn-primary btn-block">Login</a>
+        <a href="signup.html" class="btn btn-outline btn-block">Create Account</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- SECTION 1: CONTACT HERO -->
+    <section class="hero-section" style="padding: 85px 0 95px 0;">
+      <!-- Single clear background image on backside (Visible clearly, not dim, no white wash) -->
+      <div class="hero-single-bg" style="background-image: url('https://images.unsplash.com/photo-1582562124811-c09040d0a901?auto=format&fit=crop&w=1920&q=85');"></div>
+
+      <div class="container">
+        <div class="hero-content-center">
+          <span class="section-tag" style="margin-bottom:16px;"><span class="material-symbols-outlined" style="font-size:16px;">contact_support</span> Direct Communication</span>
+          <h1 class="hero-title-arranged">
+            <span class="hero-line hero-line-gold anim-hero-right-1">Reach Our Curatorial &</span>
+            <span class="hero-line hero-line-brown anim-hero-left">Artisan Concierge</span>
+          </h1>
+          <p class="hero-subtitle-arranged">
+            <span class="hero-sub-line anim-sub-right-1">Whether requesting custom commissions or inquiring about insured art transport,</span>
+            <span class="hero-sub-line anim-sub-right-2">our dedicated team of curators and concierge specialists is at your service.</span>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2 & 3: CONTACT INFO & INTERACTIVE FORM -->
+    <section class="section" style="padding: 20px 0 60px 0;">
+      <div class="container">
+        <div class="contact-grid">
+          
+          <!-- Contact Information Cards -->
+          <div class="contact-info-card">
+            <h3 style="font-size:1.6rem; margin-bottom:24px; color:var(--c-deep-brown);">Artisan Headquarters & Regional Hubs</h3>
+            
+            <div class="info-item">
+              <div class="info-icon"><span class="material-symbols-outlined">mail</span></div>
+              <div>
+                <div class="info-title">Electronic Mail</div>
+                <div class="info-text">
+                  General & Collector: <a href="mailto:artisan@chatlymarket.com" style="color:var(--c-warm-brown); font-weight:600;">artisan@chatlymarket.com</a><br>
+                  Creator Concierge: <a href="mailto:support@chatlycraft.com" style="color:var(--c-warm-brown); font-weight:600;">support@chatlycraft.com</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="info-item">
+              <div class="info-icon"><span class="material-symbols-outlined">call</span></div>
+              <div>
+                <div class="info-title">Telephone & Direct Lines</div>
+                <div class="info-text">
+                  Toll-Free (US / Global): +1 (800) 482-7826<br>
+                  East Hub (Nairobi): +254 20 790 3200<br>
+                  West Hub (Accra): +233 30 294 1150
+                </div>
+              </div>
+            </div>
+
+            <div class="info-item">
+              <div class="info-icon"><span class="material-symbols-outlined">location_on</span></div>
+              <div>
+                <div class="info-title">Physical Atelier & Offices</div>
+                <div class="info-text">
+                  Cultural Artisan Quarter, 14 Kenyatta Avenue, Nairobi, Kenya<br>
+                  Fine Art Representative Office: 450 Heritage Way, New York, NY 10013
+                </div>
+              </div>
+            </div>
+
+            <div class="info-item">
+              <div class="info-icon"><span class="material-symbols-outlined">schedule</span></div>
+              <div>
+                <div class="info-title">Business & Studio Hours</div>
+                <div class="info-text">
+                  Monday – Friday: 8:00 AM – 7:00 PM (EAT / EST)<br>
+                  Saturday: 9:00 AM – 5:00 PM (Curatorial Viewings by Appointment)<br>
+                  Sunday: Closed for Studio Craft Preparation
+                </div>
+              </div>
+            </div>
+
+            <div style="margin-top:28px; padding-top:20px; border-top:1px dashed var(--c-border-subtle);">
+              <div style="font-size:0.85rem; font-weight:700; text-transform:uppercase; color:var(--c-text-light); margin-bottom:10px;">Connect With Our Makers</div>
+              <div style="display:flex; gap:16px; color:var(--c-warm-brown); font-size:0.95rem;">
+                <a href="404.html" style="font-weight:600;">Instagram</a>
+                <a href="404.html" style="font-weight:600;">Pinterest</a>
+                <a href="404.html" style="font-weight:600;">Twitter/X</a>
+                <a href="404.html" style="font-weight:600;">YouTube</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contact Form Card -->
+          <div class="form-card">
+            <h3 style="font-size:1.6rem; margin-bottom:8px; color:var(--c-deep-brown);">Send Us a Message</h3>
+            <p style="font-size:0.92rem; color:var(--c-text-muted); margin-bottom:28px;">
+              Fill in your inquiry details below. Our artisan concierge team typically responds within 4 business hours.
+            </p>
+
+            <form id="chatly-contact-form" novalidate>
+              <div class="form-group">
+                <label for="contact-name" class="form-label">Full Name *</label>
+                <input type="text" id="contact-name" class="form-control" placeholder="e.g. Kumar Pandian" required>
+                <div class="form-error-msg">Please enter your full name.</div>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-email" class="form-label">Email Address *</label>
+                <input type="email" id="contact-email" class="form-control" placeholder="Enter your email" required>
+                <div class="form-error-msg">Please enter a valid email address.</div>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-subject" class="form-label">Subject *</label>
+                <select id="contact-subject" class="form-control" required>
+                  <option value="">Select an inquiry category</option>
+                  <option value="Custom Commission">Custom Artisan Commission</option>
+                  <option value="Artwork Inquiry">Artwork & Provenance Verification</option>
+                  <option value="Creator Application">Creator & Studio Application</option>
+                  <option value="Order & Logistics">Order Tracking & Shipping Status</option>
+                  <option value="Press & Partnership">Press, Exhibition & Partnerships</option>
+                </select>
+                <div class="form-error-msg">Please select an inquiry subject.</div>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-message" class="form-label">Message *</label>
+                <textarea id="contact-message" class="form-control" rows="5" placeholder="Share the details of your inquiry, bespoke dimensions, or question..." required></textarea>
+                <div class="form-error-msg">Please provide your message.</div>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-block btn-lg" style="margin-top:10px;">
+                Send Message to Concierge
+              </button>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: ILLUSTRATED CONTINENTAL ARTISAN MAP -->
+    <section class="section" style="padding: 20px 0 60px 0;">
+      <div class="container">
+        <div class="card-artisan" style="padding: 0; overflow:hidden; border-radius:var(--radius-xl);">
+          <div style="padding: 24px 30px; background:var(--c-cream-soft); border-bottom:1px solid var(--c-border-subtle); display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px;">
+            <div>
+              <h4 style="font-size:1.25rem; color:var(--c-deep-brown);">Artisan Guild Hubs Across the Continent</h4>
+              <p style="font-size:0.86rem; color:var(--c-text-muted);">Active studios in Nairobi, Accra, Lagos, Durban, and Marrakech.</p>
+            </div>
+            <span class="badge badge-terracotta">14 Regional Hubs Active</span>
+          </div>
+          
+          <div style="position:relative; width:100%; height:320px; background-color:#F5EFE7; display:flex; align-items:center; justify-content:center; overflow:hidden;">
+            <svg viewBox="0 0 800 320" style="width:100%; height:100%; opacity:0.85;">
+              <defs>
+                <pattern id="gridPattern" width="40" height="40" patternUnits="userSpaceOnUse">
+                  <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(125, 74, 43, 0.08)" stroke-width="1"/>
+                </pattern>
+              </defs>
+              <rect width="100%" height="100%" fill="url(#gridPattern)" />
+              <path d="M 380,40 Q 450,50 480,80 Q 520,130 500,180 Q 460,260 420,290 Q 390,300 380,260 Q 360,200 330,150 Q 300,130 320,80 Z" fill="rgba(217, 140, 69, 0.18)" stroke="var(--c-warm-brown)" stroke-width="2" stroke-dasharray="6 4" />
+              
+              <g transform="translate(480, 160)">
+                <circle r="8" fill="var(--c-terracotta)" />
+                <circle r="16" fill="rgba(184, 103, 55, 0.25)" />
+                <text x="14" y="5" font-family="'Plus Jakarta Sans', sans-serif" font-size="12" font-weight="700" fill="var(--c-deep-brown)">Nairobi HQ</text>
+              </g>
+              <g transform="translate(340, 140)">
+                <circle r="7" fill="var(--c-warm-brown)" />
+                <text x="-75" y="5" font-family="'Plus Jakarta Sans', sans-serif" font-size="12" font-weight="700" fill="var(--c-deep-brown)">Accra Hub</text>
+              </g>
+              <g transform="translate(365, 150)">
+                <circle r="7" fill="var(--c-ochre)" />
+                <text x="12" y="5" font-family="'Plus Jakarta Sans', sans-serif" font-size="12" font-weight="700" fill="var(--c-deep-brown)">Lagos Studio</text>
+              </g>
+              <g transform="translate(420, 270)">
+                <circle r="7" fill="var(--c-medium-brown)" />
+                <text x="12" y="5" font-family="'Plus Jakarta Sans', sans-serif" font-size="12" font-weight="700" fill="var(--c-deep-brown)">Durban Collective</text>
+              </g>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 5: REGIONAL OFFICE HOURS & LINES -->
+    <section class="section" style="padding: 40px 0; background-color: var(--c-cream-soft);">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag"><span class="material-symbols-outlined" style="font-size:16px;">hub</span> Regional Concierge</span>
+          <h2 class="section-title">Regional Liaison Hours</h2>
+          <p class="section-subtitle">Multilingual curatorial assistance across international time zones.</p>
+        </div>
+        <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap:20px;">
+          <div class="card-artisan">
+            <h4>Nairobi Regional Desk</h4>
+            <p style="font-size:0.88rem; color:var(--c-text-muted); margin-top:6px;">8:00 AM – 7:00 PM EAT (English, Swahili)</p>
+          </div>
+          <div class="card-artisan">
+            <h4>Lagos & Accra Regional Desk</h4>
+            <p style="font-size:0.88rem; color:var(--c-text-muted); margin-top:6px;">8:00 AM – 6:00 PM GMT (English, Yoruba, Twi)</p>
+          </div>
+          <div class="card-artisan">
+            <h4>London & European Liaison</h4>
+            <p style="font-size:0.88rem; color:var(--c-text-muted); margin-top:6px;">9:00 AM – 5:30 PM BST (English, French)</p>
+          </div>
+          <div class="card-artisan">
+            <h4>New York Americas Desk</h4>
+            <p style="font-size:0.88rem; color:var(--c-text-muted); margin-top:6px;">9:00 AM – 6:00 PM EST (English, Spanish)</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 6: FAQ ACCORDION -->
+    <section class="section" style="padding: 60px 0;">
+      <div class="container">
+        <div class="faq-accordion" style="margin-top:0;">
+          <div class="section-header" style="margin-bottom:32px;">
+            <span class="section-tag"><span class="material-symbols-outlined" style="font-size:16px;">help</span> Answers</span>
+            <h2 class="section-title" style="font-size:2.2rem;">Frequently Asked Questions</h2>
+          </div>
+
+          <div class="faq-item active">
+            <div class="faq-header">
+              <span class="faq-title">How do I verify the authentic origin and handcrafting of an item?</span>
+              <span class="faq-icon"><span class="material-symbols-outlined">expand_more</span></span>
+            </div>
+            <div class="faq-body">
+              Every creation sold on Chatly comes with an authentic Serialized Certificate of Provenance signed by the master artisan. We personally vet and inspect our artisan guild studios to guarantee traditional methods without synthetic industrial shortcuts.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-header">
+              <span class="faq-title">Can I request a custom or bespoke commission from an artist?</span>
+              <span class="faq-icon"><span class="material-symbols-outlined">expand_more</span></span>
+            </div>
+            <div class="faq-body">
+              Yes! You can contact the artist directly through your Buyer Dashboard or select "Custom Commission" in the contact form above. We facilitate direct communication, dimensional sketches, and safe escrow payments until you approve photographs of the finished piece.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-header">
+              <span class="faq-title">What is your fragile art shipping and breakage insurance policy?</span>
+              <span class="faq-icon"><span class="material-symbols-outlined">expand_more</span></span>
+            </div>
+            <div class="faq-body">
+              All ceramic vessels, wood carvings, and delicate crafts are encased in multi-layer biodegradable cellular shock cushioning and sealed timber crates. In the rare event of transit damage, our 100% white-glove transit insurance provides immediate complimentary re-creation or full refund.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-header">
+              <span class="faq-title">How are artisans compensated?</span>
+              <span class="faq-icon"><span class="material-symbols-outlined">expand_more</span></span>
+            </div>
+            <div class="faq-body">
+              Unlike traditional dealers who take 50-70% markups, Chatly remits over 85% of the purchase price directly to the artisan. Payouts are made instantly via local mobile wallets (M-Pesa, Wave) or direct bank transfer upon shipment confirmation.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-header">
+              <span class="faq-title">How do digital art downloads and commercial licenses work?</span>
+              <span class="faq-icon"><span class="material-symbols-outlined">expand_more</span></span>
+            </div>
+            <div class="faq-body">
+              Upon purchase, digital prints and 3D assets are instantly unlocked in your Buyer Dashboard under "Downloads". Standard purchases include non-commercial fine-art display rights; extended commercial printing licenses can be selected during checkout.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-header">
+              <span class="faq-title">How do I apply to become an artisan seller on Chatly?</span>
+              <span class="faq-icon"><span class="material-symbols-outlined">expand_more</span></span>
+            </div>
+            <div class="faq-body">
+              Simply navigate to our <a href="signup.html" style="color:var(--c-warm-brown); font-weight:700;">Sign Up Page</a>, select the "Seller" role, and submit 3 photos of your handcrafted pieces. Our curatorial council reviews applications within 48 hours.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 7: BESPOKE COMMISSION PROTOCOLS -->
+    <section class="section" style="padding: 60px 0; background-color: var(--c-cream-soft);">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag"><span class="material-symbols-outlined" style="font-size:16px;">brush</span> Tailored Creations</span>
+          <h2 class="section-title">Architectural & Bespoke Commissions</h2>
+          <p class="section-subtitle">How we oversee custom commissions from initial sketch to final installation.</p>
+        </div>
+        <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap:24px;">
+          <div class="card-artisan">
+            <h4>Dimensional Consultation</h4>
+            <p style="font-size:0.9rem; color:var(--c-text-muted); margin-top:6px;">Our curators review your architectural elevations, lighting requirements, and wall weight allowances.</p>
+          </div>
+          <div class="card-artisan">
+            <h4>Kiln & Loom Milestone Snaps</h4>
+            <p style="font-size:0.9rem; color:var(--c-text-muted); margin-top:6px;">Receive weekly photo and video progress dispatches directly from the maker's workshop bench.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 8: PRIVATE VIEWINGS NOTICE -->
+    <section class="section maker-cta-section" id="maker-cta-section" style="padding: 70px 0 90px 0; text-align: center; overflow: hidden;">
+      <div class="container container-narrow">
+        <span class="section-tag maker-cta-tag"><span class="material-symbols-outlined" style="font-size:16px;">visibility</span> Private Viewings</span>
+        <h2 class="section-title maker-cta-title anim-cta-words-right">Schedule a Curatorial Video Walkthrough</h2>
+        <p class="section-subtitle maker-cta-sentence anim-cta-words-left" style="margin-bottom: 28px;">
+          Would you like to examine an high-value masterwork under gallery lighting before finalizing your acquisition? Request a live video appointment with our head curator.
+        </p>
+        <div class="maker-cta-actions" style="display:flex; justify-content:center; gap:16px; flex-wrap:wrap;">
+          <a href="404.html" class="btn btn-primary btn-lg cta-btn-left">Book Curatorial Consultation</a>
+          <a href="404.html" class="btn btn-secondary btn-lg cta-btn-right">Explore Creator Tools</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="public-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a href="index.html" class="brand-logo-link footer-logo-link"><img src="assets/stacklylogo_18.webp" alt="Chatly Logo" class="footer-brand-logo"></a>
+          <p class="footer-desc">
+            Chatly is an authentic digital art and handcrafted craft marketplace connecting global collectors with authentic heritage creations.
+          </p>
+        </div>
+        <div>
+          <h4 class="footer-heading">Quick Links</h4>
+          <div class="footer-links">
+            <a href="index.html" class="footer-link"><span class="material-symbols-outlined" style="font-size:16px;">chevron_right</span> Home</a>
+            <a href="about.html" class="footer-link"><span class="material-symbols-outlined" style="font-size:16px;">chevron_right</span> About</a>
+            <a href="services.html" class="footer-link"><span class="material-symbols-outlined" style="font-size:16px;">chevron_right</span> Services</a>
+            <a href="blog.html" class="footer-link"><span class="material-symbols-outlined" style="font-size:16px;">chevron_right</span> Blog</a>
+            <a href="contact.html" class="footer-link"><span class="material-symbols-outlined" style="font-size:16px;">chevron_right</span> Contact</a>
+          </div>
+        </div>
+        <div>
+          <h4 class="footer-heading">Creator Hub</h4>
+          <div class="footer-links">
+            <a href="404.html" class="footer-link"><span class="material-symbols-outlined" style="font-size:16px;">chevron_right</span> Open Artisan Shop</a>
+            <a href="404.html" class="footer-link"><span class="material-symbols-outlined" style="font-size:16px;">chevron_right</span> Seller Dashboard</a>
+            <a href="404.html" class="footer-link"><span class="material-symbols-outlined" style="font-size:16px;">chevron_right</span> Buyer Dashboard</a>
+            <a href="404.html" class="footer-link"><span class="material-symbols-outlined" style="font-size:16px;">chevron_right</span> Creator Tools</a>
+            <a href="404.html" class="footer-link"><span class="material-symbols-outlined" style="font-size:16px;">chevron_right</span> Logistics</a>
+            <a href="404.html" class="footer-link"><span class="material-symbols-outlined" style="font-size:16px;">chevron_right</span> Fair Trade</a>
+          </div>
+        </div>
+        <div>
+          <h4 class="footer-heading">Stackly Salem Atelier</h4>
+          <div class="footer-address-card">
+            <strong>Stackly Technologies & Craft Hub</strong>
+            124/B Heritage Crafts Enclave, Cherry Road,<br>
+            Hasthampatti, Salem, Tamil Nadu 636007, India.<br><br>
+            <div style="display:flex; align-items:center; gap:6px; margin-bottom:4px;">
+              <span class="material-symbols-outlined" style="font-size:16px; color:var(--c-ochre);">call</span>
+              <span>+91 427 244 8900 / +91 98427 12345</span>
+            </div>
+            <div style="display:flex; align-items:center; gap:6px;">
+              <span class="material-symbols-outlined" style="font-size:16px; color:var(--c-ochre);">mail</span>
+              <span>support@stackly.com</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>&copy; 2026 Chatly Art & Craft Marketplace. All rights reserved. Handcrafted with reverence.</div>
+        <div style="display:flex; gap:20px;">
+          <a href="404.html" style="color:var(--c-beige-dark);">Terms of Artistry</a>
+          <a href="404.html" style="color:var(--c-beige-dark);">Privacy & Provenance</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

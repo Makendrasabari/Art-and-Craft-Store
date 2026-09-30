@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create Account | Chatly Art & Craft Marketplace</title>
+  <meta name="description" content="Join Chatly as a Buyer to collect authentic handcrafted masterworks, or as a Seller to showcase your artisan studio to the world.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+<body class="craft-texture">
+
+  <!-- UNIQUE ART & CRAFT PRELOADER -->
+  <div id="artisan-preloader" class="artisan-preloader" aria-label="Loading Registration">
+    <div class="preloader-curtain curtain-left"></div>
+    <div class="preloader-curtain curtain-right"></div>
+    <div class="preloader-content">
+      <div class="sketch-stage">
+        <svg class="sketch-lines-svg" viewBox="0 0 320 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle class="stroke-ring" cx="160" cy="160" r="118" stroke="rgba(125, 74, 43, 0.35)" stroke-width="2" stroke-dasharray="14 10" />
+          <path class="stroke-pencil" d="M 45 160 C 45 96 96 45 160 45 C 224 45 275 96 275 160 C 275 224 224 275 160 275" stroke="#5A3521" stroke-width="2.5" stroke-linecap="round" />
+          <path class="stroke-brush" d="M 60 130 Q 160 30 260 130 Q 280 220 160 260 Q 40 220 60 130" stroke="#B86737" stroke-width="3" stroke-linecap="round" />
+          <path class="craft-spiral" d="M 160 160 m -28 0 a 28,28 0 1,0 56,0 a 28,28 0 1,0 -56,0 m -18 0 a 46,46 0 1,0 92,0 a 46,46 0 1,0 -92,0" stroke="#7D4A2B" stroke-width="2" stroke-linecap="round" />
+        </svg>
+
+        <div class="logo-assemble-container">
+          <img src="assets/stacklylogo_18.webp" alt="Chatly Craft Marketplace" class="preloader-logo-img">
+        </div>
+
+        <div class="finishing-flourish">
+          <span class="finishing-dot dot-1"></span>
+          <span class="finishing-dot dot-2"></span>
+          <span class="finishing-dot dot-3"></span>
+          <span class="finishing-dot dot-4"></span>
+        </div>
+      </div>
+      <div class="preloader-status">
+        <span class="craft-label">PREPARING YOUR ARTISAN MEMBERSHIP</span>
+        <div class="drawing-progress-bar">
+          <div class="progress-fill"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- AUTHENTICATION VIEW: 2-COLUMN SPLIT (LEFT: IMAGE, RIGHT: SIGNUP BOX) -->
+  <main class="auth-wrapper">
+
+    <div class="auth-split-container">
+      
+      <!-- LEFT SIDE: RELEVANT ARTISANAL CRAFT IMAGE SHOWCASE -->
+      <div class="auth-image-panel" style="background-image: url('https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&w=1200&q=80');">
+        <div class="auth-image-content">
+          <div class="auth-image-header">
+            <span class="auth-image-badge">
+              <span class="material-symbols-outlined" style="font-size:16px;">handshake</span>
+              <span>Global Artisan Guild</span>
+            </span>
+          </div>
+
+          <div class="auth-image-body">
+            <h2 class="auth-image-title">Championing Cultural Lineage & Craft Sovereignty</h2>
+            <p class="auth-image-quote">
+              "When you create with reverence or acquire from a master, you are safeguarding living heritage that machines can never replicate."
+            </p>
+
+            <div class="auth-image-perks">
+              <div class="auth-image-perk-item">
+                <span class="material-symbols-outlined">palette</span>
+                <span>Join Over 4,200+ Master Indigenous Artists</span>
+              </div>
+              <div class="auth-image-perk-item">
+                <span class="material-symbols-outlined">trending_up</span>
+                <span>Over 85% of Proceeds Paid Directly to Creators</span>
+              </div>
+              <div class="auth-image-perk-item">
+                <span class="material-symbols-outlined">security</span>
+                <span>Protected Escrow & Authentic Provenance Guarantee</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT SIDE: SIGNUP FORM BOX -->
+      <div class="auth-box-panel">
+
+        <!-- Top Navigation: Back to Home Button above Stackly Logo -->
+        <div class="auth-top-nav">
+          <a href="index.html" class="auth-back-btn" title="Return to Marketplace Home">
+            <span class="material-symbols-outlined" style="font-size: 18px;">arrow_back</span>
+            <span>Back to Home</span>
+          </a>
+        </div>
+
+        <!-- Stackly Brand Logo Centered Above Header -->
+        <div class="auth-logo-center">
+          <a href="index.html" class="brand-logo-link" title="Return to Marketplace Home">
+            <img src="assets/stacklylogo_18.webp" alt="Stackly Logo" class="chatly-logo-img">
+          </a>
+        </div>
+
+        <div class="auth-header">
+          <h1 class="auth-title">Create an Account</h1>
+          <p class="auth-subtitle">Join thousands of collectors and master creators worldwide</p>
+        </div>
+
+        <!-- Signup Form (No default values, correct placeholders) -->
+        <form id="chatly-signup-form" novalidate>
+          
+          <!-- Full Name -->
+          <div class="form-group">
+            <label for="signup-name" class="form-label">Full Name *</label>
+            <input 
+              type="text" 
+              id="signup-name" 
+              class="form-control" 
+              placeholder="Enter your full name" 
+              required
+            >
+            <div class="form-error-msg">Please enter your full name (minimum 2 characters).</div>
+          </div>
+
+          <!-- Email (Must end with @gmail.com) -->
+          <div class="form-group">
+            <label for="signup-email" class="form-label">Email Address *</label>
+            <input 
+              type="email" 
+              id="signup-email" 
+              class="form-control" 
+              placeholder="Enter the email address" 
+              required
+            >
+            <div class="form-error-msg">Must be a valid Gmail address ending with @gmail.com</div>
+          </div>
+
+          <!-- Create New Password (min 8 characters) -->
+          <div class="form-group">
+            <label for="signup-password" class="form-label">Create Password *</label>
+            <div class="password-input-wrap">
+              <input 
+                type="password" 
+                id="signup-password" 
+                class="form-control" 
+                placeholder="Enter the password" 
+                required
+              >
+              <button type="button" class="toggle-password-btn" aria-label="Toggle password visibility">
+                <span class="material-symbols-outlined" style="font-size:20px;">visibility_off</span>
+              </button>
+            </div>
+            <div class="form-error-msg">Please enter at least 8 characters</div>
+          </div>
+
+          <!-- Confirm Password (must match) -->
+          <div class="form-group">
+            <label for="signup-confirm-password" class="form-label">Confirm Password *</label>
+            <div class="password-input-wrap">
+              <input 
+                type="password" 
+                id="signup-confirm-password" 
+                class="form-control" 
+                placeholder="Enter the password" 
+                required
+              >
+              <button type="button" class="toggle-password-btn" aria-label="Toggle password visibility">
+                <span class="material-symbols-outlined" style="font-size:20px;">visibility_off</span>
+              </button>
+            </div>
+            <div class="form-error-msg">Passwords do not match.</div>
+          </div>
+
+          <div style="font-size:0.76rem; color:var(--c-text-muted); margin-bottom:10px; line-height:1.4;">
+            By registering, you agree to Stackly's Handcrafted Authenticity Guarantee and Fair Trade Cultural Principles.
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-block btn-lg" id="signup-submit-btn" style="margin-top:8px;">
+            Create Account & Proceed
+          </button>
+        </form>
+
+        <div class="auth-footer" style="margin-top: 12px;">
+          Already have an account? <a href="login.html">Sign in</a>
+        </div>
+
+      </div>
+
+    </div>
+
+  </main>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

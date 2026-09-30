@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services & Solutions | Chatly Art & Craft Marketplace</title>
+  <meta name="description" content="Explore Chatly's suite of services: Handmade Marketplace, Artist Profiles, Digital Art, Creator Tools, Promotion, and Global Logistics.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+<body class="craft-texture">
+
+  <!-- UNIQUE ART & CRAFT PRELOADER -->
+  <div id="artisan-preloader" class="artisan-preloader" aria-label="Loading Services">
+    <div class="preloader-curtain curtain-left"></div>
+    <div class="preloader-curtain curtain-right"></div>
+    <div class="preloader-content">
+      <div class="sketch-stage">
+        <svg class="sketch-lines-svg" viewBox="0 0 320 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle class="stroke-ring" cx="160" cy="160" r="118" stroke="rgba(125, 74, 43, 0.35)" stroke-width="2" stroke-dasharray="14 10" />
+          <path class="stroke-pencil" d="M 45 160 C 45 96 96 45 160 45 C 224 45 275 96 275 160 C 275 224 224 275 160 275" stroke="#5A3521" stroke-width="2.5" stroke-linecap="round" />
+          <path class="stroke-brush" d="M 60 130 Q 160 30 260 130 Q 280 220 160 260 Q 40 220 60 130" stroke="#B86737" stroke-width="3" stroke-linecap="round" />
+          <path class="craft-spiral" d="M 160 160 m -28 0 a 28,28 0 1,0 56,0 a 28,28 0 1,0 -56,0 m -18 0 a 46,46 0 1,0 92,0 a 46,46 0 1,0 -92,0" stroke="#7D4A2B" stroke-width="2" stroke-linecap="round" />
+        </svg>
+
+        <div class="logo-assemble-container">
+          <img src="assets/stacklylogo_18.webp" alt="Chatly Craft Marketplace" class="preloader-logo-img">
+        </div>
+
+        <div class="finishing-flourish">
+          <span class="finishing-dot dot-1"></span>
+          <span class="finishing-dot dot-2"></span>
+          <span class="finishing-dot dot-3"></span>
+          <span class="finishing-dot dot-4"></span>
+        </div>
+      </div>
+      <div class="preloader-status">
+        <span class="craft-label">LOADING ARTISANAL SERVICES & TOOLS</span>
+        <div class="drawing-progress-bar">
+          <div class="progress-fill"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PUBLIC HEADER -->
+  <header class="public-header" id="main-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand-logo-link">
+        <img src="assets/stacklylogo_18.webp" alt="Chatly Logo" class="chatly-logo-img">
+      </a>
+
+      <nav class="nav-menu">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="services.html" class="nav-link active">Services</a>
+        <a href="blog.html" class="nav-link">Blog</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <a href="login.html" class="btn btn-primary btn-sm">
+          <span class="material-symbols-outlined" style="font-size:18px;">login</span>
+          <span>Login</span>
+        </a>
+        <button class="mobile-nav-toggle" id="mobile-nav-toggle" aria-label="Toggle navigation menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div class="mobile-drawer" id="mobile-drawer">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="about.html" class="nav-link">About</a>
+      <a href="services.html" class="nav-link active">Services</a>
+      <a href="blog.html" class="nav-link">Blog</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+      <div style="margin-top: 20px; display:flex; flex-direction:column; gap:12px;">
+        <a href="login.html" class="btn btn-primary btn-block">Login</a>
+        <a href="signup.html" class="btn btn-outline btn-block">Create Account</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- SECTION 1: SERVICES HERO -->
+    <section class="hero-section" style="padding: 85px 0 95px 0;">
+      <!-- Single clear background image on backside (Visible clearly, not dim, no white wash) -->
+      <div class="hero-single-bg" style="background-image: url('https://images.unsplash.com/photo-1578749556568-bc2c40e68b61?auto=format&fit=crop&w=1920&q=85');"></div>
+
+      <div class="container">
+        <div class="hero-content-center">
+          <span class="section-tag" style="margin-bottom:16px;"><span class="material-symbols-outlined" style="font-size:16px;">handyman</span> Empowering The Creative Ecosystem</span>
+          <h1 class="hero-title-arranged">
+            <span class="hero-line hero-line-gold anim-hero-right-1">Artisanal Services &</span>
+            <span class="hero-line hero-line-brown anim-hero-left">Creator Solutions</span>
+          </h1>
+          <p class="hero-subtitle-arranged">
+            <span class="hero-sub-line anim-sub-right-1">From verified handcraft curation to exhibition promotion and studio analytics —</span>
+            <span class="hero-sub-line anim-sub-right-2">discover our 8 specialized services built for independent makers and discerning collectors.</span>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: EIGHT PILLARS OF MARKETPLACE CRAFTSMANSHIP -->
+    <section class="section services-pillars-section" id="services-pillars-section" style="padding: 60px 0 80px 0;">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag"><span class="material-symbols-outlined" style="font-size:16px;">grid_view</span> Complete Portfolio</span>
+          <h2 class="section-title">Eight Pillars of Marketplace Craftsmanship</h2>
+          <p class="section-subtitle">Dedicated operational and technological solutions for makers and buyers.</p>
+        </div>
+
+        <div class="services-grid services-pillars-grid">
+          
+          <!-- 1. Handmade Marketplace -->
+          <div class="service-card" data-card-index="1" onclick="window.location.href='404.html'">
+            <div class="service-card-bg" style="background-image: url('https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?auto=format&fit=crop&w=800&q=80');"></div>
+            <div class="service-card-overlay"></div>
+            <div class="service-card-content">
+              <div class="service-icon-box"><span class="material-symbols-outlined" style="font-size:26px;">potted_plant</span></div>
+              <h3 class="service-title">1. Handmade Marketplace</h3>
+              <p class="service-desc">
+                A curated physical commerce infrastructure dedicated exclusively to certified handmade creations. Includes secure escrow payments, anti-counterfeit verification, and automated international shipping calculation.
+              </p>
+              <a href="404.html" class="service-link" onclick="event.stopPropagation();"><span>Learn More</span> <span class="material-symbols-outlined" style="font-size:18px;">arrow_forward</span></a>
+            </div>
+          </div>
+
+          <!-- 2. Artist Marketplace -->
+          <div class="service-card" data-card-index="2" onclick="window.location.href='404.html'">
+            <div class="service-card-bg" style="background-image: url('https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?auto=format&fit=crop&w=800&q=80');"></div>
+            <div class="service-card-overlay"></div>
+            <div class="service-card-content">
+              <div class="service-icon-box"><span class="material-symbols-outlined" style="font-size:26px;">palette</span></div>
+              <h3 class="service-title">2. Artist Marketplace</h3>
+              <p class="service-desc">
+                A dedicated fine-art channel for painters, master carvers, and mixed-media visionaries to exhibit limited gallery editions, original signed canvases, and museum-grade masterworks with digital provenance.
+              </p>
+              <a href="404.html" class="service-link" onclick="event.stopPropagation();"><span>Learn More</span> <span class="material-symbols-outlined" style="font-size:18px;">arrow_forward</span></a>
+            </div>
+          </div>
+
+          <!-- 3. Digital Art -->
+          <div class="service-card" data-card-index="3" onclick="window.location.href='404.html'">
+            <div class="service-card-bg" style="background-image: url('https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=800&q=80');"></div>
+            <div class="service-card-overlay"></div>
+            <div class="service-card-content">
+              <div class="service-icon-box"><span class="material-symbols-outlined" style="font-size:26px;">draw</span></div>
+              <h3 class="service-title">3. Digital Art</h3>
+              <p class="service-desc">
+                High-speed distribution portal for contemporary digital creators: printable 300-DPI archival cultural posters, 3D architectural assets, vector pattern packs, and digital collectibles.
+              </p>
+              <a href="404.html" class="service-link" onclick="event.stopPropagation();"><span>Learn More</span> <span class="material-symbols-outlined" style="font-size:18px;">arrow_forward</span></a>
+            </div>
+          </div>
+
+          <!-- 4. Craft Products -->
+          <div class="service-card" data-card-index="4" onclick="window.location.href='404.html'">
+            <div class="service-card-bg" style="background-image: url('https://images.unsplash.com/photo-1606744824163-985d376605aa?auto=format&fit=crop&w=800&q=80');"></div>
+            <div class="service-card-overlay"></div>
+            <div class="service-card-content">
+              <div class="service-icon-box"><span class="material-symbols-outlined" style="font-size:26px;">shopping_basket</span></div>
+              <h3 class="service-title">4. Craft Products</h3>
+              <p class="service-desc">
+                Wholesale and retail sourcing for functional lifestyle crafts: hand-braided sweetgrass storage baskets, carved jacaranda salad servers, woven raffia tabletop runners, and bespoke cultural homeware.
+              </p>
+              <a href="404.html" class="service-link" onclick="event.stopPropagation();"><span>Learn More</span> <span class="material-symbols-outlined" style="font-size:18px;">arrow_forward</span></a>
+            </div>
+          </div>
+
+          <!-- 5. Creator Profiles -->
+          <div class="service-card" data-card-index="5" onclick="window.location.href='404.html'">
+            <div class="service-card-bg" style="background-image: url('https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=800&q=80');"></div>
+            <div class="service-card-overlay"></div>
+            <div class="service-card-content">
+              <div class="service-icon-box"><span class="material-symbols-outlined" style="font-size:26px;">account_circle</span></div>
+              <h3 class="service-title">5. Creator Profiles</h3>
+              <p class="service-desc">
+                Editorial-grade portfolio pages spotlighting the maker’s studio journey, ancestry, awards, video walkthroughs, and personal artistic philosophy with customizable branding.
+              </p>
+              <a href="404.html" class="service-link" onclick="event.stopPropagation();"><span>Learn More</span> <span class="material-symbols-outlined" style="font-size:18px;">arrow_forward</span></a>
+            </div>
+          </div>
+
+          <!-- 6. Seller Tools -->
+          <div class="service-card" data-card-index="6" onclick="window.location.href='404.html'">
+            <div class="service-card-bg" style="background-image: url('https://images.unsplash.com/photo-1581783342308-f792dbdd27c5?auto=format&fit=crop&w=800&q=80');"></div>
+            <div class="service-card-overlay"></div>
+            <div class="service-card-content">
+              <div class="service-icon-box"><span class="material-symbols-outlined" style="font-size:26px;">build</span></div>
+              <h3 class="service-title">6. Seller Tools</h3>
+              <p class="service-desc">
+                An all-in-one studio management dashboard featuring automated batch inventory uploads, custom invoice generation, mobile order fulfillment, and multi-currency payout options.
+              </p>
+              <a href="404.html" class="service-link" onclick="event.stopPropagation();"><span>Learn More</span> <span class="material-symbols-outlined" style="font-size:18px;">arrow_forward</span></a>
+            </div>
+          </div>
+
+          <!-- 7. Product Promotion -->
+          <div class="service-card" data-card-index="7" onclick="window.location.href='404.html'">
+            <div class="service-card-bg" style="background-image: url('https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&w=800&q=80');"></div>
+            <div class="service-card-overlay"></div>
+            <div class="service-card-content">
+              <div class="service-icon-box"><span class="material-symbols-outlined" style="font-size:26px;">campaign</span></div>
+              <h3 class="service-title">7. Product Promotion</h3>
+              <p class="service-desc">
+                Algorithmic and editorial spotlights across our homepage banners, social channels, and curated subscriber newsletters delivered to 45,000+ art collectors worldwide.
+              </p>
+              <a href="404.html" class="service-link" onclick="event.stopPropagation();"><span>Learn More</span> <span class="material-symbols-outlined" style="font-size:18px;">arrow_forward</span></a>
+            </div>
+          </div>
+
+          <!-- 8. Buyer Discovery -->
+          <div class="service-card" data-card-index="8" onclick="window.location.href='404.html'">
+            <div class="service-card-bg" style="background-image: url('https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=800&q=80');"></div>
+            <div class="service-card-overlay"></div>
+            <div class="service-card-content">
+              <div class="service-icon-box"><span class="material-symbols-outlined" style="font-size:26px;">explore</span></div>
+              <h3 class="service-title">8. Buyer Discovery</h3>
+              <p class="service-desc">
+                Intelligent aesthetic recommendations based on palette, material preferences, cultural region, and room dimensions to help collectors uncover hidden gems seamlessly.
+              </p>
+              <a href="404.html" class="service-link" onclick="event.stopPropagation();"><span>Learn More</span> <span class="material-symbols-outlined" style="font-size:18px;">arrow_forward</span></a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: FOUR-STEP WORKFLOW WITH ARTWORK, SHUFFLE & ARRANGE, AND CLICK ENLIGHTENMENT -->
+    <section class="section workflow-section" id="workflow-section" style="padding: 75px 0 85px; background-color: var(--c-cream-soft); position: relative; overflow: hidden;">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag"><span class="material-symbols-outlined" style="font-size:16px;">route</span> The Process</span>
+          <h2 class="section-title workflow-main-title">From Artisan Atelier to Collector Home</h2>
+          <p class="section-subtitle">A seamless journey honoring craftsmanship at every milestone.</p>
+        </div>
+
+        <div class="workflow-grid" id="workflow-grid">
+          
+          <!-- Step 1: Handcrafting & Curing -->
+          <div class="card-artisan workflow-card anim-workflow-shuffle-1 is-enlightened" data-step="1" role="button" tabindex="0" aria-label="Step 1: Handcrafting & Curing">
+            <div class="workflow-ambient-glow"></div>
+            
+            <div class="workflow-art-stage">
+              <svg class="workflow-art-svg" viewBox="0 0 160 84" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Handcrafted Pottery Artwork">
+                <ellipse cx="80" cy="72" rx="46" ry="7" fill="rgba(125, 74, 43, 0.12)" />
+                <rect x="52" y="65" width="56" height="6" rx="3" fill="#A0522D" />
+                <ellipse cx="80" cy="65" rx="36" ry="6" fill="#D98C45" />
+                <path d="M 64 63 Q 54 46 62 30 Q 66 22 72 20 L 88 20 Q 94 22 98 30 Q 106 46 96 63 Z" fill="url(#clayGrad1)" stroke="#5A3521" stroke-width="1.8" />
+                <ellipse cx="80" cy="20" rx="10" ry="3.5" fill="#7D4A2B" stroke="#3A2216" stroke-width="1.2" />
+                <path d="M 60 44 Q 80 50 100 44" stroke="#FAF6F0" stroke-width="1.6" stroke-dasharray="3 2" opacity="0.85" />
+                <path d="M 64 53 Q 80 58 96 53" stroke="#FAF6F0" stroke-width="1.4" stroke-dasharray="3 2" opacity="0.85" />
+                <path d="M 76 34 Q 80 30 84 34 Q 88 38 84 42" stroke="#FAF6F0" stroke-width="1.5" stroke-linecap="round" fill="none" opacity="0.75" />
+                <circle cx="74" cy="28" r="2" fill="#E8B682" class="art-sparkle" />
+                <circle cx="88" cy="26" r="1.8" fill="#D98C45" class="art-sparkle" style="animation-delay: 0.3s;" />
+                <circle cx="80" cy="14" r="2.2" fill="#FAF6F0" class="art-sparkle" style="animation-delay: 0.6s;" />
+                <defs>
+                  <linearGradient id="clayGrad1" x1="60" y1="20" x2="100" y2="65" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#D98C45"/>
+                    <stop offset="0.6" stop-color="#A0522D"/>
+                    <stop offset="1" stop-color="#7D4A2B"/>
+                  </linearGradient>
+                </defs>
+              </svg>
+            </div>
+
+            <div class="workflow-card-header">
+              <div class="workflow-step-num">01</div>
+            </div>
+
+            <h4 class="workflow-step-title">Handcrafting & Curing</h4>
+            <p class="workflow-step-desc">Makers produce piece using sustainable materials and ancestral methods.</p>
+          </div>
+
+          <!-- Step 2: Provenance Audit -->
+          <div class="card-artisan workflow-card anim-workflow-shuffle-2" data-step="2" role="button" tabindex="0" aria-label="Step 2: Provenance Audit">
+            <div class="workflow-ambient-glow"></div>
+            
+            <div class="workflow-art-stage">
+              <svg class="workflow-art-svg" viewBox="0 0 160 84" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Curatorial Provenance Artwork">
+                <ellipse cx="80" cy="74" rx="42" ry="6" fill="rgba(125, 74, 43, 0.12)" />
+                <rect x="54" y="16" width="52" height="52" rx="4" fill="#FAF6F0" stroke="#D98C45" stroke-width="1.5" />
+                <line x1="62" y1="25" x2="98" y2="25" stroke="#7D4A2B" stroke-width="1.6" stroke-linecap="round" opacity="0.7" />
+                <line x1="62" y1="31" x2="90" y2="31" stroke="#A0522D" stroke-width="1.4" stroke-linecap="round" opacity="0.5" />
+                <line x1="62" y1="37" x2="94" y2="37" stroke="#A0522D" stroke-width="1.4" stroke-linecap="round" opacity="0.5" />
+                <line x1="62" y1="43" x2="82" y2="43" stroke="#A0522D" stroke-width="1.4" stroke-linecap="round" opacity="0.5" />
+                <path d="M 76 54 L 72 68 L 77 65 L 82 68 L 78 54 Z" fill="#A0522D" />
+                <path d="M 84 54 L 80 68 L 85 65 L 90 68 L 86 54 Z" fill="#7D4A2B" />
+                <circle cx="80" cy="52" r="9" fill="url(#waxGrad2)" stroke="#5A3521" stroke-width="1.2" />
+                <path d="M 76 52 L 79 55 L 85 49" stroke="#FAF6F0" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+                <circle cx="106" cy="32" r="10" fill="rgba(255, 255, 255, 0.35)" stroke="#D98C45" stroke-width="2" />
+                <line x1="113" y1="39" x2="124" y2="50" stroke="#7D4A2B" stroke-width="2.5" stroke-linecap="round" />
+                <circle cx="104" cy="30" r="3" fill="#FFFFFF" opacity="0.8" />
+                <defs>
+                  <linearGradient id="waxGrad2" x1="72" y1="44" x2="88" y2="60" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#D98C45"/>
+                    <stop offset="0.5" stop-color="#C67B28"/>
+                    <stop offset="1" stop-color="#7D4A2B"/>
+                  </linearGradient>
+                </defs>
+              </svg>
+            </div>
+
+            <div class="workflow-card-header">
+              <div class="workflow-step-num">02</div>
+            </div>
+
+            <h4 class="workflow-step-title">Provenance Audit</h4>
+            <p class="workflow-step-desc">Regional hub curatorial team verifies origin, quality, and signs certificates.</p>
+          </div>
+
+          <!-- Step 3: Insured Custom Crate -->
+          <div class="card-artisan workflow-card anim-workflow-shuffle-3" data-step="3" role="button" tabindex="0" aria-label="Step 3: Insured Custom Crate">
+            <div class="workflow-ambient-glow"></div>
+            
+            <div class="workflow-art-stage">
+              <svg class="workflow-art-svg" viewBox="0 0 160 84" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Insured Custom Crate Artwork">
+                <ellipse cx="80" cy="74" rx="44" ry="6" fill="rgba(125, 74, 43, 0.12)" />
+                <rect x="52" y="24" width="56" height="46" rx="3" fill="url(#woodGrad3)" stroke="#3A2216" stroke-width="1.6" />
+                <line x1="53" y1="25" x2="107" y2="69" stroke="#5A3521" stroke-width="3" stroke-linecap="round" />
+                <line x1="53" y1="69" x2="107" y2="25" stroke="#5A3521" stroke-width="3" stroke-linecap="round" />
+                <rect x="52" y="24" width="10" height="10" rx="1.5" fill="#E8B682" stroke="#7D4A2B" stroke-width="1" />
+                <rect x="98" y="24" width="10" height="10" rx="1.5" fill="#E8B682" stroke="#7D4A2B" stroke-width="1" />
+                <rect x="52" y="60" width="10" height="10" rx="1.5" fill="#E8B682" stroke="#7D4A2B" stroke-width="1" />
+                <rect x="98" y="60" width="10" height="10" rx="1.5" fill="#E8B682" stroke="#7D4A2B" stroke-width="1" />
+                <circle cx="80" cy="47" r="9" fill="#FAF6F0" opacity="0.9" />
+                <path d="M 76 43 L 84 43 L 84 48 Q 84 52 80 54 Q 76 52 76 48 Z" fill="#A0522D" />
+                <path d="M 44 47 Q 52 40 52 47" stroke="#D98C45" stroke-width="1.8" fill="none" stroke-linecap="round" />
+                <path d="M 108 47 Q 116 54 116 47" stroke="#D98C45" stroke-width="1.8" fill="none" stroke-linecap="round" />
+                <defs>
+                  <linearGradient id="woodGrad3" x1="52" y1="24" x2="108" y2="70" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#C67B28"/>
+                    <stop offset="0.5" stop-color="#A0522D"/>
+                    <stop offset="1" stop-color="#7D4A2B"/>
+                  </linearGradient>
+                </defs>
+              </svg>
+            </div>
+
+            <div class="workflow-card-header">
+              <div class="workflow-step-num">03</div>
+            </div>
+
+            <h4 class="workflow-step-title">Insured Custom Crate</h4>
+            <p class="workflow-step-desc">Encased in biodegradable shock absorbers and fitted wooden crates.</p>
+          </div>
+
+          <!-- Step 4: Express Payout -->
+          <div class="card-artisan workflow-card anim-workflow-shuffle-4" data-step="4" role="button" tabindex="0" aria-label="Step 4: Express Payout">
+            <div class="workflow-ambient-glow"></div>
+            
+            <div class="workflow-art-stage">
+              <svg class="workflow-art-svg" viewBox="0 0 160 84" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Express Payout Artwork">
+                <ellipse cx="80" cy="74" rx="44" ry="6" fill="rgba(46, 125, 50, 0.14)" />
+                <rect x="62" y="16" width="36" height="56" rx="6" fill="#2E1C12" stroke="#D98C45" stroke-width="1.6" />
+                <rect x="66" y="22" width="28" height="42" rx="3" fill="#FAF6F0" />
+                <circle cx="80" cy="38" r="9" fill="#2E7D32" />
+                <path d="M 76 38 L 79 41 L 84 36" stroke="#FFFFFF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+                <rect x="71" y="52" width="18" height="5" rx="2" fill="#D98C45" opacity="0.8" />
+                <circle cx="112" cy="28" r="8" fill="url(#coinGrad4)" stroke="#7D4A2B" stroke-width="1.2" class="art-coin-1" />
+                <text x="112" y="31.5" font-size="8" font-weight="bold" fill="#5A3521" text-anchor="middle">$</text>
+                <circle cx="48" cy="40" r="7" fill="url(#coinGrad4)" stroke="#7D4A2B" stroke-width="1.2" class="art-coin-2" />
+                <text x="48" y="43" font-size="7" font-weight="bold" fill="#5A3521" text-anchor="middle">%</text>
+                <path d="M 74 12 Q 80 8 86 12" stroke="#2E7D32" stroke-width="1.5" stroke-linecap="round" fill="none" />
+                <path d="M 70 8 Q 80 3 90 8" stroke="#D98C45" stroke-width="1.4" stroke-linecap="round" fill="none" />
+                <defs>
+                  <linearGradient id="coinGrad4" x1="106" y1="22" x2="118" y2="34" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#F5D491"/>
+                    <stop offset="0.5" stop-color="#D98C45"/>
+                    <stop offset="1" stop-color="#C67B28"/>
+                  </linearGradient>
+                </defs>
+              </svg>
+            </div>
+
+            <div class="workflow-card-header">
+              <div class="workflow-step-num">04</div>
+            </div>
+
+            <h4 class="workflow-step-title">Express Payout</h4>
+            <p class="workflow-step-desc">Artisan receives 85%+ payout instantly via mobile money or bank wire.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: CREATOR TIERS WITH FLIP BUTTON HOVER REVEAL & TOP/BOTTOM ARRIVAL -->
+    <section class="section tier-section" id="tier-section" style="padding: 70px 0; overflow: hidden;">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag"><span class="material-symbols-outlined" style="font-size:16px;">loyalty</span> Membership</span>
+          <h2 class="section-title">Designed for Every Stage of Artistry</h2>
+          <p class="section-subtitle">Whether you are an individual village maker or an established contemporary studio.</p>
+        </div>
+
+        <div class="tier-grid" id="tier-grid">
+          
+          <!-- Tier 1: Free Starter (Arrives from Top) -->
+          <div class="card-artisan tier-card anim-tier-top tier-card-1" data-tier="1">
+            <span class="badge badge-craft" style="margin-bottom:12px;">Apprentice Maker</span>
+            <h3 style="font-size:1.6rem; margin-bottom:8px;">Free Starter</h3>
+            <div style="font-size:2rem; font-weight:800; color:var(--c-deep-brown); margin-bottom:16px;">$0<span style="font-size:0.9rem; font-weight:400; color:var(--c-text-light);"> / forever</span></div>
+            <p style="font-size:0.9rem; color:var(--c-text-muted); margin-bottom:20px;">Ideal for emerging independent artisans listing their first pieces.</p>
+            <ul style="display:flex; flex-direction:column; gap:10px; font-size:0.88rem; color:var(--c-text-main); margin-bottom:26px;">
+              <li style="display:flex; align-items:center; gap:8px;"><span class="material-symbols-outlined" style="font-size:18px; color:var(--c-success);">check</span> Up to 15 active product listings</li>
+              <li style="display:flex; align-items:center; gap:8px;"><span class="material-symbols-outlined" style="font-size:18px; color:var(--c-success);">check</span> Standard Seller Dashboard</li>
+              <li style="display:flex; align-items:center; gap:8px;"><span class="material-symbols-outlined" style="font-size:18px; color:var(--c-success);">check</span> Direct Mobile Money payouts</li>
+            </ul>
+            
+            <a href="404.html" class="btn btn-outline btn-block tier-card-btn">
+              <span>Get Started Free</span>
+              <span class="material-symbols-outlined" style="font-size:18px;">arrow_forward</span>
+            </a>
+          </div>
+
+          <!-- Tier 2: Guild Master (Arrives from Bottom) -->
+          <div class="card-artisan tier-card anim-tier-bottom tier-card-2 tier-popular" data-tier="2">
+            <span class="badge badge-terracotta" style="margin-bottom:12px;">Most Popular</span>
+            <h3 style="font-size:1.6rem; margin-bottom:8px;">Guild Master</h3>
+            <div style="font-size:2rem; font-weight:800; color:var(--c-warm-brown); margin-bottom:16px;">$19<span style="font-size:0.9rem; font-weight:400; color:var(--c-text-light);"> / month</span></div>
+            <p style="font-size:0.9rem; color:var(--c-text-muted); margin-bottom:20px;">Built for active studios and professional makers seeking global reach.</p>
+            <ul style="display:flex; flex-direction:column; gap:10px; font-size:0.88rem; color:var(--c-text-main); margin-bottom:26px;">
+              <li style="display:flex; align-items:center; gap:8px;"><span class="material-symbols-outlined" style="font-size:18px; color:var(--c-success);">check</span> Unlimited product listings</li>
+              <li style="display:flex; align-items:center; gap:8px;"><span class="material-symbols-outlined" style="font-size:18px; color:var(--c-success);">check</span> Advanced Revenue & Sales Analytics</li>
+              <li style="display:flex; align-items:center; gap:8px;"><span class="material-symbols-outlined" style="font-size:18px; color:var(--c-success);">check</span> Priority Homepage & Newsletter Features</li>
+            </ul>
+            
+            <a href="404.html" class="btn btn-primary btn-block tier-card-btn">
+              <span>Join as Guild Master</span>
+              <span class="material-symbols-outlined" style="font-size:18px;">workspace_premium</span>
+            </a>
+          </div>
+
+          <!-- Tier 3: Heritage Collective (Arrives from Top) -->
+          <div class="card-artisan tier-card anim-tier-top tier-card-3" data-tier="3">
+            <span class="badge badge-craft" style="margin-bottom:12px;">Artisan Cooperatives</span>
+            <h3 style="font-size:1.6rem; margin-bottom:8px;">Heritage Collective</h3>
+            <div style="font-size:2rem; font-weight:800; color:var(--c-deep-brown); margin-bottom:16px;">$49<span style="font-size:0.9rem; font-weight:400; color:var(--c-text-light);"> / month</span></div>
+            <p style="font-size:0.9rem; color:var(--c-text-muted); margin-bottom:20px;">For cooperatives, craft associations, and established cultural galleries.</p>
+            <ul style="display:flex; flex-direction:column; gap:10px; font-size:0.88rem; color:var(--c-text-main); margin-bottom:26px;">
+              <li style="display:flex; align-items:center; gap:8px;"><span class="material-symbols-outlined" style="font-size:18px; color:var(--c-success);">check</span> Unlimited multi-artisan accounts</li>
+              <li style="display:flex; align-items:center; gap:8px;"><span class="material-symbols-outlined" style="font-size:18px; color:var(--c-success);">check</span> Dedicated Curatorial Concierge</li>
+              <li style="display:flex; align-items:center; gap:8px;"><span class="material-symbols-outlined" style="font-size:18px; color:var(--c-success);">check</span> Bespoke exhibition drops & wholesale deals</li>
+            </ul>
+            
+            <a href="404.html" class="btn btn-outline btn-block tier-card-btn">
+              <span>Contact Concierge</span>
+              <span class="material-symbols-outlined" style="font-size:18px;">support_agent</span>
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 5: STUDIO MANAGEMENT SUITE WITH SLIDE-IN & LIVE RUNNING NUMBER -->
+    <section class="section studio-suite-section" id="studio-suite-section" style="padding: 75px 0; background-color: var(--c-cream-soft); overflow: hidden;">
+      <div class="container">
+        <div class="studio-suite-grid" style="display:grid; grid-template-columns: 1.15fr 0.85fr; gap:48px; align-items:center;">
+          
+          <!-- Left Content: Comes from Left side and arranges in position -->
+          <div class="studio-suite-left anim-studio-left">
+            <span class="section-tag"><span class="material-symbols-outlined" style="font-size:16px;">smartphone</span> Studio Technology</span>
+            <h2 class="studio-suite-title" style="font-size:2.2rem; margin-bottom:16px;">Mobile-First Studio Management</h2>
+            <p style="color:var(--c-text-muted); font-size:0.98rem; line-height:1.7; margin-bottom:20px;">
+              Our software operates even on basic mobile networks. Artisans can take photographs on their smartphone, record audio voice-notes on the craft's cultural meaning, and print DHL international packing slips directly.
+            </p>
+            <ul class="studio-feature-list" style="display:flex; flex-direction:column; gap:12px; font-size:0.92rem; color:var(--c-deep-brown);">
+              <li style="display:flex; align-items:center; gap:10px;"><span class="material-symbols-outlined" style="color:var(--c-warm-brown); font-size:20px;">wifi_off</span> Offline draft saving during remote studio connectivity gaps</li>
+              <li style="display:flex; align-items:center; gap:10px;"><span class="material-symbols-outlined" style="color:var(--c-warm-brown); font-size:20px;">currency_exchange</span> Multi-currency conversion from USD/EUR to regional and local currencies</li>
+            </ul>
+          </div>
+
+          <!-- Right Content: Active Studio Inflow card comes from Right side and arranges in position -->
+          <div class="card-artisan studio-inflow-card anim-studio-right" style="padding:38px 34px; position:relative; overflow:hidden;">
+            <div class="studio-card-glow"></div>
+            <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:12px;">
+              <h4 style="font-size:1.3rem; margin:0; color:var(--c-deep-brown);">Active Studio Inflow</h4>
+              <span class="badge badge-success" style="font-size:0.75rem; display:inline-flex; align-items:center; gap:4px;">
+                <span class="material-symbols-outlined" style="font-size:14px;">trending_up</span> Live Payouts
+              </span>
+            </div>
+            
+            <!-- Live Running Number Counter -->
+            <div class="studio-inflow-num live-stat-inflow" data-target="34850" data-prefix="$">$0</div>
+            
+            <p style="font-size:0.9rem; color:var(--c-text-muted); line-height:1.6; margin-bottom:0;">
+              Real-time tracking of orders, payments, and international delivery confirmations.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 6: GLOBAL LOGISTICS NETWORK (CARDS 1 & 3 FROM DOWNSIDE, CARD 2 FROM TOP SIDE + LIVE RUNNING BOUNDARY LINE ON HOVER & CLICK) -->
+    <section class="section logistics-section" id="logistics-section" style="padding: 75px 0 85px 0; overflow: hidden;">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag"><span class="material-symbols-outlined" style="font-size:16px;">local_shipping</span> Worldwide Freight</span>
+          <h2 class="section-title">White-Glove International Logistics</h2>
+          <p class="section-subtitle">Specialized fragile transport routes connecting 42 nations with zero transit breakages.</p>
+        </div>
+        
+        <div class="logistics-grid" id="logistics-grid">
+          
+          <!-- Card 1: Custom Timber Crating (Comes from Downside) -->
+          <div class="card-artisan logistics-card anim-logistics-bottom logistics-card-1" tabindex="0" role="button" aria-pressed="false" aria-label="Custom Timber Crating">
+            <!-- Continuous SVG Boundary Runner Overlay -->
+            <svg class="logistics-border-runner" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+              <rect class="border-runner-track" x="1.5" y="1.5" width="97" height="97" rx="6" ry="6" pathLength="100" vector-effect="non-scaling-stroke"></rect>
+              <rect class="border-runner-pulse" x="1.5" y="1.5" width="97" height="97" rx="6" ry="6" pathLength="100" vector-effect="non-scaling-stroke"></rect>
+            </svg>
+
+            <div class="logistics-card-content">
+              <div class="logistics-icon-header">
+                <div class="logistics-icon-box">
+                  <span class="material-symbols-outlined logistics-icon">inventory_2</span>
+                </div>
+                <span class="logistics-badge">Origin Prep</span>
+              </div>
+              <h4 class="logistics-card-title">Custom Timber Crating</h4>
+              <p class="logistics-card-desc">
+                Reinforced cedar and plywood boxing tailored to individual sculpture geometry with shock-dampening internal braces.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 2: Export Customs Clearance (Comes from Top Side) -->
+          <div class="card-artisan logistics-card anim-logistics-top logistics-card-2" tabindex="0" role="button" aria-pressed="false" aria-label="Export Customs Clearance">
+            <!-- Continuous SVG Boundary Runner Overlay -->
+            <svg class="logistics-border-runner" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+              <rect class="border-runner-track" x="1.5" y="1.5" width="97" height="97" rx="6" ry="6" pathLength="100" vector-effect="non-scaling-stroke"></rect>
+              <rect class="border-runner-pulse" x="1.5" y="1.5" width="97" height="97" rx="6" ry="6" pathLength="100" vector-effect="non-scaling-stroke"></rect>
+            </svg>
+
+            <div class="logistics-card-content">
+              <div class="logistics-icon-header">
+                <div class="logistics-icon-box">
+                  <span class="material-symbols-outlined logistics-icon">verified</span>
+                </div>
+                <span class="logistics-badge">Customs Gate</span>
+              </div>
+              <h4 class="logistics-card-title">Export Customs Clearance</h4>
+              <p class="logistics-card-desc">
+                Automated biological wood declarations and cultural heritage export stamps processed through expedited diplomatic freight corridors.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 3: 100% Replacement Guarantee (Comes from Downside) -->
+          <div class="card-artisan logistics-card anim-logistics-bottom logistics-card-3" tabindex="0" role="button" aria-pressed="false" aria-label="100% Replacement Guarantee">
+            <!-- Continuous SVG Boundary Runner Overlay -->
+            <svg class="logistics-border-runner" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+              <rect class="border-runner-track" x="1.5" y="1.5" width="97" height="97" rx="6" ry="6" pathLength="100" vector-effect="non-scaling-stroke"></rect>
+              <rect class="border-runner-pulse" x="1.5" y="1.5" width="97" height="97" rx="6" ry="6" pathLength="100" vector-effect="non-scaling-stroke"></rect>
+            </svg>
+
+            <div class="logistics-card-content">
+              <div class="logistics-icon-header">
+                <div class="logistics-icon-box">
+                  <span class="material-symbols-outlined logistics-icon">security</span>
+                </div>
+                <span class="logistics-badge">100% Protection</span>
+              </div>
+              <h4 class="logistics-card-title">100% Replacement Guarantee</h4>
+              <p class="logistics-card-desc">
+                In the rare event of transit damage, collectors receive an immediate artisan remake commission or full escrow refund without friction.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 7: CREATOR CONSULTATION CALL TO ACTION -->
+    <section class="section maker-cta-section" id="maker-cta-section" style="padding: 70px 0 90px 0; text-align: center; overflow: hidden;">
+      <div class="container container-narrow">
+        <span class="section-tag maker-cta-tag"><span class="material-symbols-outlined" style="font-size:16px;">forum</span> Consult Our Curators</span>
+        <h2 class="section-title maker-cta-title anim-cta-words-right">Ready to Elevate Your Artisan Studio?</h2>
+        <p class="section-subtitle maker-cta-sentence anim-cta-words-left" style="margin-bottom: 30px;">
+          Speak with our maker concierge team to structure bespoke logistics, wholesale commissions, and gallery exhibition drops.
+        </p>
+        <div class="maker-cta-actions" style="display:flex; justify-content:center; gap:16px; flex-wrap:wrap;">
+          <a href="404.html" class="btn btn-primary btn-lg cta-btn-left">Open Studio Shop</a>
+          <a href="404.html" class="btn btn-outline btn-lg cta-btn-right">Explore Creator Tools</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="public-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a href="index.html" class="brand-logo-link footer-logo-link"><img src="assets/stacklylogo_18.webp" alt="Chatly Logo" class="footer-brand-logo"></a>
+          <p class="footer-desc">
+            Chatly is an authentic digital art and handcrafted craft marketplace connecting global collectors with authentic heritage creations.
+          </p>
+        </div>
+        <div>
+          <h4 class="footer-heading">Quick Links</h4>
+          <div class="footer-links">
+            <a href="index.html" class="footer-link"><span class="material-symbols-outlined" style="font-size:16px;">chevron_right</span> Home</a>
+            <a href="about.html" class="footer-link"><span class="material-symbols-outlined" style="font-size:16px;">chevron_right</span> About</a>
+            <a href="services.html" class="footer-link"><span class="material-symbols-outlined" style="font-size:16px;">chevron_right</span> Services</a>
+            <a href="blog.html" class="footer-link"><span class="material-symbols-outlined" style="font-size:16px;">chevron_right</span> Blog</a>
+            <a href="contact.html" class="footer-link"><span class="material-symbols-outlined" style="font-size:16px;">chevron_right</span> Contact</a>
+          </div>
+        </div>
+        <div>
+          <h4 class="footer-heading">Creator Hub</h4>
+          <div class="footer-links">
+            <a href="404.html" class="footer-link"><span class="material-symbols-outlined" style="font-size:16px;">chevron_right</span> Open Artisan Shop</a>
+            <a href="404.html" class="footer-link"><span class="material-symbols-outlined" style="font-size:16px;">chevron_right</span> Seller Dashboard</a>
+            <a href="404.html" class="footer-link"><span class="material-symbols-outlined" style="font-size:16px;">chevron_right</span> Buyer Dashboard</a>
+            <a href="404.html" class="footer-link"><span class="material-symbols-outlined" style="font-size:16px;">chevron_right</span> Creator Tools</a>
+            <a href="404.html" class="footer-link"><span class="material-symbols-outlined" style="font-size:16px;">chevron_right</span> Logistics</a>
+            <a href="404.html" class="footer-link"><span class="material-symbols-outlined" style="font-size:16px;">chevron_right</span> Fair Trade</a>
+          </div>
+        </div>
+        <div>
+          <h4 class="footer-heading">Stackly Salem Atelier</h4>
+          <div class="footer-address-card">
+            <strong>Stackly Technologies & Craft Hub</strong>
+            124/B Heritage Crafts Enclave, Cherry Road,<br>
+            Hasthampatti, Salem, Tamil Nadu 636007, India.<br><br>
+            <div style="display:flex; align-items:center; gap:6px; margin-bottom:4px;">
+              <span class="material-symbols-outlined" style="font-size:16px; color:var(--c-ochre);">call</span>
+              <span>+91 427 244 8900 / +91 98427 12345</span>
+            </div>
+            <div style="display:flex; align-items:center; gap:6px;">
+              <span class="material-symbols-outlined" style="font-size:16px; color:var(--c-ochre);">mail</span>
+              <span>support@stackly.com</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>&copy; 2026 Chatly Art & Craft Marketplace. All rights reserved. Handcrafted with reverence.</div>
+        <div style="display:flex; gap:20px;">
+          <a href="404.html" style="color:var(--c-beige-dark);">Terms of Artistry</a>
+          <a href="404.html" style="color:var(--c-beige-dark);">Privacy & Provenance</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
