@@ -59,10 +59,7 @@
       </nav>
 
       <div class="header-actions">
-        <a href="login.html" class="btn btn-primary btn-sm">
-          <span class="material-symbols-outlined" style="font-size:18px;">login</span>
-          <span>Login</span>
-        </a>
+        <a href="login.html" class="btn btn-primary btn-sm">Login</a>
         <button class="mobile-nav-toggle" id="mobile-nav-toggle" aria-label="Toggle navigation menu">
           <span></span><span></span><span></span>
         </button>
@@ -87,19 +84,53 @@
     <!-- SECTION 1: SERVICES HERO -->
     <section class="hero-section" style="padding: 85px 0 95px 0;">
       <!-- Single clear background image on backside (Visible clearly, not dim, no white wash) -->
-      <div class="hero-single-bg" style="background-image: url('https://images.unsplash.com/photo-1578749556568-bc2c40e68b61?auto=format&fit=crop&w=1920&q=85');"></div>
+      <div class="hero-single-bg" style="background-image: url('assets/services_hero.webp');"></div>
 
       <div class="container">
         <div class="hero-content-center">
-          <span class="section-tag" style="margin-bottom:16px;"><span class="material-symbols-outlined" style="font-size:16px;">handyman</span> Empowering The Creative Ecosystem</span>
+          <div class="hero-badge anim-hero-badge">
+            <span class="material-symbols-outlined" style="font-size:18px; color:var(--c-terracotta);">handyman</span>
+            <span>Empowering The Creative Ecosystem</span>
+          </div>
           <h1 class="hero-title-arranged">
-            <span class="hero-line hero-line-gold anim-hero-right-1">Artisanal Services &</span>
-            <span class="hero-line hero-line-brown anim-hero-left">Creator Solutions</span>
+            <span class="hero-line hero-line-orange anim-hero-left-1">Artisanal Services &amp;</span>
+            <span class="hero-line hero-line-brown anim-hero-right">Creator Solutions</span>
           </h1>
-          <p class="hero-subtitle-arranged">
-            <span class="hero-sub-line anim-sub-right-1">From verified handcraft curation to exhibition promotion and studio analytics —</span>
-            <span class="hero-sub-line anim-sub-right-2">discover our 8 specialized services built for independent makers and discerning collectors.</span>
+          <p class="hero-subtitle-arranged hero-words-sentence">
+            <span class="hero-word-right" style="--w-idx: 0;">From</span>
+            <span class="hero-word-right" style="--w-idx: 1;">verified</span>
+            <span class="hero-word-right" style="--w-idx: 2;">handcraft</span>
+            <span class="hero-word-right" style="--w-idx: 3;">curation</span>
+            <span class="hero-word-right" style="--w-idx: 4;">to</span>
+            <span class="hero-word-right" style="--w-idx: 5;">exhibition</span>
+            <span class="hero-word-right" style="--w-idx: 6;">promotion</span>
+            <span class="hero-word-right" style="--w-idx: 7;">and</span>
+            <span class="hero-word-right" style="--w-idx: 8;">studio</span>
+            <span class="hero-word-right" style="--w-idx: 9;">analytics</span>
+            <span class="hero-word-right" style="--w-idx: 10;">—</span>
+            <span class="hero-word-right" style="--w-idx: 11;">discover</span>
+            <span class="hero-word-right" style="--w-idx: 12;">our</span>
+            <span class="hero-word-right" style="--w-idx: 13;">8</span>
+            <span class="hero-word-right" style="--w-idx: 14;">specialized</span>
+            <span class="hero-word-right" style="--w-idx: 15;">services</span>
+            <span class="hero-word-right" style="--w-idx: 16;">built</span>
+            <span class="hero-word-right" style="--w-idx: 17;">for</span>
+            <span class="hero-word-right" style="--w-idx: 18;">independent</span>
+            <span class="hero-word-right" style="--w-idx: 19;">makers</span>
+            <span class="hero-word-right" style="--w-idx: 20;">and</span>
+            <span class="hero-word-right" style="--w-idx: 21;">discerning</span>
+            <span class="hero-word-right" style="--w-idx: 22;">collectors.</span>
           </p>
+          <div class="hero-ctas" style="justify-content: center; margin-bottom: 0;">
+            <a href="404.html" onclick="window.location.href='404.html'" class="btn btn-primary btn-lg anim-hero-btn-left">
+              <span>Explore Marketplace</span>
+              <span class="material-symbols-outlined" style="font-size:18px;">arrow_forward</span>
+            </a>
+            <a href="404.html" onclick="window.location.href='404.html'" class="btn btn-secondary btn-lg anim-hero-btn-right">
+              <span>Join as Creator</span>
+              <span class="material-symbols-outlined" style="font-size:18px;">brush</span>
+            </a>
+          </div>
         </div>
       </div>
     </section>
@@ -116,8 +147,8 @@
         <div class="services-grid services-pillars-grid">
           
           <!-- 1. Handmade Marketplace -->
-          <div class="service-card" data-card-index="1" onclick="window.location.href='404.html'">
-            <div class="service-card-bg" style="background-image: url('https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?auto=format&fit=crop&w=800&q=80');"></div>
+          <div class="service-card" data-card-index="1">
+            <div class="service-card-bg" style="background-image: url('assets/service_ceramics.webp');"></div>
             <div class="service-card-overlay"></div>
             <div class="service-card-content">
               <div class="service-icon-box"><span class="material-symbols-outlined" style="font-size:26px;">potted_plant</span></div>
@@ -125,13 +156,13 @@
               <p class="service-desc">
                 A curated physical commerce infrastructure dedicated exclusively to certified handmade creations. Includes secure escrow payments, anti-counterfeit verification, and automated international shipping calculation.
               </p>
-              <a href="404.html" class="service-link" onclick="event.stopPropagation();"><span>Learn More</span> <span class="material-symbols-outlined" style="font-size:18px;">arrow_forward</span></a>
+              <a href="404.html" class="service-link"><span>Learn More</span> <span class="material-symbols-outlined" style="font-size:18px;">arrow_forward</span></a>
             </div>
           </div>
 
           <!-- 2. Artist Marketplace -->
-          <div class="service-card" data-card-index="2" onclick="window.location.href='404.html'">
-            <div class="service-card-bg" style="background-image: url('https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?auto=format&fit=crop&w=800&q=80');"></div>
+          <div class="service-card" data-card-index="2">
+            <div class="service-card-bg" style="background-image: url('assets/service_digital.webp');"></div>
             <div class="service-card-overlay"></div>
             <div class="service-card-content">
               <div class="service-icon-box"><span class="material-symbols-outlined" style="font-size:26px;">palette</span></div>
@@ -139,13 +170,13 @@
               <p class="service-desc">
                 A dedicated fine-art channel for painters, master carvers, and mixed-media visionaries to exhibit limited gallery editions, original signed canvases, and museum-grade masterworks with digital provenance.
               </p>
-              <a href="404.html" class="service-link" onclick="event.stopPropagation();"><span>Learn More</span> <span class="material-symbols-outlined" style="font-size:18px;">arrow_forward</span></a>
+              <a href="404.html" class="service-link"><span>Learn More</span> <span class="material-symbols-outlined" style="font-size:18px;">arrow_forward</span></a>
             </div>
           </div>
 
           <!-- 3. Digital Art -->
-          <div class="service-card" data-card-index="3" onclick="window.location.href='404.html'">
-            <div class="service-card-bg" style="background-image: url('https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=800&q=80');"></div>
+          <div class="service-card" data-card-index="3">
+            <div class="service-card-bg" style="background-image: url('assets/service_contemporary.webp');"></div>
             <div class="service-card-overlay"></div>
             <div class="service-card-content">
               <div class="service-icon-box"><span class="material-symbols-outlined" style="font-size:26px;">draw</span></div>
@@ -153,13 +184,13 @@
               <p class="service-desc">
                 High-speed distribution portal for contemporary digital creators: printable 300-DPI archival cultural posters, 3D architectural assets, vector pattern packs, and digital collectibles.
               </p>
-              <a href="404.html" class="service-link" onclick="event.stopPropagation();"><span>Learn More</span> <span class="material-symbols-outlined" style="font-size:18px;">arrow_forward</span></a>
+              <a href="404.html" class="service-link"><span>Learn More</span> <span class="material-symbols-outlined" style="font-size:18px;">arrow_forward</span></a>
             </div>
           </div>
 
           <!-- 4. Craft Products -->
-          <div class="service-card" data-card-index="4" onclick="window.location.href='404.html'">
-            <div class="service-card-bg" style="background-image: url('https://images.unsplash.com/photo-1606744824163-985d376605aa?auto=format&fit=crop&w=800&q=80');"></div>
+          <div class="service-card" data-card-index="4">
+            <div class="service-card-bg" style="background-image: url('assets/service_weaving.webp');"></div>
             <div class="service-card-overlay"></div>
             <div class="service-card-content">
               <div class="service-icon-box"><span class="material-symbols-outlined" style="font-size:26px;">shopping_basket</span></div>
@@ -167,13 +198,13 @@
               <p class="service-desc">
                 Wholesale and retail sourcing for functional lifestyle crafts: hand-braided sweetgrass storage baskets, carved jacaranda salad servers, woven raffia tabletop runners, and bespoke cultural homeware.
               </p>
-              <a href="404.html" class="service-link" onclick="event.stopPropagation();"><span>Learn More</span> <span class="material-symbols-outlined" style="font-size:18px;">arrow_forward</span></a>
+              <a href="404.html" class="service-link"><span>Learn More</span> <span class="material-symbols-outlined" style="font-size:18px;">arrow_forward</span></a>
             </div>
           </div>
 
           <!-- 5. Creator Profiles -->
-          <div class="service-card" data-card-index="5" onclick="window.location.href='404.html'">
-            <div class="service-card-bg" style="background-image: url('https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=800&q=80');"></div>
+          <div class="service-card" data-card-index="5">
+            <div class="service-card-bg" style="background-image: url('assets/service_woodcraft.webp');"></div>
             <div class="service-card-overlay"></div>
             <div class="service-card-content">
               <div class="service-icon-box"><span class="material-symbols-outlined" style="font-size:26px;">account_circle</span></div>
@@ -181,13 +212,13 @@
               <p class="service-desc">
                 Editorial-grade portfolio pages spotlighting the maker’s studio journey, ancestry, awards, video walkthroughs, and personal artistic philosophy with customizable branding.
               </p>
-              <a href="404.html" class="service-link" onclick="event.stopPropagation();"><span>Learn More</span> <span class="material-symbols-outlined" style="font-size:18px;">arrow_forward</span></a>
+              <a href="404.html" class="service-link"><span>Learn More</span> <span class="material-symbols-outlined" style="font-size:18px;">arrow_forward</span></a>
             </div>
           </div>
 
           <!-- 6. Seller Tools -->
-          <div class="service-card" data-card-index="6" onclick="window.location.href='404.html'">
-            <div class="service-card-bg" style="background-image: url('https://images.unsplash.com/photo-1581783342308-f792dbdd27c5?auto=format&fit=crop&w=800&q=80');"></div>
+          <div class="service-card" data-card-index="6">
+            <div class="service-card-bg" style="background-image: url('assets/service_tools.webp');"></div>
             <div class="service-card-overlay"></div>
             <div class="service-card-content">
               <div class="service-icon-box"><span class="material-symbols-outlined" style="font-size:26px;">build</span></div>
@@ -195,13 +226,13 @@
               <p class="service-desc">
                 An all-in-one studio management dashboard featuring automated batch inventory uploads, custom invoice generation, mobile order fulfillment, and multi-currency payout options.
               </p>
-              <a href="404.html" class="service-link" onclick="event.stopPropagation();"><span>Learn More</span> <span class="material-symbols-outlined" style="font-size:18px;">arrow_forward</span></a>
+              <a href="404.html" class="service-link"><span>Learn More</span> <span class="material-symbols-outlined" style="font-size:18px;">arrow_forward</span></a>
             </div>
           </div>
 
           <!-- 7. Product Promotion -->
-          <div class="service-card" data-card-index="7" onclick="window.location.href='404.html'">
-            <div class="service-card-bg" style="background-image: url('https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&w=800&q=80');"></div>
+          <div class="service-card" data-card-index="7">
+            <div class="service-card-bg" style="background-image: url('assets/service_fine_art.webp');"></div>
             <div class="service-card-overlay"></div>
             <div class="service-card-content">
               <div class="service-icon-box"><span class="material-symbols-outlined" style="font-size:26px;">campaign</span></div>
@@ -209,13 +240,13 @@
               <p class="service-desc">
                 Algorithmic and editorial spotlights across our homepage banners, social channels, and curated subscriber newsletters delivered to 45,000+ art collectors worldwide.
               </p>
-              <a href="404.html" class="service-link" onclick="event.stopPropagation();"><span>Learn More</span> <span class="material-symbols-outlined" style="font-size:18px;">arrow_forward</span></a>
+              <a href="404.html" class="service-link"><span>Learn More</span> <span class="material-symbols-outlined" style="font-size:18px;">arrow_forward</span></a>
             </div>
           </div>
 
           <!-- 8. Buyer Discovery -->
-          <div class="service-card" data-card-index="8" onclick="window.location.href='404.html'">
-            <div class="service-card-bg" style="background-image: url('https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=800&q=80');"></div>
+          <div class="service-card" data-card-index="8">
+            <div class="service-card-bg" style="background-image: url('assets/service_heritage.webp');"></div>
             <div class="service-card-overlay"></div>
             <div class="service-card-content">
               <div class="service-icon-box"><span class="material-symbols-outlined" style="font-size:26px;">explore</span></div>
@@ -223,7 +254,7 @@
               <p class="service-desc">
                 Intelligent aesthetic recommendations based on palette, material preferences, cultural region, and room dimensions to help collectors uncover hidden gems seamlessly.
               </p>
-              <a href="404.html" class="service-link" onclick="event.stopPropagation();"><span>Learn More</span> <span class="material-symbols-outlined" style="font-size:18px;">arrow_forward</span></a>
+              <a href="404.html" class="service-link"><span>Learn More</span> <span class="material-symbols-outlined" style="font-size:18px;">arrow_forward</span></a>
             </div>
           </div>
 

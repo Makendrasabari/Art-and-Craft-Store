@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Buyer Dashboard | Chatly Art & Craft Marketplace</title>
+  <title>Buyer Dashboard | Stackly Art & Craft Marketplace</title>
   <meta name="description" content="Personal collector dashboard to track purchases, discover master artisans, manage wishlist, and analyze art collections.">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
@@ -24,7 +24,7 @@
         </svg>
 
         <div class="logo-assemble-container">
-          <img src="assets/stacklylogo_18.webp" alt="Chatly Craft Marketplace" class="preloader-logo-img">
+          <img src="assets/stacklylogo_18.webp" alt="Stackly Craft Marketplace" class="preloader-logo-img">
         </div>
 
         <div class="finishing-flourish">
@@ -52,8 +52,8 @@
           <button class="dashboard-sidebar-toggle" id="dashboard-sidebar-toggle" aria-label="Toggle sidebar menu">
             <span class="material-symbols-outlined">menu</span>
           </button>
-          <a href="index.html" class="brand-logo-link" title="Return to Home Page">
-            <img src="assets/stacklylogo_18.webp" alt="Chatly Logo" class="chatly-logo-img">
+          <a href="buyer-dashboard.html" class="brand-logo-link" title="Buyer Dashboard">
+            <img src="assets/stacklylogo_18.webp" alt="Stackly Logo" class="chatly-logo-img">
           </a>
         </div>
 
@@ -79,10 +79,6 @@
                 <div class="dropdown-user-email" id="dropdown-user-email">kumarpandian@gmail.com</div>
                 <span class="dropdown-user-role" id="dropdown-user-role">Buyer</span>
               </div>
-              <a href="index.html" style="padding: 8px 0; font-size: 0.88rem; color: var(--c-deep-brown); display: flex; align-items: center; gap: 8px;">
-                <span class="material-symbols-outlined" style="font-size:18px;">home</span>
-                <span>Marketplace Home</span>
-              </a>
             </div>
           </div>
         </div>
@@ -96,9 +92,12 @@
       <aside class="dashboard-sidebar">
         <!-- Mobile Sidebar Brand Header: Visible only inside sidebar on mobile -->
         <div class="sidebar-brand-header">
-          <a href="buyer-dashboard.html" class="brand-logo-link" title="Buyer Overview">
+          <a href="buyer-dashboard.html" class="brand-logo-link" title="Buyer Dashboard">
             <img src="assets/stacklylogo_18.webp" alt="Stackly Logo" class="chatly-logo-img">
           </a>
+          <button type="button" class="sidebar-close-btn" id="sidebar-close-btn" aria-label="Close sidebar navigation">
+            <span class="material-symbols-outlined">close</span>
+          </button>
         </div>
 
         <nav class="sidebar-clean-nav">
@@ -147,7 +146,7 @@
               <h1 class="dashboard-welcome-title" id="dashboard-welcome-heading">Welcome back, Kumar Pandian!</h1>
               <p class="dashboard-welcome-desc">Explore curated heritage crafts, your recent purchases, and personalized artisan insights.</p>
             </div>
-            <a href="index.html#featured-artworks" class="btn btn-primary btn-sm">
+            <a href="404.html" class="btn btn-primary btn-sm" onclick="window.location.href='404.html'">
               <span class="material-symbols-outlined" style="font-size:18px;">travel_explore</span>
               <span>Explore Marketplace</span>
             </a>
@@ -222,7 +221,7 @@
 
           <!-- Recommended Artwork -->
           <div style="margin-bottom: 32px;">
-            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom: 20px;">
+            <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px; margin-bottom: 20px;">
               <h3 style="font-size:1.3rem;">Recommended Handcrafted Works for You</h3>
               <button class="btn btn-outline btn-sm" onclick="window.location.href='404.html';">
                 <span>View All Recommendations</span>
@@ -232,7 +231,7 @@
 
             <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px;">
               <div class="card-artisan anim-triplet-left" style="padding:18px; display:flex; gap:16px; align-items:center;">
-                <img src="https://images.unsplash.com/photo-1578749556568-bc2c40e68b61?auto=format&fit=crop&w=300&q=80" alt="Clay pot" style="width:84px; height:84px; border-radius:var(--radius-md); object-fit:cover;">
+                <img src="assets/product_pottery.webp" alt="Clay pot" style="width:84px; height:84px; border-radius:var(--radius-md); object-fit:cover;">
                 <div>
                   <span class="badge badge-terracotta" style="font-size:0.7rem; margin-bottom:4px;">Ceramics</span>
                   <div style="font-weight:700; font-size:1rem; color:var(--c-deep-brown);">Oshun River Terracotta Bowl</div>
@@ -242,7 +241,7 @@
               </div>
 
               <div class="card-artisan anim-triplet-center" style="padding:18px; display:flex; gap:16px; align-items:center;">
-                <img src="https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=300&q=80" alt="Wood bust" style="width:84px; height:84px; border-radius:var(--radius-md); object-fit:cover;">
+                <img src="assets/product_wood_bust.webp" alt="Wood bust" style="width:84px; height:84px; border-radius:var(--radius-md); object-fit:cover;">
                 <div>
                   <span class="badge badge-craft" style="font-size:0.7rem; margin-bottom:4px;">Sculpture</span>
                   <div style="font-weight:700; font-size:1rem; color:var(--c-deep-brown);">Jacaranda Tribal Figure</div>
@@ -252,7 +251,7 @@
               </div>
 
               <div class="card-artisan anim-triplet-right" style="padding:18px; display:flex; gap:16px; align-items:center;">
-                <img src="https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?auto=format&fit=crop&w=300&q=80" alt="Weaving" style="width:84px; height:84px; border-radius:var(--radius-md); object-fit:cover;">
+                <img src="assets/product_tapestry.webp" alt="Weaving" style="width:84px; height:84px; border-radius:var(--radius-md); object-fit:cover;">
                 <div>
                   <span class="badge badge-terracotta" style="font-size:0.7rem; margin-bottom:4px;">Textiles</span>
                   <div style="font-weight:700; font-size:1rem; color:var(--c-deep-brown);">Royal Ashanti Wall Weaving</div>
@@ -324,12 +323,6 @@
               <h2 class="dashboard-welcome-title">Discover Art & Artisan Creations</h2>
               <p class="dashboard-welcome-desc">Browse curated masterpieces directly from our most revered master studios.</p>
             </div>
-            <div style="display:flex; gap:12px;">
-              <button class="btn btn-outline btn-sm" onclick="showArtisanToast('Filtering by certified master pieces...', 'verified')">
-                <span class="material-symbols-outlined" style="font-size:18px;">verified</span>
-                <span>Certified Originals</span>
-              </button>
-            </div>
           </div>
 
           <div class="category-chip-group">
@@ -347,7 +340,7 @@
           </div>
           <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; margin-bottom: 32px;">
             <div class="card-artisan anim-cascade-item discover-work-card" data-category="ceramics">
-              <img src="https://images.unsplash.com/photo-1578749556568-bc2c40e68b61?auto=format&fit=crop&w=600&q=80" alt="Pottery" style="height:190px; width:100%; object-fit:cover; border-radius:var(--radius-md); margin-bottom:12px;">
+              <img src="assets/product_pottery.webp" alt="Pottery" style="height:190px; width:100%; object-fit:cover; border-radius:var(--radius-md); margin-bottom:12px;">
               <span class="badge badge-terracotta" style="margin-bottom:6px;">Ceramics</span>
               <h4 style="font-size:1.1rem; color:var(--c-deep-brown);">Ancient Spirals Terracotta Vessel</h4>
               <p style="font-size:0.84rem; color:var(--c-text-muted); margin-bottom:12px;">Pit-fired in sacred kiln with organic neem leaves. By Nia Adebayo (Lagos).</p>
@@ -358,7 +351,7 @@
             </div>
 
             <div class="card-artisan anim-cascade-item discover-work-card" data-category="wood">
-              <img src="https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=600&q=80" alt="Sculpture" style="height:190px; width:100%; object-fit:cover; border-radius:var(--radius-md); margin-bottom:12px;">
+              <img src="assets/product_wood_bust.webp" alt="Sculpture" style="height:190px; width:100%; object-fit:cover; border-radius:var(--radius-md); margin-bottom:12px;">
               <span class="badge badge-craft" style="margin-bottom:6px;">Woodcraft</span>
               <h4 style="font-size:1.1rem; color:var(--c-deep-brown);">Mahogany Tribal Bust</h4>
               <p style="font-size:0.84rem; color:var(--c-text-muted); margin-bottom:12px;">Hand-sculpted by master Kwame Asante from sustainably sourced jacaranda wood.</p>
@@ -369,7 +362,7 @@
             </div>
 
             <div class="card-artisan anim-cascade-item discover-work-card" data-category="textiles">
-              <img src="https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?auto=format&fit=crop&w=600&q=80" alt="Textile" style="height:190px; width:100%; object-fit:cover; border-radius:var(--radius-md); margin-bottom:12px;">
+              <img src="assets/product_tapestry.webp" alt="Textile" style="height:190px; width:100%; object-fit:cover; border-radius:var(--radius-md); margin-bottom:12px;">
               <span class="badge badge-terracotta" style="margin-bottom:6px;">Textiles</span>
               <h4 style="font-size:1.1rem; color:var(--c-deep-brown);">Ashanti Royal Kente Tapestry</h4>
               <p style="font-size:0.84rem; color:var(--c-text-muted); margin-bottom:12px;">Double-weave silk and cotton heritage patterns by Kofi Mensah (Bonwire).</p>
@@ -380,7 +373,7 @@
             </div>
 
             <div class="card-artisan anim-cascade-item discover-work-card" data-category="beaded">
-              <img src="https://images.unsplash.com/photo-1535223289827-42f1e9919769?auto=format&fit=crop&w=600&q=80" alt="Zulu Beads" style="height:190px; width:100%; object-fit:cover; border-radius:var(--radius-md); margin-bottom:12px;">
+              <img src="assets/buyer_beads.webp" alt="Zulu Beads" style="height:190px; width:100%; object-fit:cover; border-radius:var(--radius-md); margin-bottom:12px;">
               <span class="badge badge-craft" style="margin-bottom:6px;">Beaded Regalia</span>
               <h4 style="font-size:1.1rem; color:var(--c-deep-brown);">Zulu Ceremonial Collar</h4>
               <p style="font-size:0.84rem; color:var(--c-text-muted); margin-bottom:12px;">Intricate glass seed beads and spun brass wire by Zola Mthembu (Durban).</p>
@@ -464,7 +457,7 @@
             <div class="card-artisan anim-triplet-right" style="padding: 20px; background-color: var(--c-cream-soft);">
               <h4 style="color:var(--c-deep-brown); margin-bottom: 8px;">Fair Trade & Blockchain Provenance</h4>
               <p style="font-size:0.86rem; color:var(--c-text-muted); line-height:1.65;">
-                Every creation on Chatly includes a tamper-evident serial certificate guaranteeing 86%+ fair trade payout directly to indigenous artisan families.
+                Every creation on Stackly includes a tamper-evident serial certificate guaranteeing 86%+ fair trade payout directly to indigenous artisan families.
               </p>
             </div>
           </div>
@@ -667,7 +660,7 @@
               <div style="margin: 12px 0; font-weight:800; color:var(--c-warm-brown); font-size:1.15rem;">$110.00</div>
               <div style="display:flex; gap:10px;">
                 <a href="404.html" class="btn btn-primary btn-sm" style="flex:1;">Move to Acquisition</a>
-                <button class="btn btn-outline btn-sm" onclick="showArtisanToast('Removed from wishlist.', 'info')">Remove</button>
+                <button class="btn btn-outline btn-sm" onclick="window.location.href='404.html'">Remove</button>
               </div>
             </div>
 
@@ -678,7 +671,7 @@
               <div style="margin: 12px 0; font-weight:800; color:var(--c-warm-brown); font-size:1.15rem;">$260.00</div>
               <div style="display:flex; gap:10px;">
                 <a href="404.html" class="btn btn-primary btn-sm" style="flex:1;">Move to Acquisition</a>
-                <button class="btn btn-outline btn-sm" onclick="showArtisanToast('Removed from wishlist.', 'info')">Remove</button>
+                <button class="btn btn-outline btn-sm" onclick="window.location.href='404.html'">Remove</button>
               </div>
             </div>
 
@@ -689,7 +682,7 @@
               <div style="margin: 12px 0; font-weight:800; color:var(--c-warm-brown); font-size:1.15rem;">$450.00</div>
               <div style="display:flex; gap:10px;">
                 <a href="404.html" class="btn btn-primary btn-sm" style="flex:1;">Move to Acquisition</a>
-                <button class="btn btn-outline btn-sm" onclick="showArtisanToast('Removed from wishlist.', 'info')">Remove</button>
+                <button class="btn btn-outline btn-sm" onclick="window.location.href='404.html'">Remove</button>
               </div>
             </div>
           </div>

@@ -152,22 +152,11 @@ const AuthManager = {
 AuthManager.init();
 
 // ==========================================================================
-// 3. TOAST NOTIFICATION UTILITY (Material Symbols)
+// 3. TOAST NOTIFICATION UTILITY (DISABLED)
 // ==========================================================================
 function showArtisanToast(message, iconName = 'verified') {
-  let toast = document.getElementById('artisan-toast');
-  if (!toast) {
-    toast = document.createElement('div');
-    toast.id = 'artisan-toast';
-    toast.className = 'artisan-toast';
-    document.body.appendChild(toast);
-  }
-  toast.innerHTML = `<span class="material-symbols-outlined" style="font-size:20px;">${iconName}</span> <span>${message}</span>`;
-  toast.classList.add('show');
-
-  setTimeout(() => {
-    toast.classList.remove('show');
-  }, 3200);
+  // Popups disabled per user instruction: "dont show this kind of pop ups"
+  return;
 }
 
 // ==========================================================================
@@ -179,9 +168,26 @@ document.addEventListener('DOMContentLoaded', () => {
   const mobileDrawer = document.getElementById('mobile-drawer');
 
   if (mobileToggle && mobileDrawer) {
-    mobileToggle.addEventListener('click', () => {
+    mobileToggle.addEventListener('click', (e) => {
+      e.stopPropagation();
       mobileToggle.classList.toggle('open');
       mobileDrawer.classList.toggle('open');
+    });
+
+    // Close when clicking outside of drawer
+    document.addEventListener('click', (e) => {
+      if (!mobileDrawer.contains(e.target) && !mobileToggle.contains(e.target)) {
+        mobileToggle.classList.remove('open');
+        mobileDrawer.classList.remove('open');
+      }
+    });
+
+    // Close when clicking any nav link inside drawer
+    mobileDrawer.querySelectorAll('.nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileToggle.classList.remove('open');
+        mobileDrawer.classList.remove('open');
+      });
     });
   }
 
@@ -197,9 +203,9 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Highlight active public nav link
+  // Highlight active public nav link (both desktop and mobile)
   const currentPath = window.location.pathname.split('/').pop() || 'index.html';
-  document.querySelectorAll('.nav-menu .nav-link').forEach(link => {
+  document.querySelectorAll('.nav-menu .nav-link, .mobile-drawer .nav-link').forEach(link => {
     const href = link.getAttribute('href');
     if (href === currentPath || (currentPath === '' && href === 'index.html')) {
       link.classList.add('active');
@@ -208,6 +214,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Setup Public components
   initHeroBgSlideshow();
+  initHeroWordAnimations();
   setupArtworkTabs();
   setupFaqAccordion();
   setupContactForm();
@@ -233,6 +240,20 @@ function initHeroBgSlideshow() {
     currentIndex = (currentIndex + 1) % slides.length;
     slides[currentIndex].classList.add('active');
   }, 2000); // Exactly 2 seconds continuous cycle
+}
+
+// ==========================================================================
+// 4c. HERO SUBTITLE WORD-BY-WORD STAGGER ENTRANCE (RIGHT TO LEFT)
+// ==========================================================================
+function initHeroWordAnimations() {
+  const heroSentences = document.querySelectorAll('.hero-words-sentence, .hero-subtitle-arranged');
+  heroSentences.forEach(sentence => {
+    if (sentence.querySelectorAll('.hero-word-right').length > 0) return;
+    const text = sentence.textContent.trim().replace(/\s+/g, ' ');
+    if (!text) return;
+    const words = text.split(' ');
+    sentence.innerHTML = words.map((w, idx) => `<span class="hero-word-right" style="--w-idx: ${idx};">${w}</span>`).join(' ');
+  });
 }
 
 // ==========================================================================
@@ -347,9 +368,7 @@ function setupContactForm() {
     }
 
     if (isValid) {
-      showArtisanToast('Thank you! Your inquiry has been sent to our curatorial team.', 'mail');
-      contactForm.reset();
-      contactForm.querySelectorAll('.form-control').forEach(el => el.classList.remove('is-valid'));
+      window.location.href = '404.html';
     }
   });
 }
@@ -736,19 +755,65 @@ function setupDashboard() {
 
   const sidebarToggle = document.getElementById('dashboard-sidebar-toggle');
   const sidebar = document.querySelector('.dashboard-sidebar');
+  const sidebarClose = document.getElementById('sidebar-close-btn') || document.querySelector('.sidebar-close-btn');
+
+  function openDashboardSidebar() {
+    if (sidebar) {
+      sidebar.classList.add('mobile-open');
+      if (window.innerWidth <= 860) {
+        document.body.style.overflow = 'hidden';
+      }
+    }
+  }
+
+  function closeDashboardSidebar() {
+    if (sidebar) {
+      sidebar.classList.remove('mobile-open');
+      document.body.style.overflow = '';
+    }
+  }
+
   if (sidebarToggle && sidebar) {
-    sidebarToggle.addEventListener('click', () => {
-      sidebar.classList.toggle('mobile-open');
+    sidebarToggle.addEventListener('click', (e) => {
+      e.stopPropagation();
+      if (sidebar.classList.contains('mobile-open')) {
+        closeDashboardSidebar();
+      } else {
+        openDashboardSidebar();
+      }
     });
   }
 
-  const dashLogo = document.querySelector('.dashboard-nav-left .brand-logo-link');
-  if (dashLogo) {
-    dashLogo.addEventListener('click', (e) => {
-      e.preventDefault();
-      window.location.href = 'index.html';
+  if (sidebarClose && sidebar) {
+    sidebarClose.addEventListener('click', (e) => {
+      e.stopPropagation();
+      closeDashboardSidebar();
     });
   }
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && sidebar && sidebar.classList.contains('mobile-open')) {
+      closeDashboardSidebar();
+    }
+  });
+
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 860 && sidebar && sidebar.classList.contains('mobile-open')) {
+      closeDashboardSidebar();
+    }
+  });
+
+  const dashLogos = document.querySelectorAll('.dashboard-nav-left .brand-logo-link, .sidebar-brand-header .brand-logo-link');
+  dashLogos.forEach(logo => {
+    logo.addEventListener('click', (e) => {
+      e.preventDefault();
+      if (isBuyerDash) {
+        window.location.href = 'buyer-dashboard.html';
+      } else if (isSellerDash) {
+        window.location.href = 'seller-dashboard.html';
+      }
+    });
+  });
 
   // Simplified 5 Top-Level Sidebar Navigation
   setupCleanSidebar();
@@ -813,6 +878,7 @@ function setupCleanSidebar() {
 
       if (window.innerWidth <= 860 && sidebar) {
         sidebar.classList.remove('mobile-open');
+        document.body.style.overflow = '';
       }
     });
   });
@@ -1459,7 +1525,7 @@ function removeFooterLogoWhiteBg() {
 // Intersection Observer to smoothly trigger shuffle, slide, table rows, and scorecard arrange animations on scroll
 function initScrollAnimations() {
   const animatedElements = document.querySelectorAll(
-    '.anim-triplet-left, .anim-triplet-center, .anim-triplet-right, .anim-shuffle-left, .anim-shuffle-center, .anim-shuffle-right, .anim-from-left, .anim-from-right, .anim-queue-left, .anim-remittance-right, .anim-arrange-left, .anim-arrange-right, .anim-card-from-left, .anim-card-from-top, .anim-card-from-right, .anim-card-from-bottom'
+    '.anim-triplet-left, .anim-triplet-center, .anim-triplet-right, .anim-shuffle-left, .anim-shuffle-center, .anim-shuffle-right, .anim-from-left, .anim-from-right, .anim-queue-left, .anim-remittance-right, .anim-arrange-left, .anim-arrange-right, .anim-card-from-left, .anim-card-from-top, .anim-card-from-right, .anim-card-from-bottom, .anim-contact-left, .anim-contact-right, .anim-regional-left, .anim-regional-right, .anim-faq-left, .anim-faq-right, .anim-spotlight-right'
   );
 
   const tableCards = document.querySelectorAll('.table-card, .artisan-table');
@@ -1490,8 +1556,19 @@ function initScrollAnimations() {
   const blogArticlesSections = document.querySelectorAll('.blog-articles-section');
   const artisanVoicesSections = document.querySelectorAll('.artisan-voices-section');
   const masteryGuidesSections = document.querySelectorAll('.mastery-guides-section');
+  const regionalHoursSections = document.querySelectorAll('.regional-hours-section');
+  const faqSections = document.querySelectorAll('.faq-accordion, .faq-section');
+  const spotlightSections = document.querySelectorAll('.spotlight-section');
 
   function checkPopularGrids() {
+    spotlightSections.forEach(section => {
+      if (!section.classList.contains('is-in-view')) {
+        const rect = section.getBoundingClientRect();
+        if (rect.top < window.innerHeight * 0.92) {
+          section.classList.add('is-in-view');
+        }
+      }
+    });
     popularCatGrids.forEach(grid => {
       if (!grid.classList.contains('is-in-view')) {
         const rect = grid.getBoundingClientRect();
@@ -1673,6 +1750,22 @@ function initScrollAnimations() {
         }
       }
     });
+    regionalHoursSections.forEach(section => {
+      if (!section.classList.contains('is-in-view')) {
+        const rect = section.getBoundingClientRect();
+        if (rect.top < window.innerHeight * 0.92) {
+          section.classList.add('is-in-view');
+        }
+      }
+    });
+    faqSections.forEach(section => {
+      if (!section.classList.contains('is-in-view')) {
+        const rect = section.getBoundingClientRect();
+        if (rect.top < window.innerHeight * 0.92) {
+          section.classList.add('is-in-view');
+        }
+      }
+    });
   }
   checkPopularGrids();
   window.addEventListener('scroll', checkPopularGrids, { passive: true });
@@ -1715,6 +1808,9 @@ function initScrollAnimations() {
     blogArticlesSections.forEach(s => s.classList.add('is-in-view'));
     artisanVoicesSections.forEach(s => s.classList.add('is-in-view'));
     masteryGuidesSections.forEach(s => s.classList.add('is-in-view'));
+    regionalHoursSections.forEach(s => s.classList.add('is-in-view'));
+    faqSections.forEach(s => s.classList.add('is-in-view'));
+    spotlightSections.forEach(s => s.classList.add('is-in-view'));
     return;
   }
 
@@ -1722,7 +1818,7 @@ function initScrollAnimations() {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         const el = entry.target;
-        if (el.classList.contains('popular-cat-grid') || el.classList.contains('handmade-pair-grid') || el.classList.contains('trending-global-grid') || el.classList.contains('ancestral-traditions-grid') || el.classList.contains('why-choose-grid') || el.classList.contains('stats-banner') || el.classList.contains('maker-cta-section') || el.classList.contains('our-story-section') || el.classList.contains('mission-vision-section') || el.classList.contains('craft-culture-section') || el.classList.contains('values-section') || el.classList.contains('impact-stats-section') || el.classList.contains('empowerment-section') || el.classList.contains('services-pillars-section') || el.classList.contains('workflow-section') || el.classList.contains('tier-section') || el.classList.contains('studio-suite-section') || el.classList.contains('logistics-section') || el.classList.contains('blog-featured-section') || el.classList.contains('blog-articles-section') || el.classList.contains('artisan-voices-section') || el.classList.contains('mastery-guides-section')) {
+        if (el.classList.contains('popular-cat-grid') || el.classList.contains('handmade-pair-grid') || el.classList.contains('trending-global-grid') || el.classList.contains('ancestral-traditions-grid') || el.classList.contains('why-choose-grid') || el.classList.contains('stats-banner') || el.classList.contains('maker-cta-section') || el.classList.contains('our-story-section') || el.classList.contains('mission-vision-section') || el.classList.contains('craft-culture-section') || el.classList.contains('values-section') || el.classList.contains('impact-stats-section') || el.classList.contains('empowerment-section') || el.classList.contains('services-pillars-section') || el.classList.contains('workflow-section') || el.classList.contains('tier-section') || el.classList.contains('studio-suite-section') || el.classList.contains('logistics-section') || el.classList.contains('blog-featured-section') || el.classList.contains('blog-articles-section') || el.classList.contains('artisan-voices-section') || el.classList.contains('mastery-guides-section') || el.classList.contains('regional-hours-section') || el.classList.contains('faq-accordion') || el.classList.contains('faq-section') || el.classList.contains('spotlight-section')) {
           el.classList.add('is-in-view');
           if (el.classList.contains('studio-suite-section')) {
             runStudioInflowLiveNumber(el);
@@ -1772,6 +1868,7 @@ function initScrollAnimations() {
             r.style.animation = '';
           });
         } else {
+          el.classList.add('is-animated');
           el.style.animation = 'none';
           void el.offsetWidth;
           el.style.animation = '';
@@ -1807,6 +1904,9 @@ function initScrollAnimations() {
   blogArticlesSections.forEach(el => observer.observe(el));
   artisanVoicesSections.forEach(el => observer.observe(el));
   masteryGuidesSections.forEach(el => observer.observe(el));
+  regionalHoursSections.forEach(el => observer.observe(el));
+  faqSections.forEach(el => observer.observe(el));
+  spotlightSections.forEach(el => observer.observe(el));
   tableCards.forEach(el => observer.observe(el));
   impactScorecards.forEach(el => observer.observe(el));
   auditLogCards.forEach(el => observer.observe(el));
@@ -1953,10 +2053,6 @@ function setupEmpowermentClickEnlighten() {
       if (!isCurrentlyActive) {
         card.classList.add('is-enlightened');
         card.setAttribute('aria-pressed', 'true');
-        const badgeLabel = card.querySelector('.empower-badge')?.innerText.trim() || 'Selection';
-        if (typeof showArtisanToast === 'function') {
-          showArtisanToast(`Enlightened: ${badgeLabel}`, 'auto_awesome');
-        }
       }
     });
 
@@ -2010,11 +2106,6 @@ function setupWorkflowClickEnlighten() {
           void stepTitle.offsetWidth;
           stepTitle.style.animation = 'headingEnlightenPulse 0.55s cubic-bezier(0.16, 1, 0.3, 1)';
         }
-
-        const titleText = stepTitle ? stepTitle.innerText.trim() : 'Workflow Step';
-        if (typeof showArtisanToast === 'function') {
-          showArtisanToast(`Enlightened: ${titleText}`, 'auto_awesome');
-        }
       }
 
       // Check if any card is enlightened to set section state
@@ -2065,11 +2156,6 @@ function setupLogisticsBorderClick() {
       } else {
         card.classList.add('is-line-active');
         card.setAttribute('aria-pressed', 'true');
-
-        const title = card.querySelector('.logistics-card-title')?.innerText.trim() || 'Logistics Service';
-        if (typeof showArtisanToast === 'function') {
-          showArtisanToast(`Active: ${title} Boundary Running`, 'linear_scale');
-        }
       }
     });
 
@@ -2108,10 +2194,6 @@ function setupBlogFeaturedClick() {
       } else {
         card.classList.add('is-line-active');
         card.setAttribute('aria-pressed', 'true');
-
-        if (typeof showArtisanToast === 'function') {
-          showArtisanToast('Active: Featured Story Boundary Running', 'linear_scale');
-        }
       }
     });
 

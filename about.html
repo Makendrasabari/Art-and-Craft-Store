@@ -59,10 +59,7 @@
       </nav>
 
       <div class="header-actions">
-        <a href="login.html" class="btn btn-primary btn-sm">
-          <span class="material-symbols-outlined" style="font-size:18px;">login</span>
-          <span>Login</span>
-        </a>
+        <a href="login.html" class="btn btn-primary btn-sm">Login</a>
         <button class="mobile-nav-toggle" id="mobile-nav-toggle" aria-label="Toggle navigation menu">
           <span></span><span></span><span></span>
         </button>
@@ -87,27 +84,54 @@
     <!-- SECTION 1: ABOUT HERO -->
     <section class="hero-section" style="padding: 85px 0 95px 0;">
       <!-- Single clear background image on backside (Visible clearly, not dim, no white wash) -->
-      <div class="hero-single-bg" style="background-image: url('https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&w=1920&q=85');"></div>
+      <div class="hero-single-bg" style="background-image: url('assets/about_hero.webp');"></div>
 
       <div class="container">
-        <div class="hero-content-about-clean">
-          <span class="section-tag" style="margin-bottom:18px;"><span class="material-symbols-outlined" style="font-size:16px;">explore</span> Origin &amp; Purpose</span>
-          
-          <!-- Words: Bold black letters on left side, Gold/brown words on right side at equal height position -->
-          <h1 class="about-hero-title-row">
-            <span class="about-title-left anim-hero-left">Modern Craftsmanship</span>
-            <span class="about-title-amp">&amp;</span>
-            <span class="about-title-right anim-hero-right-1">Bridging Ancestral Heritage</span>
+        <div class="hero-content-center">
+          <div class="hero-badge anim-hero-badge">
+            <span class="material-symbols-outlined" style="font-size:18px; color:var(--c-terracotta);">explore</span>
+            <span>Origin &amp; Purpose</span>
+          </div>
+
+          <h1 class="hero-title-arranged">
+            <span class="hero-line hero-line-orange anim-hero-left-1">Modern Craftsmanship &amp;</span>
+            <span class="hero-line hero-line-brown anim-hero-right">Ancestral Heritage</span>
           </h1>
 
-          <!-- Subtitle sentences arranged one by one -->
-          <div class="about-hero-sentences-wrap">
-            <p class="about-hero-sentence sentence-1 anim-sub-arrange-1">
-              Chatly is a global sanctuary for master craftswomen, sculptors, and textile weavers.
-            </p>
-            <p class="about-hero-sentence sentence-2 anim-sub-arrange-2">
-              We celebrate the handmade soul in an era of industrial replicas.
-            </p>
+          <p class="hero-subtitle-arranged hero-words-sentence">
+            <span class="hero-word-right" style="--w-idx: 0;">Chatly</span>
+            <span class="hero-word-right" style="--w-idx: 1;">is</span>
+            <span class="hero-word-right" style="--w-idx: 2;">a</span>
+            <span class="hero-word-right" style="--w-idx: 3;">global</span>
+            <span class="hero-word-right" style="--w-idx: 4;">sanctuary</span>
+            <span class="hero-word-right" style="--w-idx: 5;">for</span>
+            <span class="hero-word-right" style="--w-idx: 6;">master</span>
+            <span class="hero-word-right" style="--w-idx: 7;">craftswomen,</span>
+            <span class="hero-word-right" style="--w-idx: 8;">sculptors,</span>
+            <span class="hero-word-right" style="--w-idx: 9;">and</span>
+            <span class="hero-word-right" style="--w-idx: 10;">textile</span>
+            <span class="hero-word-right" style="--w-idx: 11;">weavers</span>
+            <span class="hero-word-right" style="--w-idx: 12;">celebrating</span>
+            <span class="hero-word-right" style="--w-idx: 13;">the</span>
+            <span class="hero-word-right" style="--w-idx: 14;">handmade</span>
+            <span class="hero-word-right" style="--w-idx: 15;">soul</span>
+            <span class="hero-word-right" style="--w-idx: 16;">in</span>
+            <span class="hero-word-right" style="--w-idx: 17;">an</span>
+            <span class="hero-word-right" style="--w-idx: 18;">era</span>
+            <span class="hero-word-right" style="--w-idx: 19;">of</span>
+            <span class="hero-word-right" style="--w-idx: 20;">industrial</span>
+            <span class="hero-word-right" style="--w-idx: 21;">replicas.</span>
+          </p>
+
+          <div class="hero-ctas" style="justify-content: center; margin-bottom: 0;">
+            <a href="404.html" onclick="window.location.href='404.html'" class="btn btn-primary btn-lg anim-hero-btn-left">
+              <span>Explore Marketplace</span>
+              <span class="material-symbols-outlined" style="font-size:18px;">arrow_forward</span>
+            </a>
+            <a href="404.html" onclick="window.location.href='404.html'" class="btn btn-secondary btn-lg anim-hero-btn-right">
+              <span>Join as Creator</span>
+              <span class="material-symbols-outlined" style="font-size:18px;">brush</span>
+            </a>
           </div>
         </div>
       </div>
@@ -121,10 +145,10 @@
           <div class="our-story-image-wrap">
             <div class="diagonal-split-stage">
               <div class="diagonal-half half-top-left">
-                <img src="https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&w=900&q=80" alt="Artisan Craft Studio" class="diagonal-img">
+                <img src="assets/studio_workshop.webp" alt="Artisan Craft Studio" class="diagonal-img">
               </div>
               <div class="diagonal-half half-bottom-right">
-                <img src="https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&w=900&q=80" alt="Artisan Craft Studio" class="diagonal-img">
+                <img src="assets/studio_workshop.webp" alt="Artisan Craft Studio" class="diagonal-img">
               </div>
               <div class="diagonal-seam-glow"></div>
             </div>
@@ -165,7 +189,7 @@
         <div class="mission-vision-grid">
           <!-- CARD 1: OUR VISION (Swapped to Left Position) -->
           <div class="card-mission-vision vision-card anim-swap-left">
-            <div class="card-mv-bg" style="background-image: url('https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?auto=format&fit=crop&w=1000&q=80');"></div>
+            <div class="card-mv-bg" style="background-image: url('assets/about_vision.webp');"></div>
             <div class="card-mv-overlay"></div>
             <div class="card-mv-content">
               <div class="mv-icon-wrap" aria-label="Our Vision Icon">
@@ -181,7 +205,7 @@
 
           <!-- CARD 2: OUR MISSION (Swapped to Right Position) -->
           <div class="card-mission-vision mission-card anim-swap-right">
-            <div class="card-mv-bg" style="background-image: url('https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=1000&q=80');"></div>
+            <div class="card-mv-bg" style="background-image: url('assets/about_mission.webp');"></div>
             <div class="card-mv-overlay"></div>
             <div class="card-mv-content">
               <div class="mv-icon-wrap" aria-label="Our Mission Icon">

@@ -61,10 +61,7 @@
 
       <!-- Clean Login Button (Always points to login.html) -->
       <div class="header-actions">
-        <a href="login.html" class="btn btn-primary btn-sm" id="nav-login-btn">
-          <span class="material-symbols-outlined" style="font-size:18px;">login</span>
-          <span>Login</span>
-        </a>
+        <a href="login.html" class="btn btn-primary btn-sm" id="nav-login-btn">Login</a>
         <button class="mobile-nav-toggle" id="mobile-nav-toggle" aria-label="Toggle navigation menu">
           <span></span><span></span><span></span>
         </button>
@@ -90,30 +87,46 @@
     <section class="hero-section" id="hero">
       <!-- 5 Live Background Images Carousel (Runs continuously with 2-second interval, clearly visible) -->
       <div class="hero-bg-slideshow" id="hero-bg-slideshow">
-        <div class="hero-bg-slide active" style="background-image: url('https://images.unsplash.com/photo-1578749556568-bc2c40e68b61?auto=format&fit=crop&w=1920&q=85');"></div>
-        <div class="hero-bg-slide" style="background-image: url('https://images.unsplash.com/photo-1590736969955-71cc94801759?auto=format&fit=crop&w=1920&q=85');"></div>
-        <div class="hero-bg-slide" style="background-image: url('https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&w=1920&q=85');"></div>
-        <div class="hero-bg-slide" style="background-image: url('https://images.unsplash.com/photo-1582562124811-c09040d0a901?auto=format&fit=crop&w=1920&q=85');"></div>
-        <div class="hero-bg-slide" style="background-image: url('https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?auto=format&fit=crop&w=1920&q=85');"></div>
+        <div class="hero-bg-slide active" style="background-image: url('assets/hero_slide_1.webp');"></div>
+        <div class="hero-bg-slide" style="background-image: url('assets/hero_slide_2.webp');"></div>
+        <div class="hero-bg-slide" style="background-image: url('assets/hero_slide_3.webp');"></div>
+        <div class="hero-bg-slide" style="background-image: url('assets/hero_slide_4.webp');"></div>
+        <div class="hero-bg-slide" style="background-image: url('assets/hero_slide_5.webp');"></div>
       </div>
 
       <div class="container">
         <div class="hero-content-center">
-          <div class="hero-badge">
+          <div class="hero-badge anim-hero-badge">
             <span class="material-symbols-outlined" style="font-size:18px; color:var(--c-terracotta);">auto_awesome</span>
             <span>Handmade Cultural Marketplace</span>
           </div>
 
           <h1 class="hero-title-arranged">
-            <span class="hero-line hero-line-gold anim-hero-right-1">Discover Art.</span>
-            <span class="hero-line hero-line-gold anim-hero-right-2">Celebrate Craft.</span>
-            <span class="hero-line hero-line-brown anim-hero-left">Support Creators.</span>
+            <span class="hero-line hero-line-orange anim-hero-left-1">Discover Art.</span>
+            <span class="hero-line hero-line-orange anim-hero-left-2">Celebrate Craft.</span>
+            <span class="hero-line hero-line-brown anim-hero-right">Support Creators.</span>
           </h1>
 
-          <p class="hero-subtitle-arranged">
-            <span class="hero-sub-line anim-sub-right-1">Immerse yourself in authentic heritage craftsmanship,</span>
-            <span class="hero-sub-line anim-sub-right-2">master-carved sculptures, heritage woven textiles,</span>
-            <span class="hero-sub-line anim-sub-right-3">and contemporary digital art directly from independent makers.</span>
+          <p class="hero-subtitle-arranged hero-words-sentence">
+            <span class="hero-word-right" style="--w-idx: 0;">Immerse</span>
+            <span class="hero-word-right" style="--w-idx: 1;">yourself</span>
+            <span class="hero-word-right" style="--w-idx: 2;">in</span>
+            <span class="hero-word-right" style="--w-idx: 3;">authentic</span>
+            <span class="hero-word-right" style="--w-idx: 4;">heritage</span>
+            <span class="hero-word-right" style="--w-idx: 5;">craftsmanship,</span>
+            <span class="hero-word-right" style="--w-idx: 6;">master-carved</span>
+            <span class="hero-word-right" style="--w-idx: 7;">sculptures,</span>
+            <span class="hero-word-right" style="--w-idx: 8;">heritage</span>
+            <span class="hero-word-right" style="--w-idx: 9;">woven</span>
+            <span class="hero-word-right" style="--w-idx: 10;">textiles,</span>
+            <span class="hero-word-right" style="--w-idx: 11;">and</span>
+            <span class="hero-word-right" style="--w-idx: 12;">contemporary</span>
+            <span class="hero-word-right" style="--w-idx: 13;">digital</span>
+            <span class="hero-word-right" style="--w-idx: 14;">art</span>
+            <span class="hero-word-right" style="--w-idx: 15;">directly</span>
+            <span class="hero-word-right" style="--w-idx: 16;">from</span>
+            <span class="hero-word-right" style="--w-idx: 17;">independent</span>
+            <span class="hero-word-right" style="--w-idx: 18;">makers.</span>
           </p>
 
           <div class="hero-ctas" style="justify-content: center; margin-bottom: 28px;">
@@ -127,7 +140,7 @@
             </a>
           </div>
 
-          <div class="hero-trust" style="justify-content: center; width: 100%;">
+          <div class="hero-trust anim-hero-trust" style="justify-content: center; width: 100%;">
             <div class="trust-item">
               <div class="trust-icon"><span class="material-symbols-outlined" style="font-size:18px;">verified</span></div>
               <div class="trust-text">100% Verified Authentic Provenance</div>
@@ -171,7 +184,7 @@
               <button class="product-wishlist-btn" aria-label="Save to wishlist">
                 <span class="material-symbols-outlined" style="font-size:18px;">favorite_border</span>
               </button>
-              <img src="https://images.unsplash.com/photo-1578749556568-bc2c40e68b61?auto=format&fit=crop&w=800&q=80" alt="Yoruba Earthenware Clay Pot" class="product-img">
+              <img src="assets/product_pottery.webp" alt="Yoruba Earthenware Clay Pot" class="product-img">
             </div>
             <div class="product-body">
               <div class="product-meta">
@@ -198,7 +211,7 @@
               <button class="product-wishlist-btn" aria-label="Save to wishlist">
                 <span class="material-symbols-outlined" style="font-size:18px;">favorite_border</span>
               </button>
-              <img src="https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=800&q=80" alt="Hand-carved Solid Mahogany Sculpture" class="product-img">
+              <img src="assets/product_wood_bust.webp" alt="Hand-carved Solid Mahogany Sculpture" class="product-img">
             </div>
             <div class="product-body">
               <div class="product-meta">
@@ -225,7 +238,7 @@
               <button class="product-wishlist-btn" aria-label="Save to wishlist">
                 <span class="material-symbols-outlined" style="font-size:18px;">favorite_border</span>
               </button>
-              <img src="https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?auto=format&fit=crop&w=800&q=80" alt="Authentic Kente Handwoven Tapestry" class="product-img">
+              <img src="assets/product_tapestry.webp" alt="Authentic Kente Handwoven Tapestry" class="product-img">
             </div>
             <div class="product-body">
               <div class="product-meta">
@@ -252,7 +265,7 @@
               <button class="product-wishlist-btn" aria-label="Save to wishlist">
                 <span class="material-symbols-outlined" style="font-size:18px;">favorite_border</span>
               </button>
-              <img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=800&q=80" alt="Handcrafted Beaded Jewelry" class="product-img">
+              <img src="assets/product_jewelry.webp" alt="Handcrafted Beaded Jewelry" class="product-img">
             </div>
             <div class="product-body">
               <div class="product-meta">
@@ -279,7 +292,7 @@
               <button class="product-wishlist-btn" aria-label="Save to wishlist">
                 <span class="material-symbols-outlined" style="font-size:18px;">favorite_border</span>
               </button>
-              <img src="https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?auto=format&fit=crop&w=800&q=80" alt="Sun Goddess of the Savannah Digital Afro-Art" class="product-img">
+              <img src="assets/product_digital_art.webp" alt="Sun Goddess of the Savannah Digital Art" class="product-img">
             </div>
             <div class="product-body">
               <div class="product-meta">
@@ -306,7 +319,7 @@
               <button class="product-wishlist-btn" aria-label="Save to wishlist">
                 <span class="material-symbols-outlined" style="font-size:18px;">favorite_border</span>
               </button>
-              <img src="https://images.unsplash.com/photo-1606744824163-985d376605aa?auto=format&fit=crop&w=800&q=80" alt="Benin Lost-Wax Bronze Leopard" class="product-img">
+              <img src="assets/product_bronze.webp" alt="Benin Lost-Wax Bronze Leopard" class="product-img">
             </div>
             <div class="product-body">
               <div class="product-meta">
@@ -338,8 +351,8 @@
 
         <div class="popular-cat-grid" id="popular-categories-grid">
           <!-- Card 1: Ceramics & Clay (Row 1) -->
-          <div class="category-card anim-cat-card anim-cat-delay-1" onclick="window.location.href='404.html'">
-            <div class="category-card-bg" style="background-image: url('https://images.unsplash.com/photo-1578749556568-bc2c40e68b61?auto=format&fit=crop&w=700&q=80');"></div>
+          <div class="category-card anim-cat-card anim-cat-delay-1">
+            <div class="category-card-bg" style="background-image: url('assets/cat_ceramics.webp');"></div>
             <div class="category-card-overlay"></div>
             <div class="category-card-content">
               <div class="category-icon-wrap"><span class="material-symbols-outlined" style="font-size:32px;">potted_plant</span></div>
@@ -349,8 +362,8 @@
           </div>
 
           <!-- Card 2: Handwoven Textiles (Row 1) -->
-          <div class="category-card anim-cat-card anim-cat-delay-2" onclick="window.location.href='404.html'">
-            <div class="category-card-bg" style="background-image: url('https://images.unsplash.com/photo-1590736969955-71cc94801759?auto=format&fit=crop&w=700&q=80');"></div>
+          <div class="category-card anim-cat-card anim-cat-delay-2">
+            <div class="category-card-bg" style="background-image: url('assets/cat_textiles.webp');"></div>
             <div class="category-card-overlay"></div>
             <div class="category-card-content">
               <div class="category-icon-wrap"><span class="material-symbols-outlined" style="font-size:32px;">texture</span></div>
@@ -360,8 +373,8 @@
           </div>
 
           <!-- Card 3: Wood Carvings (Row 1) -->
-          <div class="category-card anim-cat-card anim-cat-delay-3" onclick="window.location.href='404.html'">
-            <div class="category-card-bg" style="background-image: url('https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&w=700&q=80');"></div>
+          <div class="category-card anim-cat-card anim-cat-delay-3">
+            <div class="category-card-bg" style="background-image: url('assets/cat_woodcraft.webp');"></div>
             <div class="category-card-overlay"></div>
             <div class="category-card-content">
               <div class="category-icon-wrap"><span class="material-symbols-outlined" style="font-size:32px;">forest</span></div>
@@ -371,8 +384,8 @@
           </div>
 
           <!-- Card 4: Beaded Jewelry (Row 1) -->
-          <div class="category-card anim-cat-card anim-cat-delay-4" onclick="window.location.href='404.html'">
-            <div class="category-card-bg" style="background-image: url('https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=700&q=80');"></div>
+          <div class="category-card anim-cat-card anim-cat-delay-4">
+            <div class="category-card-bg" style="background-image: url('assets/cat_jewelry.webp');"></div>
             <div class="category-card-overlay"></div>
             <div class="category-card-content">
               <div class="category-icon-wrap"><span class="material-symbols-outlined" style="font-size:32px;">diamond</span></div>
@@ -382,8 +395,8 @@
           </div>
 
           <!-- Card 5: Digital Art (Row 2) -->
-          <div class="category-card anim-cat-card anim-cat-delay-5" onclick="window.location.href='404.html'">
-            <div class="category-card-bg" style="background-image: url('https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?auto=format&fit=crop&w=700&q=80');"></div>
+          <div class="category-card anim-cat-card anim-cat-delay-5">
+            <div class="category-card-bg" style="background-image: url('assets/cat_digital_art.webp');"></div>
             <div class="category-card-overlay"></div>
             <div class="category-card-content">
               <div class="category-icon-wrap"><span class="material-symbols-outlined" style="font-size:32px;">draw</span></div>
@@ -393,8 +406,8 @@
           </div>
 
           <!-- Card 6: Raffia & Baskets (Row 2) -->
-          <div class="category-card anim-cat-card anim-cat-delay-6" onclick="window.location.href='404.html'">
-            <div class="category-card-bg" style="background-image: url('https://images.unsplash.com/photo-1584992236310-6edddc08acff?auto=format&fit=crop&w=700&q=80');"></div>
+          <div class="category-card anim-cat-card anim-cat-delay-6">
+            <div class="category-card-bg" style="background-image: url('assets/cat_baskets.webp');"></div>
             <div class="category-card-overlay"></div>
             <div class="category-card-content">
               <div class="category-icon-wrap"><span class="material-symbols-outlined" style="font-size:32px;">shopping_basket</span></div>
@@ -404,8 +417,8 @@
           </div>
 
           <!-- Card 7: Lost-Wax Bronze (Row 2) -->
-          <div class="category-card anim-cat-card anim-cat-delay-7" onclick="window.location.href='404.html'">
-            <div class="category-card-bg" style="background-image: url('https://images.unsplash.com/photo-1606744824163-985d376605aa?auto=format&fit=crop&w=700&q=80');"></div>
+          <div class="category-card anim-cat-card anim-cat-delay-7">
+            <div class="category-card-bg" style="background-image: url('assets/cat_bronze.webp');"></div>
             <div class="category-card-overlay"></div>
             <div class="category-card-content">
               <div class="category-icon-wrap"><span class="material-symbols-outlined" style="font-size:32px;">local_fire_department</span></div>
@@ -415,8 +428,8 @@
           </div>
 
           <!-- Card 8: Leatherwork & Hide (Row 2) -->
-          <div class="category-card anim-cat-card anim-cat-delay-8" onclick="window.location.href='404.html'">
-            <div class="category-card-bg" style="background-image: url('https://images.unsplash.com/photo-1524805444758-089113d48a6d?auto=format&fit=crop&w=700&q=80');"></div>
+          <div class="category-card anim-cat-card anim-cat-delay-8">
+            <div class="category-card-bg" style="background-image: url('assets/cat_leather.webp');"></div>
             <div class="category-card-overlay"></div>
             <div class="category-card-content">
               <div class="category-icon-wrap"><span class="material-symbols-outlined" style="font-size:32px;">style</span></div>
@@ -440,7 +453,7 @@
         <div class="handmade-pair-grid" id="handmade-pair-grid">
           <!-- Left Card: Solar Mandala Sweetgrass Basket (Slides In From Left) -->
           <div class="card-artisan anim-from-left anim-handmade-left" id="card-solar-mandala">
-            <img src="https://images.unsplash.com/photo-1584992236310-6edddc08acff?auto=format&fit=crop&w=700&q=80" alt="Basketry" style="width:100%; height:220px; object-fit:cover; border-radius:var(--radius-md); margin-bottom:16px;">
+            <img src="assets/spotlight_basket.webp" alt="Basketry" style="width:100%; height:220px; object-fit:cover; border-radius:var(--radius-md); margin-bottom:16px;">
             <span class="badge badge-terracotta" style="margin-bottom:8px;">Gambia Basketry</span>
             <h3 style="font-size:1.25rem; margin-bottom:8px;">Solar Mandala Sweetgrass Basket</h3>
             <p style="font-size:0.9rem; color:var(--c-text-muted); margin-bottom:16px;">Coiled wild grass dyed with native acacia bark and turmeric root.</p>
@@ -452,7 +465,7 @@
 
           <!-- Right Card: Golden Nubia Archival Digital Canvas (Slides In From Right) -->
           <div class="card-artisan anim-from-right anim-handmade-right" id="card-golden-nubia">
-            <img src="https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?auto=format&fit=crop&w=700&q=80" alt="Digital Art" style="width:100%; height:220px; object-fit:cover; border-radius:var(--radius-md); margin-bottom:16px;">
+            <img src="assets/spotlight_digital.webp" alt="Digital Art" style="width:100%; height:220px; object-fit:cover; border-radius:var(--radius-md); margin-bottom:16px;">
             <span class="badge badge-craft" style="margin-bottom:8px;">Archival Print</span>
             <h3 style="font-size:1.25rem; margin-bottom:8px;">Golden Nubia Archival Digital Canvas</h3>
             <p style="font-size:0.9rem; color:var(--c-text-muted); margin-bottom:16px;">Ultra-high resolution museum fine art canvas with gold vector overlays.</p>
@@ -480,7 +493,7 @@
         <div class="artist-marquee-track">
           <!-- Artisan 1 -->
           <div class="artist-card">
-            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&q=80" alt="Nia Adebayo Portrait" class="artist-avatar">
+            <img src="assets/artisan_nia.webp" alt="Nia Adebayo Portrait" class="artist-avatar">
             <h3 class="artist-name">Nia Adebayo</h3>
             <div class="artist-location"><span class="material-symbols-outlined" style="font-size:16px;">location_on</span> Lagos, Nigeria</div>
             <p class="artist-bio">Ceramic sculptor blending traditional Yoruba earthenware pit-firing with modern silhouettes.</p>
@@ -493,7 +506,7 @@
 
           <!-- Artisan 2 -->
           <div class="artist-card">
-            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80" alt="Kwame Asante Portrait" class="artist-avatar">
+            <img src="assets/artisan_kwame.webp" alt="Kwame Asante Portrait" class="artist-avatar">
             <h3 class="artist-name">Kwame Asante</h3>
             <div class="artist-location"><span class="material-symbols-outlined" style="font-size:16px;">location_on</span> Kumasi, Ghana</div>
             <p class="artist-bio">Third-generation wood sculptor working with salvaged jacaranda, ebony, and mahogany.</p>
@@ -506,7 +519,7 @@
 
           <!-- Artisan 3 -->
           <div class="artist-card">
-            <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=400&q=80" alt="Zola Mthembu Portrait" class="artist-avatar">
+            <img src="assets/artisan_zola.webp" alt="Zola Mthembu Portrait" class="artist-avatar">
             <h3 class="artist-name">Zola Mthembu</h3>
             <div class="artist-location"><span class="material-symbols-outlined" style="font-size:16px;">location_on</span> Durban Studio</div>
             <p class="artist-bio">Weaver and glass bead artisan infusing Zulu geometric color semantics into wearable jewelry.</p>
@@ -519,7 +532,7 @@
 
           <!-- Artisan 4 -->
           <div class="artist-card">
-            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=400&q=80" alt="Tariq El-Amin Portrait" class="artist-avatar">
+            <img src="assets/artisan_tariq.webp" alt="Tariq El-Amin Portrait" class="artist-avatar">
             <h3 class="artist-name">Tariq El-Amin</h3>
             <div class="artist-location"><span class="material-symbols-outlined" style="font-size:16px;">location_on</span> Cairo, Egypt</div>
             <p class="artist-bio">Digital fine artist exploring Nubian mythologies through architectural generative 3D forms.</p>
@@ -532,7 +545,7 @@
 
           <!-- Artisan 5 -->
           <div class="artist-card">
-            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=400&q=80" alt="Amina Jallow Portrait" class="artist-avatar">
+            <img src="assets/artisan_amina.webp" alt="Amina Jallow Portrait" class="artist-avatar">
             <h3 class="artist-name">Amina Jallow</h3>
             <div class="artist-location"><span class="material-symbols-outlined" style="font-size:16px;">location_on</span> Banjul, Gambia</div>
             <p class="artist-bio">Master basket weaver transforming wild sweetgrass and vegetable dyes into museum vessels.</p>
@@ -545,7 +558,7 @@
 
           <!-- Duplicated Set of 5 Artisans for Seamless Continuous Infinite Loop -->
           <div class="artist-card">
-            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&q=80" alt="Nia Adebayo Portrait" class="artist-avatar">
+            <img src="assets/artisan_nia.webp" alt="Nia Adebayo Portrait" class="artist-avatar">
             <h3 class="artist-name">Nia Adebayo</h3>
             <div class="artist-location"><span class="material-symbols-outlined" style="font-size:16px;">location_on</span> Lagos, Nigeria</div>
             <p class="artist-bio">Ceramic sculptor blending traditional Yoruba earthenware pit-firing with modern silhouettes.</p>
@@ -557,7 +570,7 @@
           </div>
 
           <div class="artist-card">
-            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80" alt="Kwame Asante Portrait" class="artist-avatar">
+            <img src="assets/artisan_kwame.webp" alt="Kwame Asante Portrait" class="artist-avatar">
             <h3 class="artist-name">Kwame Asante</h3>
             <div class="artist-location"><span class="material-symbols-outlined" style="font-size:16px;">location_on</span> Kumasi, Ghana</div>
             <p class="artist-bio">Third-generation wood sculptor working with salvaged jacaranda, ebony, and mahogany.</p>
@@ -569,7 +582,7 @@
           </div>
 
           <div class="artist-card">
-            <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=400&q=80" alt="Zola Mthembu Portrait" class="artist-avatar">
+            <img src="assets/artisan_zola.webp" alt="Zola Mthembu Portrait" class="artist-avatar">
             <h3 class="artist-name">Zola Mthembu</h3>
             <div class="artist-location"><span class="material-symbols-outlined" style="font-size:16px;">location_on</span> Durban Studio</div>
             <p class="artist-bio">Weaver and glass bead artisan infusing Zulu geometric color semantics into wearable jewelry.</p>
@@ -581,7 +594,7 @@
           </div>
 
           <div class="artist-card">
-            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=400&q=80" alt="Tariq El-Amin Portrait" class="artist-avatar">
+            <img src="assets/artisan_tariq.webp" alt="Tariq El-Amin Portrait" class="artist-avatar">
             <h3 class="artist-name">Tariq El-Amin</h3>
             <div class="artist-location"><span class="material-symbols-outlined" style="font-size:16px;">location_on</span> Cairo, Egypt</div>
             <p class="artist-bio">Digital fine artist exploring Nubian mythologies through architectural generative 3D forms.</p>
@@ -593,7 +606,7 @@
           </div>
 
           <div class="artist-card">
-            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=400&q=80" alt="Amina Jallow Portrait" class="artist-avatar">
+            <img src="assets/artisan_amina.webp" alt="Amina Jallow Portrait" class="artist-avatar">
             <h3 class="artist-name">Amina Jallow</h3>
             <div class="artist-location"><span class="material-symbols-outlined" style="font-size:16px;">location_on</span> Banjul, Gambia</div>
             <p class="artist-bio">Master basket weaver transforming wild sweetgrass and vegetable dyes into museum vessels.</p>
@@ -608,11 +621,11 @@
     </section>
 
     <!-- SECTION 6: CREATOR SPOTLIGHT -->
-    <section class="section" style="padding: 70px 0;">
+    <section class="section spotlight-section" id="spotlight-section" style="padding: 70px 0; overflow: hidden;">
       <div class="container">
-        <div class="spotlight-card">
+        <div class="spotlight-card anim-spotlight-right">
           <div class="spotlight-media">
-            <img src="https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&w=1000&q=80" alt="Artisan Studio Workshop">
+            <img src="assets/studio_workshop.webp" alt="Artisan Studio Workshop">
           </div>
           <div>
             <span class="badge badge-terracotta" style="margin-bottom:12px;">Artisan In Focus</span>
@@ -784,7 +797,7 @@
           <!-- Card 1: Elena Rostova -->
           <div class="card-artisan testimonial-card">
             <div class="testimonial-header">
-              <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=200&q=80" alt="Elena Rostova Portrait" class="testimonial-avatar">
+              <img src="assets/user_elena.webp" alt="Elena Rostova Portrait" class="testimonial-avatar">
               <div>
                 <strong class="testimonial-author-name">Elena Rostova</strong>
                 <div class="testimonial-author-role">Private Collector • Zurich, Switzerland</div>
@@ -805,7 +818,7 @@
           <!-- Card 2: Julian Vance -->
           <div class="card-artisan testimonial-card">
             <div class="testimonial-header">
-              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80" alt="Julian Vance Portrait" class="testimonial-avatar">
+              <img src="assets/user_julian.webp" alt="Julian Vance Portrait" class="testimonial-avatar">
               <div>
                 <strong class="testimonial-author-name">Julian Vance</strong>
                 <div class="testimonial-author-role">Interior Architect • London, UK</div>
@@ -826,7 +839,7 @@
           <!-- Card 3: Chloé Dubois -->
           <div class="card-artisan testimonial-card">
             <div class="testimonial-header">
-              <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=200&q=80" alt="Chloé Dubois Portrait" class="testimonial-avatar">
+              <img src="assets/user_chloe.webp" alt="Chloé Dubois Portrait" class="testimonial-avatar">
               <div>
                 <strong class="testimonial-author-name">Chloé Dubois</strong>
                 <div class="testimonial-author-role">Contemporary Art Curator • Paris, France</div>
@@ -847,7 +860,7 @@
           <!-- Duplicated Set for Seamless Continuous Infinite Live Run -->
           <div class="card-artisan testimonial-card">
             <div class="testimonial-header">
-              <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=200&q=80" alt="Elena Rostova Portrait" class="testimonial-avatar">
+              <img src="assets/user_elena.webp" alt="Elena Rostova Portrait" class="testimonial-avatar">
               <div>
                 <strong class="testimonial-author-name">Elena Rostova</strong>
                 <div class="testimonial-author-role">Private Collector • Zurich, Switzerland</div>
@@ -867,7 +880,7 @@
 
           <div class="card-artisan testimonial-card">
             <div class="testimonial-header">
-              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80" alt="Julian Vance Portrait" class="testimonial-avatar">
+              <img src="assets/user_julian.webp" alt="Julian Vance Portrait" class="testimonial-avatar">
               <div>
                 <strong class="testimonial-author-name">Julian Vance</strong>
                 <div class="testimonial-author-role">Interior Architect • London, UK</div>
@@ -887,7 +900,7 @@
 
           <div class="card-artisan testimonial-card">
             <div class="testimonial-header">
-              <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=200&q=80" alt="Chloé Dubois Portrait" class="testimonial-avatar">
+              <img src="assets/user_chloe.webp" alt="Chloé Dubois Portrait" class="testimonial-avatar">
               <div>
                 <strong class="testimonial-author-name">Chloé Dubois</strong>
                 <div class="testimonial-author-role">Contemporary Art Curator • Paris, France</div>

@@ -59,10 +59,7 @@
       </nav>
 
       <div class="header-actions">
-        <a href="login.html" class="btn btn-primary btn-sm">
-          <span class="material-symbols-outlined" style="font-size:18px;">login</span>
-          <span>Login</span>
-        </a>
+        <a href="login.html" class="btn btn-primary btn-sm">Login</a>
         <button class="mobile-nav-toggle" id="mobile-nav-toggle" aria-label="Toggle navigation menu">
           <span></span><span></span><span></span>
         </button>
@@ -87,19 +84,45 @@
     <!-- SECTION 1: BLOG HERO -->
     <section class="hero-section" style="padding: 85px 0 95px 0;">
       <!-- Single clear background image on backside (Visible clearly, not dim, no white wash) -->
-      <div class="hero-single-bg" style="background-image: url('https://images.unsplash.com/photo-1590736969955-71cc94801759?auto=format&fit=crop&w=1920&q=85');"></div>
+      <div class="hero-single-bg" style="background-image: url('assets/blog_hero.webp');"></div>
 
       <div class="container">
         <div class="hero-content-center">
-          <span class="section-tag" style="margin-bottom:16px;"><span class="material-symbols-outlined" style="font-size:16px;">menu_book</span> The Artisan Gazette</span>
+          <div class="hero-badge anim-hero-badge">
+            <span class="material-symbols-outlined" style="font-size:18px; color:var(--c-terracotta);">menu_book</span>
+            <span>The Artisan Gazette</span>
+          </div>
           <h1 class="hero-title-arranged">
-            <span class="hero-line hero-line-gold anim-hero-right-1">Chronicles of Craft,</span>
-            <span class="hero-line hero-line-brown anim-hero-left">Lineage & Creation</span>
+            <span class="hero-line hero-line-orange anim-hero-left-1">Chronicles of Craft,</span>
+            <span class="hero-line hero-line-brown anim-hero-right">Lineage &amp; Creation</span>
           </h1>
-          <p class="hero-subtitle-arranged">
-            <span class="hero-sub-line anim-sub-right-1">In-depth stories, artisan master interviews, and craft preservation tutorials</span>
-            <span class="hero-sub-line anim-sub-right-2">across the modern global maker movement.</span>
+          <p class="hero-subtitle-arranged hero-words-sentence">
+            <span class="hero-word-right" style="--w-idx: 0;">In-depth</span>
+            <span class="hero-word-right" style="--w-idx: 1;">stories,</span>
+            <span class="hero-word-right" style="--w-idx: 2;">artisan</span>
+            <span class="hero-word-right" style="--w-idx: 3;">master</span>
+            <span class="hero-word-right" style="--w-idx: 4;">interviews,</span>
+            <span class="hero-word-right" style="--w-idx: 5;">and</span>
+            <span class="hero-word-right" style="--w-idx: 6;">craft</span>
+            <span class="hero-word-right" style="--w-idx: 7;">preservation</span>
+            <span class="hero-word-right" style="--w-idx: 8;">tutorials</span>
+            <span class="hero-word-right" style="--w-idx: 9;">across</span>
+            <span class="hero-word-right" style="--w-idx: 10;">the</span>
+            <span class="hero-word-right" style="--w-idx: 11;">modern</span>
+            <span class="hero-word-right" style="--w-idx: 12;">global</span>
+            <span class="hero-word-right" style="--w-idx: 13;">maker</span>
+            <span class="hero-word-right" style="--w-idx: 14;">movement.</span>
           </p>
+          <div class="hero-ctas" style="justify-content: center; margin-bottom: 0;">
+            <a href="404.html" onclick="window.location.href='404.html'" class="btn btn-primary btn-lg anim-hero-btn-left">
+              <span>Explore Marketplace</span>
+              <span class="material-symbols-outlined" style="font-size:18px;">arrow_forward</span>
+            </a>
+            <a href="404.html" onclick="window.location.href='404.html'" class="btn btn-secondary btn-lg anim-hero-btn-right">
+              <span>Join as Creator</span>
+              <span class="material-symbols-outlined" style="font-size:18px;">brush</span>
+            </a>
+          </div>
         </div>
       </div>
     </section>
@@ -117,7 +140,7 @@
 
           <!-- Left: Featured Media with Slide-in from Left -->
           <div class="blog-featured-media anim-featured-left">
-            <img src="https://images.unsplash.com/photo-1578749556568-bc2c40e68b61?auto=format&fit=crop&w=1000&q=80" alt="Ceramic Artisan at Work" class="blog-featured-img">
+            <img src="assets/blog_featured.webp" alt="Ceramic Artisan at Work" class="blog-featured-img">
             <div class="blog-featured-badge-overlay">
               <span class="badge badge-terracotta"><span class="material-symbols-outlined" style="font-size:14px;">auto_awesome</span> Featured Lead Story</span>
             </div>
@@ -138,7 +161,7 @@
             </p>
             <div class="blog-featured-author-row" style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:16px;">
               <div style="display:flex; align-items:center; gap:12px;">
-                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=120&q=80" alt="Author Chidinma Eze" style="width:44px; height:44px; border-radius:50%; object-fit:cover; border:2px solid rgba(184, 103, 55, 0.25);">
+                <img src="assets/blog_author_chidinma.webp" alt="Author Chidinma Eze" style="width:44px; height:44px; border-radius:50%; object-fit:cover; border:2px solid rgba(184, 103, 55, 0.25);">
                 <div>
                   <strong style="font-size:0.92rem; display:block; color:var(--c-deep-brown);">Chidinma Eze</strong>
                   <span style="font-size:0.78rem; color:var(--c-text-light);">Senior Cultural Curator</span>
@@ -171,7 +194,7 @@
           <!-- Card 1: Row 1 Left (Arrives from Left Side) -->
           <article class="blog-card anim-blog-left blog-card-1" tabindex="0" role="button" aria-label="Sacred Geometric Codes of Ashanti Kente Weavers" onclick="window.location.href='404.html';">
             <div class="blog-card-media">
-              <img src="https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?auto=format&fit=crop&w=700&q=80" alt="Kente Loom" class="blog-card-img">
+              <img src="assets/blog_post_1.webp" alt="Kente Loom" class="blog-card-img">
               <div class="blog-image-enlighten-overlay"></div>
             </div>
             <div class="blog-card-body">
@@ -191,7 +214,7 @@
           <!-- Card 2: Row 1 Center (Arrives from Top Side) -->
           <article class="blog-card anim-blog-top blog-card-2" tabindex="0" role="button" aria-label="Pricing Your Handcrafted Art for Global Collectors" onclick="window.location.href='404.html';">
             <div class="blog-card-media">
-              <img src="https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&w=700&q=80" alt="Studio Business" class="blog-card-img">
+              <img src="assets/blog_post_2.webp" alt="Studio Business" class="blog-card-img">
               <div class="blog-image-enlighten-overlay"></div>
             </div>
             <div class="blog-card-body">
@@ -211,7 +234,7 @@
           <!-- Card 3: Row 1 Right (Arrives from Right Side) -->
           <article class="blog-card anim-blog-right blog-card-3" tabindex="0" role="button" aria-label="Kwame Asante: Listening to the Grain of Jacaranda Wood" onclick="window.location.href='404.html';">
             <div class="blog-card-media">
-              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=700&q=80" alt="Sculptor Kwame Asante" class="blog-card-img">
+              <img src="assets/blog_post_3.webp" alt="Sculptor Kwame Asante" class="blog-card-img">
               <div class="blog-image-enlighten-overlay"></div>
             </div>
             <div class="blog-card-body">
@@ -231,7 +254,7 @@
           <!-- Card 4: Row 2 Left (Arrives from Left Side) -->
           <article class="blog-card anim-blog-left blog-card-4" tabindex="0" role="button" aria-label="Tutorial: Coiling Sweetgrass & Raffia Baskets at Home" onclick="window.location.href='404.html';">
             <div class="blog-card-media">
-              <img src="https://images.unsplash.com/photo-1584992236310-6edddc08acff?auto=format&fit=crop&w=700&q=80" alt="Weaving basket" class="blog-card-img">
+              <img src="assets/blog_post_4.webp" alt="Weaving basket" class="blog-card-img">
               <div class="blog-image-enlighten-overlay"></div>
             </div>
             <div class="blog-card-body">
@@ -251,7 +274,7 @@
           <!-- Card 5: Row 2 Center (Arrives from Downside) -->
           <article class="blog-card anim-blog-bottom blog-card-5" tabindex="0" role="button" aria-label="Ancestral Futurism: Merging Ancient Mythology with 3D Canvas" onclick="window.location.href='404.html';">
             <div class="blog-card-media">
-              <img src="https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?auto=format&fit=crop&w=700&q=80" alt="Digital Art Sculpture" class="blog-card-img">
+              <img src="assets/blog_post_5.webp" alt="Digital Art Sculpture" class="blog-card-img">
               <div class="blog-image-enlighten-overlay"></div>
             </div>
             <div class="blog-card-body">
@@ -271,7 +294,7 @@
           <!-- Card 6: Row 2 Right (Arrives from Right Side) -->
           <article class="blog-card anim-blog-right blog-card-6" tabindex="0" role="button" aria-label="How Mobile Money Micro-Payouts are Transforming Craft Guilds" onclick="window.location.href='404.html';">
             <div class="blog-card-media">
-              <img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=700&q=80" alt="Jewelry Craft Economy" class="blog-card-img">
+              <img src="assets/blog_post_6.webp" alt="Jewelry Craft Economy" class="blog-card-img">
               <div class="blog-image-enlighten-overlay"></div>
             </div>
             <div class="blog-card-body">

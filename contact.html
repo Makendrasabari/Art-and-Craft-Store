@@ -59,10 +59,7 @@
       </nav>
 
       <div class="header-actions">
-        <a href="login.html" class="btn btn-primary btn-sm">
-          <span class="material-symbols-outlined" style="font-size:18px;">login</span>
-          <span>Login</span>
-        </a>
+        <a href="login.html" class="btn btn-primary btn-sm">Login</a>
         <button class="mobile-nav-toggle" id="mobile-nav-toggle" aria-label="Toggle navigation menu">
           <span></span><span></span><span></span>
         </button>
@@ -87,25 +84,58 @@
     <!-- SECTION 1: CONTACT HERO -->
     <section class="hero-section" style="padding: 85px 0 95px 0;">
       <!-- Single clear background image on backside (Visible clearly, not dim, no white wash) -->
-      <div class="hero-single-bg" style="background-image: url('https://images.unsplash.com/photo-1582562124811-c09040d0a901?auto=format&fit=crop&w=1920&q=85');"></div>
+      <div class="hero-single-bg" style="background-image: url('assets/contact_hero.webp');"></div>
 
       <div class="container">
         <div class="hero-content-center">
-          <span class="section-tag" style="margin-bottom:16px;"><span class="material-symbols-outlined" style="font-size:16px;">contact_support</span> Direct Communication</span>
+          <div class="hero-badge anim-hero-badge">
+            <span class="material-symbols-outlined" style="font-size:18px; color:var(--c-terracotta);">contact_support</span>
+            <span>Direct Communication</span>
+          </div>
           <h1 class="hero-title-arranged">
-            <span class="hero-line hero-line-gold anim-hero-right-1">Reach Our Curatorial &</span>
-            <span class="hero-line hero-line-brown anim-hero-left">Artisan Concierge</span>
+            <span class="hero-line hero-line-orange anim-hero-left-1">Reach Our Curatorial &amp;</span>
+            <span class="hero-line hero-line-brown anim-hero-right">Artisan Concierge</span>
           </h1>
-          <p class="hero-subtitle-arranged">
-            <span class="hero-sub-line anim-sub-right-1">Whether requesting custom commissions or inquiring about insured art transport,</span>
-            <span class="hero-sub-line anim-sub-right-2">our dedicated team of curators and concierge specialists is at your service.</span>
+          <p class="hero-subtitle-arranged hero-words-sentence">
+            <span class="hero-word-right" style="--w-idx: 0;">Whether</span>
+            <span class="hero-word-right" style="--w-idx: 1;">requesting</span>
+            <span class="hero-word-right" style="--w-idx: 2;">custom</span>
+            <span class="hero-word-right" style="--w-idx: 3;">commissions</span>
+            <span class="hero-word-right" style="--w-idx: 4;">or</span>
+            <span class="hero-word-right" style="--w-idx: 5;">inquiring</span>
+            <span class="hero-word-right" style="--w-idx: 6;">about</span>
+            <span class="hero-word-right" style="--w-idx: 7;">insured</span>
+            <span class="hero-word-right" style="--w-idx: 8;">art</span>
+            <span class="hero-word-right" style="--w-idx: 9;">transport,</span>
+            <span class="hero-word-right" style="--w-idx: 10;">our</span>
+            <span class="hero-word-right" style="--w-idx: 11;">dedicated</span>
+            <span class="hero-word-right" style="--w-idx: 12;">team</span>
+            <span class="hero-word-right" style="--w-idx: 13;">of</span>
+            <span class="hero-word-right" style="--w-idx: 14;">curators</span>
+            <span class="hero-word-right" style="--w-idx: 15;">and</span>
+            <span class="hero-word-right" style="--w-idx: 16;">concierge</span>
+            <span class="hero-word-right" style="--w-idx: 17;">specialists</span>
+            <span class="hero-word-right" style="--w-idx: 18;">is</span>
+            <span class="hero-word-right" style="--w-idx: 19;">at</span>
+            <span class="hero-word-right" style="--w-idx: 20;">your</span>
+            <span class="hero-word-right" style="--w-idx: 21;">service.</span>
           </p>
+          <div class="hero-ctas" style="justify-content: center; margin-bottom: 0;">
+            <a href="404.html" onclick="window.location.href='404.html'" class="btn btn-primary btn-lg anim-hero-btn-left">
+              <span>Explore Marketplace</span>
+              <span class="material-symbols-outlined" style="font-size:18px;">arrow_forward</span>
+            </a>
+            <a href="404.html" onclick="window.location.href='404.html'" class="btn btn-secondary btn-lg anim-hero-btn-right">
+              <span>Join as Creator</span>
+              <span class="material-symbols-outlined" style="font-size:18px;">brush</span>
+            </a>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- SECTION 2 & 3: CONTACT INFO & INTERACTIVE FORM -->
-    <section class="section" style="padding: 20px 0 60px 0;">
+    <section class="section contact-main-section" style="padding: 20px 0 60px 0; overflow: hidden;">
       <div class="container">
         <div class="contact-grid">
           
@@ -113,7 +143,7 @@
           <div class="contact-info-card">
             <h3 style="font-size:1.6rem; margin-bottom:24px; color:var(--c-deep-brown);">Artisan Headquarters & Regional Hubs</h3>
             
-            <div class="info-item">
+            <div class="info-item anim-contact-left anim-contact-delay-1">
               <div class="info-icon"><span class="material-symbols-outlined">mail</span></div>
               <div>
                 <div class="info-title">Electronic Mail</div>
@@ -124,7 +154,7 @@
               </div>
             </div>
 
-            <div class="info-item">
+            <div class="info-item anim-contact-left anim-contact-delay-2">
               <div class="info-icon"><span class="material-symbols-outlined">call</span></div>
               <div>
                 <div class="info-title">Telephone & Direct Lines</div>
@@ -136,7 +166,7 @@
               </div>
             </div>
 
-            <div class="info-item">
+            <div class="info-item anim-contact-left anim-contact-delay-3">
               <div class="info-icon"><span class="material-symbols-outlined">location_on</span></div>
               <div>
                 <div class="info-title">Physical Atelier & Offices</div>
@@ -147,7 +177,7 @@
               </div>
             </div>
 
-            <div class="info-item">
+            <div class="info-item anim-contact-left anim-contact-delay-4">
               <div class="info-icon"><span class="material-symbols-outlined">schedule</span></div>
               <div>
                 <div class="info-title">Business & Studio Hours</div>
@@ -161,7 +191,7 @@
 
             <div style="margin-top:28px; padding-top:20px; border-top:1px dashed var(--c-border-subtle);">
               <div style="font-size:0.85rem; font-weight:700; text-transform:uppercase; color:var(--c-text-light); margin-bottom:10px;">Connect With Our Makers</div>
-              <div style="display:flex; gap:16px; color:var(--c-warm-brown); font-size:0.95rem;">
+              <div class="contact-social-links" style="display:flex; flex-wrap:wrap; gap:12px 16px; color:var(--c-warm-brown); font-size:0.95rem;">
                 <a href="404.html" style="font-weight:600;">Instagram</a>
                 <a href="404.html" style="font-weight:600;">Pinterest</a>
                 <a href="404.html" style="font-weight:600;">Twitter/X</a>
@@ -171,7 +201,7 @@
           </div>
 
           <!-- Contact Form Card -->
-          <div class="form-card">
+          <div class="form-card anim-contact-right">
             <h3 style="font-size:1.6rem; margin-bottom:8px; color:var(--c-deep-brown);">Send Us a Message</h3>
             <p style="font-size:0.92rem; color:var(--c-text-muted); margin-bottom:28px;">
               Fill in your inquiry details below. Our artisan concierge team typically responds within 4 business hours.
@@ -219,53 +249,57 @@
       </div>
     </section>
 
-    <!-- SECTION 4: ILLUSTRATED CONTINENTAL ARTISAN MAP -->
-    <section class="section" style="padding: 20px 0 60px 0;">
+    <!-- SECTION 4: STACKLY SALEM ATELIER MAP (GOOGLE IFRAME) -->
+    <section class="section map-section" id="stackly-salem-map-section" style="padding: 20px 0 60px 0; overflow: hidden;">
       <div class="container">
-        <div class="card-artisan" style="padding: 0; overflow:hidden; border-radius:var(--radius-xl);">
+        <div class="card-artisan" style="padding: 0; overflow:hidden; border-radius:var(--radius-xl); box-shadow: 0 16px 40px rgba(36, 20, 13, 0.08);">
           <div style="padding: 24px 30px; background:var(--c-cream-soft); border-bottom:1px solid var(--c-border-subtle); display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px;">
             <div>
-              <h4 style="font-size:1.25rem; color:var(--c-deep-brown);">Artisan Guild Hubs Across the Continent</h4>
-              <p style="font-size:0.86rem; color:var(--c-text-muted);">Active studios in Nairobi, Accra, Lagos, Durban, and Marrakech.</p>
+              <h4 style="font-size:1.35rem; color:var(--c-deep-brown); margin-bottom:4px; display:flex; align-items:center; gap:8px;">
+                <span class="material-symbols-outlined" style="color:var(--c-warm-brown);">location_on</span>
+                Stackly Salem Atelier &amp; Craft Hub
+              </h4>
+              <p style="font-size:0.88rem; color:var(--c-text-muted); margin:0;">124/B Heritage Crafts Enclave, Cherry Road, Hasthampatti, Salem, Tamil Nadu 636007, India</p>
             </div>
-            <span class="badge badge-terracotta">14 Regional Hubs Active</span>
+            <div style="display:flex; align-items:center; gap:10px; flex-wrap:wrap;">
+              <span class="badge badge-terracotta" style="display:inline-flex; align-items:center; gap:4px;">
+                <span class="material-symbols-outlined" style="font-size:14px;">check_circle</span>
+                Open for Visits &amp; Viewings
+              </span>
+              <a href="https://maps.google.com/?q=Stackly+Salem+Tamil+Nadu" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm" style="display:inline-flex; align-items:center; gap:6px;">
+                <span class="material-symbols-outlined" style="font-size:16px;">open_in_new</span>
+                <span>Open in Chrome</span>
+              </a>
+            </div>
           </div>
           
-          <div style="position:relative; width:100%; height:320px; background-color:#F5EFE7; display:flex; align-items:center; justify-content:center; overflow:hidden;">
-            <svg viewBox="0 0 800 320" style="width:100%; height:100%; opacity:0.85;">
-              <defs>
-                <pattern id="gridPattern" width="40" height="40" patternUnits="userSpaceOnUse">
-                  <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(125, 74, 43, 0.08)" stroke-width="1"/>
-                </pattern>
-              </defs>
-              <rect width="100%" height="100%" fill="url(#gridPattern)" />
-              <path d="M 380,40 Q 450,50 480,80 Q 520,130 500,180 Q 460,260 420,290 Q 390,300 380,260 Q 360,200 330,150 Q 300,130 320,80 Z" fill="rgba(217, 140, 69, 0.18)" stroke="var(--c-warm-brown)" stroke-width="2" stroke-dasharray="6 4" />
-              
-              <g transform="translate(480, 160)">
-                <circle r="8" fill="var(--c-terracotta)" />
-                <circle r="16" fill="rgba(184, 103, 55, 0.25)" />
-                <text x="14" y="5" font-family="'Plus Jakarta Sans', sans-serif" font-size="12" font-weight="700" fill="var(--c-deep-brown)">Nairobi HQ</text>
-              </g>
-              <g transform="translate(340, 140)">
-                <circle r="7" fill="var(--c-warm-brown)" />
-                <text x="-75" y="5" font-family="'Plus Jakarta Sans', sans-serif" font-size="12" font-weight="700" fill="var(--c-deep-brown)">Accra Hub</text>
-              </g>
-              <g transform="translate(365, 150)">
-                <circle r="7" fill="var(--c-ochre)" />
-                <text x="12" y="5" font-family="'Plus Jakarta Sans', sans-serif" font-size="12" font-weight="700" fill="var(--c-deep-brown)">Lagos Studio</text>
-              </g>
-              <g transform="translate(420, 270)">
-                <circle r="7" fill="var(--c-medium-brown)" />
-                <text x="12" y="5" font-family="'Plus Jakarta Sans', sans-serif" font-size="12" font-weight="700" fill="var(--c-deep-brown)">Durban Collective</text>
-              </g>
-            </svg>
+          <div style="position:relative; width:100%; height:420px; overflow:hidden;">
+            <!-- Clickable overlay navigating directly to Chrome / Google Maps -->
+            <a href="https://maps.google.com/?q=Stackly+Salem+Tamil+Nadu" target="_blank" rel="noopener noreferrer" class="map-link-overlay" aria-label="Open Stackly Salem location in Google Maps" style="position:absolute; top:0; left:0; width:100%; height:100%; z-index:10; display:flex; align-items:flex-end; justify-content:flex-end; padding:20px; text-decoration:none; cursor:pointer;">
+              <span class="map-navigate-chip" style="background:rgba(36, 20, 13, 0.92); color:#FFFFFF; padding:10px 18px; border-radius:var(--radius-full); font-size:0.88rem; font-weight:600; display:inline-flex; align-items:center; gap:8px; box-shadow:0 6px 20px rgba(0,0,0,0.3); backdrop-filter:blur(8px); transition:all var(--trans-fast);">
+                <span class="material-symbols-outlined" style="font-size:18px; color:var(--c-ochre);">near_me</span>
+                <span>Navigate in Google Maps (Chrome)</span>
+                <span class="material-symbols-outlined" style="font-size:16px;">open_in_new</span>
+              </span>
+            </a>
+
+            <iframe 
+              src="https://maps.google.com/maps?q=Stackly+Salem+Tamil+Nadu&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+              width="100%" 
+              height="100%" 
+              style="border:0; width:100%; height:100%; min-height:420px; display:block; pointer-events:none;" 
+              allowfullscreen="" 
+              loading="lazy" 
+              referrerpolicy="no-referrer-when-downgrade"
+              title="Stackly Salem Map">
+            </iframe>
           </div>
         </div>
       </div>
     </section>
 
     <!-- SECTION 5: REGIONAL OFFICE HOURS & LINES -->
-    <section class="section" style="padding: 40px 0; background-color: var(--c-cream-soft);">
+    <section class="section regional-hours-section" id="regional-hours-section" style="padding: 40px 0; background-color: var(--c-cream-soft); overflow: hidden;">
       <div class="container">
         <div class="section-header">
           <span class="section-tag"><span class="material-symbols-outlined" style="font-size:16px;">hub</span> Regional Concierge</span>
@@ -273,19 +307,21 @@
           <p class="section-subtitle">Multilingual curatorial assistance across international time zones.</p>
         </div>
         <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap:20px;">
-          <div class="card-artisan">
+          <!-- Card 1 & 2: Come from Left side -->
+          <div class="card-artisan anim-regional-left anim-regional-delay-1">
             <h4>Nairobi Regional Desk</h4>
             <p style="font-size:0.88rem; color:var(--c-text-muted); margin-top:6px;">8:00 AM – 7:00 PM EAT (English, Swahili)</p>
           </div>
-          <div class="card-artisan">
+          <div class="card-artisan anim-regional-left anim-regional-delay-2">
             <h4>Lagos & Accra Regional Desk</h4>
             <p style="font-size:0.88rem; color:var(--c-text-muted); margin-top:6px;">8:00 AM – 6:00 PM GMT (English, Yoruba, Twi)</p>
           </div>
-          <div class="card-artisan">
+          <!-- Card 3 & 4: Come from Right side -->
+          <div class="card-artisan anim-regional-right anim-regional-delay-3">
             <h4>London & European Liaison</h4>
             <p style="font-size:0.88rem; color:var(--c-text-muted); margin-top:6px;">9:00 AM – 5:30 PM BST (English, French)</p>
           </div>
-          <div class="card-artisan">
+          <div class="card-artisan anim-regional-right anim-regional-delay-4">
             <h4>New York Americas Desk</h4>
             <p style="font-size:0.88rem; color:var(--c-text-muted); margin-top:6px;">9:00 AM – 6:00 PM EST (English, Spanish)</p>
           </div>
@@ -294,7 +330,7 @@
     </section>
 
     <!-- SECTION 6: FAQ ACCORDION -->
-    <section class="section" style="padding: 60px 0;">
+    <section class="section faq-section" id="faq-section" style="padding: 60px 0; overflow: hidden;">
       <div class="container">
         <div class="faq-accordion" style="margin-top:0;">
           <div class="section-header" style="margin-bottom:32px;">
@@ -302,7 +338,8 @@
             <h2 class="section-title" style="font-size:2.2rem;">Frequently Asked Questions</h2>
           </div>
 
-          <div class="faq-item active">
+          <!-- FAQ 1: From Right -->
+          <div class="faq-item anim-faq-right anim-faq-delay-1">
             <div class="faq-header">
               <span class="faq-title">How do I verify the authentic origin and handcrafting of an item?</span>
               <span class="faq-icon"><span class="material-symbols-outlined">expand_more</span></span>
@@ -312,7 +349,8 @@
             </div>
           </div>
 
-          <div class="faq-item">
+          <!-- FAQ 2: From Left -->
+          <div class="faq-item anim-faq-left anim-faq-delay-2">
             <div class="faq-header">
               <span class="faq-title">Can I request a custom or bespoke commission from an artist?</span>
               <span class="faq-icon"><span class="material-symbols-outlined">expand_more</span></span>
@@ -322,7 +360,8 @@
             </div>
           </div>
 
-          <div class="faq-item">
+          <!-- FAQ 3: From Right -->
+          <div class="faq-item anim-faq-right anim-faq-delay-3">
             <div class="faq-header">
               <span class="faq-title">What is your fragile art shipping and breakage insurance policy?</span>
               <span class="faq-icon"><span class="material-symbols-outlined">expand_more</span></span>
@@ -332,7 +371,8 @@
             </div>
           </div>
 
-          <div class="faq-item">
+          <!-- FAQ 4: From Left -->
+          <div class="faq-item anim-faq-left anim-faq-delay-4">
             <div class="faq-header">
               <span class="faq-title">How are artisans compensated?</span>
               <span class="faq-icon"><span class="material-symbols-outlined">expand_more</span></span>
@@ -342,7 +382,8 @@
             </div>
           </div>
 
-          <div class="faq-item">
+          <!-- FAQ 5: From Right -->
+          <div class="faq-item anim-faq-right anim-faq-delay-5">
             <div class="faq-header">
               <span class="faq-title">How do digital art downloads and commercial licenses work?</span>
               <span class="faq-icon"><span class="material-symbols-outlined">expand_more</span></span>
@@ -352,7 +393,8 @@
             </div>
           </div>
 
-          <div class="faq-item">
+          <!-- FAQ 6: From Left -->
+          <div class="faq-item anim-faq-left anim-faq-delay-6">
             <div class="faq-header">
               <span class="faq-title">How do I apply to become an artisan seller on Chatly?</span>
               <span class="faq-icon"><span class="material-symbols-outlined">expand_more</span></span>
@@ -365,26 +407,6 @@
       </div>
     </section>
 
-    <!-- SECTION 7: BESPOKE COMMISSION PROTOCOLS -->
-    <section class="section" style="padding: 60px 0; background-color: var(--c-cream-soft);">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-tag"><span class="material-symbols-outlined" style="font-size:16px;">brush</span> Tailored Creations</span>
-          <h2 class="section-title">Architectural & Bespoke Commissions</h2>
-          <p class="section-subtitle">How we oversee custom commissions from initial sketch to final installation.</p>
-        </div>
-        <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap:24px;">
-          <div class="card-artisan">
-            <h4>Dimensional Consultation</h4>
-            <p style="font-size:0.9rem; color:var(--c-text-muted); margin-top:6px;">Our curators review your architectural elevations, lighting requirements, and wall weight allowances.</p>
-          </div>
-          <div class="card-artisan">
-            <h4>Kiln & Loom Milestone Snaps</h4>
-            <p style="font-size:0.9rem; color:var(--c-text-muted); margin-top:6px;">Receive weekly photo and video progress dispatches directly from the maker's workshop bench.</p>
-          </div>
-        </div>
-      </div>
-    </section>
 
     <!-- SECTION 8: PRIVATE VIEWINGS NOTICE -->
     <section class="section maker-cta-section" id="maker-cta-section" style="padding: 70px 0 90px 0; text-align: center; overflow: hidden;">
@@ -395,8 +417,8 @@
           Would you like to examine an high-value masterwork under gallery lighting before finalizing your acquisition? Request a live video appointment with our head curator.
         </p>
         <div class="maker-cta-actions" style="display:flex; justify-content:center; gap:16px; flex-wrap:wrap;">
-          <a href="404.html" class="btn btn-primary btn-lg cta-btn-left">Book Curatorial Consultation</a>
-          <a href="404.html" class="btn btn-secondary btn-lg cta-btn-right">Explore Creator Tools</a>
+          <a href="404.html" onclick="window.location.href='404.html';" class="btn btn-primary btn-lg cta-btn-left">Book Curatorial Consultation</a>
+          <a href="404.html" onclick="window.location.href='404.html';" class="btn btn-secondary btn-lg cta-btn-right">Explore Creator Tools</a>
         </div>
       </div>
     </section>
