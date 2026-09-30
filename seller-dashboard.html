@@ -13,6 +13,11 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
   
   <link rel="stylesheet" href="css/style.css">
+  <script>
+    if (sessionStorage.getItem('skip_artisan_preloader') === 'true') {
+      document.documentElement.classList.add('no-preloader');
+    }
+  </script>
 </head>
 <body class="craft-texture seller-dashboard-page">
 
@@ -430,14 +435,45 @@
                 <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px;">
                   <div class="form-group">
                     <label class="form-label" for="pub-craft-category">Category *</label>
-                    <select id="pub-craft-category" class="form-control">
-                      <option value="">Select Category...</option>
-                      <option value="Ceramics">Ceramics & Clay</option>
-                      <option value="Textiles">Textiles & Weaving</option>
-                      <option value="Woodcraft">Wood & Sculpture</option>
-                      <option value="Jewelry">Beaded Jewelry</option>
-                      <option value="Digital">Digital Afro-Art</option>
-                    </select>
+                    <div class="custom-select-wrapper" id="pub-craft-category-wrapper">
+                      <select id="pub-craft-category" class="form-control custom-select-native" tabindex="-1" aria-hidden="true">
+                        <option value="">Select Category...</option>
+                        <option value="Ceramics">Ceramics &amp; Clay</option>
+                        <option value="Textiles">Textiles &amp; Weaving</option>
+                        <option value="Woodcraft">Wood &amp; Sculpture</option>
+                        <option value="Jewelry">Beaded Jewelry</option>
+                        <option value="Digital">Digital Artisan Art</option>
+                      </select>
+                      <button type="button" class="custom-select-trigger" aria-haspopup="listbox" aria-expanded="false" id="pub-craft-category-trigger">
+                        <span class="custom-select-text is-placeholder">Select Category...</span>
+                        <span class="material-symbols-outlined custom-select-arrow">expand_more</span>
+                      </button>
+                      <div class="custom-select-menu" role="listbox" aria-labelledby="pub-craft-category-trigger">
+                        <div class="custom-select-option is-placeholder" data-value="" role="option">
+                          <span>Select Category...</span>
+                        </div>
+                        <div class="custom-select-option" data-value="Ceramics" role="option">
+                          <span class="material-symbols-outlined opt-icon">palette</span>
+                          <span>Ceramics &amp; Clay</span>
+                        </div>
+                        <div class="custom-select-option" data-value="Textiles" role="option">
+                          <span class="material-symbols-outlined opt-icon">texture</span>
+                          <span>Textiles &amp; Weaving</span>
+                        </div>
+                        <div class="custom-select-option" data-value="Woodcraft" role="option">
+                          <span class="material-symbols-outlined opt-icon">forest</span>
+                          <span>Wood &amp; Sculpture</span>
+                        </div>
+                        <div class="custom-select-option" data-value="Jewelry" role="option">
+                          <span class="material-symbols-outlined opt-icon">diamond</span>
+                          <span>Beaded Jewelry</span>
+                        </div>
+                        <div class="custom-select-option" data-value="Digital" role="option">
+                          <span class="material-symbols-outlined opt-icon">brush</span>
+                          <span>Digital Artisan Art</span>
+                        </div>
+                      </div>
+                    </div>
                     <div class="form-error-msg">Please enter the required details.</div>
                   </div>
                   <div class="form-group">
@@ -845,13 +881,41 @@
         <div class="modal-row-grid">
           <div class="form-group">
             <label class="form-label" for="prod-category">Category *</label>
-            <select id="prod-category" class="form-control" required>
-              <option value="Ceramics">Ceramics</option>
-              <option value="Sculpture">Sculpture</option>
-              <option value="Textiles">Textiles</option>
-              <option value="Jewelry">Jewelry</option>
-              <option value="Digital">Digital Art</option>
-            </select>
+            <div class="custom-select-wrapper" id="prod-category-wrapper">
+              <select id="prod-category" class="form-control custom-select-native" required tabindex="-1" aria-hidden="true">
+                <option value="Ceramics">Ceramics</option>
+                <option value="Sculpture">Sculpture</option>
+                <option value="Textiles">Textiles</option>
+                <option value="Jewelry">Jewelry</option>
+                <option value="Digital">Digital Art</option>
+              </select>
+              <button type="button" class="custom-select-trigger" aria-haspopup="listbox" aria-expanded="false" id="prod-category-trigger">
+                <span class="custom-select-text">Ceramics</span>
+                <span class="material-symbols-outlined custom-select-arrow">expand_more</span>
+              </button>
+              <div class="custom-select-menu" role="listbox" aria-labelledby="prod-category-trigger">
+                <div class="custom-select-option selected" data-value="Ceramics" role="option">
+                  <span class="material-symbols-outlined opt-icon">palette</span>
+                  <span>Ceramics</span>
+                </div>
+                <div class="custom-select-option" data-value="Sculpture" role="option">
+                  <span class="material-symbols-outlined opt-icon">forest</span>
+                  <span>Sculpture</span>
+                </div>
+                <div class="custom-select-option" data-value="Textiles" role="option">
+                  <span class="material-symbols-outlined opt-icon">texture</span>
+                  <span>Textiles</span>
+                </div>
+                <div class="custom-select-option" data-value="Jewelry" role="option">
+                  <span class="material-symbols-outlined opt-icon">diamond</span>
+                  <span>Jewelry</span>
+                </div>
+                <div class="custom-select-option" data-value="Digital" role="option">
+                  <span class="material-symbols-outlined opt-icon">brush</span>
+                  <span>Digital Art</span>
+                </div>
+              </div>
+            </div>
           </div>
           <div class="form-group">
             <label class="form-label" for="prod-price">Price (USD) *</label>

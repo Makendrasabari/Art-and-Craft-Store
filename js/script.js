@@ -7,6 +7,22 @@
 // 1. UNIQUE ART & CRAFT PRELOADER ENGINE
 // ==========================================================================
 (function initArtisanPreloader() {
+  const navEntry = window.performance && performance.getEntriesByType && performance.getEntriesByType('navigation')[0];
+  const isReload = navEntry ? navEntry.type === 'reload' : (window.performance && performance.navigation && performance.navigation.type === 1);
+  const shouldSkip = sessionStorage.getItem('skip_artisan_preloader') === 'true' || isReload;
+
+  if (shouldSkip) {
+    sessionStorage.removeItem('skip_artisan_preloader');
+    document.documentElement.classList.add('no-preloader');
+    const preloader = document.getElementById('artisan-preloader');
+    if (preloader) {
+      preloader.style.display = 'none';
+      preloader.dataset.dismissed = 'true';
+    }
+    window.dispatchEvent(new CustomEvent('artisanCurtainOpened'));
+    return;
+  }
+
   const startTime = performance.now();
   const minDisplayTime = 1500; // Minimum 1.5s display
 
@@ -222,6 +238,7 @@ document.addEventListener('DOMContentLoaded', () => {
   setupDashboard();
   initCtaWordAnimations();
   initScrollAnimations();
+  initCustomSelects();
 });
 
 // ==========================================================================
@@ -372,6 +389,193 @@ function setupContactForm() {
     }
   });
 }
+
+// ==========================================================================
+// 7b. CUSTOM ARTISAN DROPDOWN ENGINE (NO NATIVE HTML DROPDOWNS)
+// ==========================================================================
+function initCustomSelects() {
+  // 1. Auto-enhance any standard <select> that has not yet been converted
+  document.querySelectorAll('select.form-control:not(.custom-select-native)').forEach(select => {
+    if (select.closest('.custom-select-wrapper')) return;
+
+    const wrapper = document.createElement('div');
+    wrapper.className = 'custom-select-wrapper';
+    if (select.id) wrapper.id = select.id + '-wrapper';
+
+    select.parentNode.insertBefore(wrapper, select);
+    wrapper.appendChild(select);
+    select.classList.add('custom-select-native');
+    select.setAttribute('tabindex', '-1');
+    select.setAttribute('aria-hidden', 'true');
+
+    const trigger = document.createElement('button');
+    trigger.type = 'button';
+    trigger.className = 'custom-select-trigger';
+    trigger.setAttribute('aria-haspopup', 'listbox');
+    trigger.setAttribute('aria-expanded', 'false');
+
+    const selectedOption = select.options[select.selectedIndex] || select.options[0];
+    const initialText = selectedOption ? selectedOption.text : 'Select an option...';
+    const isPlaceholder = !select.value;
+
+    trigger.innerHTML = `
+      <span class="custom-select-text ${isPlaceholder ? 'is-placeholder' : ''}">${initialText}</span>
+      <span class="material-symbols-outlined custom-select-arrow">expand_more</span>
+    `;
+    wrapper.appendChild(trigger);
+
+    const menu = document.createElement('div');
+    menu.className = 'custom-select-menu';
+    menu.setAttribute('role', 'listbox');
+
+    Array.from(select.options).forEach((opt, idx) => {
+      const optDiv = document.createElement('div');
+      optDiv.className = 'custom-select-option';
+      if (!opt.value && idx === 0) optDiv.classList.add('is-placeholder');
+      if (opt.selected && opt.value) optDiv.classList.add('selected');
+      optDiv.dataset.value = opt.value;
+      optDiv.setAttribute('role', 'option');
+      optDiv.innerHTML = `<span>${opt.text}</span>`;
+      menu.appendChild(optDiv);
+    });
+
+    wrapper.appendChild(menu);
+  });
+
+  // 2. Bind event handlers to all .custom-select-wrapper components
+  const wrappers = document.querySelectorAll('.custom-select-wrapper');
+  wrappers.forEach(wrapper => {
+    if (wrapper.dataset.customSelectBound === 'true') return;
+    wrapper.dataset.customSelectBound = 'true';
+
+    const nativeSelect = wrapper.querySelector('.custom-select-native');
+    const trigger = wrapper.querySelector('.custom-select-trigger');
+    const textSpan = wrapper.querySelector('.custom-select-text');
+    const menu = wrapper.querySelector('.custom-select-menu');
+    const options = wrapper.querySelectorAll('.custom-select-option');
+
+    if (!trigger || !menu) return;
+
+    // Toggle dropdown open / close
+    trigger.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      const isOpen = wrapper.classList.contains('open');
+
+      // Close all other open dropdowns
+      document.querySelectorAll('.custom-select-wrapper.open').forEach(w => {
+        if (w !== wrapper) {
+          w.classList.remove('open');
+          const t = w.querySelector('.custom-select-trigger');
+          if (t) t.setAttribute('aria-expanded', 'false');
+        }
+      });
+
+      if (isOpen) {
+        wrapper.classList.remove('open');
+        trigger.setAttribute('aria-expanded', 'false');
+      } else {
+        wrapper.classList.add('open');
+        trigger.setAttribute('aria-expanded', 'true');
+      }
+    });
+
+    // Handle option click
+    options.forEach(opt => {
+      opt.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const value = opt.dataset.value ?? '';
+        const labelText = opt.querySelector('span:not(.material-symbols-outlined)')?.textContent?.trim() || opt.textContent.trim();
+
+        options.forEach(o => o.classList.remove('selected'));
+        if (value) {
+          opt.classList.add('selected');
+        }
+
+        if (textSpan) {
+          textSpan.textContent = labelText;
+          if (!value) {
+            textSpan.classList.add('is-placeholder');
+          } else {
+            textSpan.classList.remove('is-placeholder');
+          }
+        }
+
+        if (nativeSelect) {
+          nativeSelect.value = value;
+          nativeSelect.classList.remove('is-invalid');
+          nativeSelect.classList.add('is-valid');
+          wrapper.classList.remove('is-invalid');
+          wrapper.classList.add('is-valid');
+          nativeSelect.dispatchEvent(new Event('change', { bubbles: true }));
+          nativeSelect.dispatchEvent(new Event('input', { bubbles: true }));
+        }
+
+        wrapper.classList.remove('open');
+        trigger.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    // Form reset synchronization
+    const parentForm = wrapper.closest('form');
+    if (parentForm) {
+      parentForm.addEventListener('reset', () => {
+        setTimeout(() => {
+          options.forEach(o => o.classList.remove('selected'));
+          const defaultOpt = options[0];
+          if (defaultOpt) {
+            const labelText = defaultOpt.querySelector('span:not(.material-symbols-outlined)')?.textContent?.trim() || defaultOpt.textContent.trim();
+            if (textSpan) {
+              textSpan.textContent = labelText;
+              textSpan.classList.add('is-placeholder');
+            }
+          }
+          wrapper.classList.remove('is-invalid', 'is-valid');
+        }, 15);
+      });
+    }
+
+    // Observer for validation states on underlying select
+    if (nativeSelect) {
+      const observer = new MutationObserver(() => {
+        if (nativeSelect.classList.contains('is-invalid')) {
+          wrapper.classList.add('is-invalid');
+          wrapper.classList.remove('is-valid');
+        } else if (nativeSelect.classList.contains('is-valid')) {
+          wrapper.classList.remove('is-invalid');
+          wrapper.classList.add('is-valid');
+        } else {
+          wrapper.classList.remove('is-invalid', 'is-valid');
+        }
+      });
+      observer.observe(nativeSelect, { attributes: true, attributeFilter: ['class'] });
+    }
+  });
+}
+
+// Global click-outside listener
+document.addEventListener('click', (e) => {
+  if (!e.target.closest('.custom-select-wrapper')) {
+    document.querySelectorAll('.custom-select-wrapper.open').forEach(w => {
+      w.classList.remove('open');
+      const t = w.querySelector('.custom-select-trigger');
+      if (t) t.setAttribute('aria-expanded', 'false');
+    });
+  }
+});
+
+// Global Escape key listener
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') {
+    document.querySelectorAll('.custom-select-wrapper.open').forEach(w => {
+      w.classList.remove('open');
+      const t = w.querySelector('.custom-select-trigger');
+      if (t) t.setAttribute('aria-expanded', 'false');
+    });
+  }
+});
+
+window.initCustomSelects = initCustomSelects;
 
 // ==========================================================================
 // 8. AUTH PAGES: LOGIN, SIGNUP & FORGOT PASSWORD
@@ -807,11 +1011,19 @@ function setupDashboard() {
   dashLogos.forEach(logo => {
     logo.addEventListener('click', (e) => {
       e.preventDefault();
+      sessionStorage.setItem('skip_artisan_preloader', 'true');
       if (isBuyerDash) {
         window.location.href = 'buyer-dashboard.html';
       } else if (isSellerDash) {
         window.location.href = 'seller-dashboard.html';
       }
+    });
+  });
+
+  // Global logo links: skip preloader on refresh navigation
+  document.querySelectorAll('.brand-logo-link').forEach(logo => {
+    logo.addEventListener('click', () => {
+      sessionStorage.setItem('skip_artisan_preloader', 'true');
     });
   });
 
@@ -1559,6 +1771,7 @@ function initScrollAnimations() {
   const regionalHoursSections = document.querySelectorAll('.regional-hours-section');
   const faqSections = document.querySelectorAll('.faq-accordion, .faq-section');
   const spotlightSections = document.querySelectorAll('.spotlight-section');
+  const contactMainSections = document.querySelectorAll('.contact-main-section');
 
   function checkPopularGrids() {
     spotlightSections.forEach(section => {
@@ -1766,6 +1979,14 @@ function initScrollAnimations() {
         }
       }
     });
+    contactMainSections.forEach(section => {
+      if (!section.classList.contains('is-in-view')) {
+        const rect = section.getBoundingClientRect();
+        if (rect.top < window.innerHeight * 0.92) {
+          section.classList.add('is-in-view');
+        }
+      }
+    });
   }
   checkPopularGrids();
   window.addEventListener('scroll', checkPopularGrids, { passive: true });
@@ -1811,6 +2032,7 @@ function initScrollAnimations() {
     regionalHoursSections.forEach(s => s.classList.add('is-in-view'));
     faqSections.forEach(s => s.classList.add('is-in-view'));
     spotlightSections.forEach(s => s.classList.add('is-in-view'));
+    contactMainSections.forEach(s => s.classList.add('is-in-view'));
     return;
   }
 
@@ -1818,7 +2040,7 @@ function initScrollAnimations() {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         const el = entry.target;
-        if (el.classList.contains('popular-cat-grid') || el.classList.contains('handmade-pair-grid') || el.classList.contains('trending-global-grid') || el.classList.contains('ancestral-traditions-grid') || el.classList.contains('why-choose-grid') || el.classList.contains('stats-banner') || el.classList.contains('maker-cta-section') || el.classList.contains('our-story-section') || el.classList.contains('mission-vision-section') || el.classList.contains('craft-culture-section') || el.classList.contains('values-section') || el.classList.contains('impact-stats-section') || el.classList.contains('empowerment-section') || el.classList.contains('services-pillars-section') || el.classList.contains('workflow-section') || el.classList.contains('tier-section') || el.classList.contains('studio-suite-section') || el.classList.contains('logistics-section') || el.classList.contains('blog-featured-section') || el.classList.contains('blog-articles-section') || el.classList.contains('artisan-voices-section') || el.classList.contains('mastery-guides-section') || el.classList.contains('regional-hours-section') || el.classList.contains('faq-accordion') || el.classList.contains('faq-section') || el.classList.contains('spotlight-section')) {
+        if (el.classList.contains('popular-cat-grid') || el.classList.contains('handmade-pair-grid') || el.classList.contains('trending-global-grid') || el.classList.contains('ancestral-traditions-grid') || el.classList.contains('why-choose-grid') || el.classList.contains('stats-banner') || el.classList.contains('maker-cta-section') || el.classList.contains('our-story-section') || el.classList.contains('mission-vision-section') || el.classList.contains('craft-culture-section') || el.classList.contains('values-section') || el.classList.contains('impact-stats-section') || el.classList.contains('empowerment-section') || el.classList.contains('services-pillars-section') || el.classList.contains('workflow-section') || el.classList.contains('tier-section') || el.classList.contains('studio-suite-section') || el.classList.contains('logistics-section') || el.classList.contains('blog-featured-section') || el.classList.contains('blog-articles-section') || el.classList.contains('artisan-voices-section') || el.classList.contains('mastery-guides-section') || el.classList.contains('regional-hours-section') || el.classList.contains('faq-accordion') || el.classList.contains('faq-section') || el.classList.contains('spotlight-section') || el.classList.contains('contact-main-section')) {
           el.classList.add('is-in-view');
           if (el.classList.contains('studio-suite-section')) {
             runStudioInflowLiveNumber(el);
@@ -1907,6 +2129,7 @@ function initScrollAnimations() {
   regionalHoursSections.forEach(el => observer.observe(el));
   faqSections.forEach(el => observer.observe(el));
   spotlightSections.forEach(el => observer.observe(el));
+  contactMainSections.forEach(el => observer.observe(el));
   tableCards.forEach(el => observer.observe(el));
   impactScorecards.forEach(el => observer.observe(el));
   auditLogCards.forEach(el => observer.observe(el));
@@ -2490,8 +2713,11 @@ window.openArtisanModal = function(modalId) {
   if (modal) {
     modal.classList.add('open');
     document.body.style.overflow = 'hidden';
+    if (typeof window.initCustomSelects === 'function') {
+      window.initCustomSelects();
+    }
     setTimeout(() => {
-      modal.querySelector('input, select')?.focus();
+      modal.querySelector('input, .custom-select-trigger')?.focus();
     }, 80);
   }
 };
