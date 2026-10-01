@@ -10445,3 +10445,70 @@ a.info-entry-val:hover {
   transform: rotate(15deg);
   transition: transform 0.3s ease;
 }
+
+/* ==========================================================================
+   DASHBOARD PAGES - ALL SECTIONS MINIMAL HOVER EFFECT
+   Enlightens all sections across Buyer & Seller dashboard pages with a
+   minimal lift, enlightened brown color line, and back brown color shadow/shade
+   ========================================================================== */
+
+.buyer-dashboard-page .dashboard-content-area .kpi-card,
+.buyer-dashboard-page .dashboard-content-area .chart-card,
+.buyer-dashboard-page .dashboard-content-area .table-card,
+.buyer-dashboard-page .dashboard-content-area .card-artisan,
+.buyer-dashboard-page .dashboard-content-area .form-card,
+.seller-dashboard-page .dashboard-content-area .kpi-card,
+.seller-dashboard-page .dashboard-content-area .chart-card,
+.seller-dashboard-page .dashboard-content-area .table-card,
+.seller-dashboard-page .dashboard-content-area .card-artisan,
+.seller-dashboard-page .dashboard-content-area .form-card,
+.dashboard-view-panel .kpi-card,
+.dashboard-view-panel .chart-card,
+.dashboard-view-panel .table-card,
+.dashboard-view-panel .card-artisan,
+.dashboard-view-panel .form-card {
+  transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.28s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.28s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.buyer-dashboard-page .dashboard-content-area .kpi-card:hover,
+.buyer-dashboard-page .dashboard-content-area .chart-card:hover,
+.buyer-dashboard-page .dashboard-content-area .table-card:hover,
+.buyer-dashboard-page .dashboard-content-area .card-artisan:hover,
+.buyer-dashboard-page .dashboard-content-area .form-card:hover,
+.seller-dashboard-page .dashboard-content-area .kpi-card:hover,
+.seller-dashboard-page .dashboard-content-area .chart-card:hover,
+.seller-dashboard-page .dashboard-content-area .table-card:hover,
+.seller-dashboard-page .dashboard-content-area .card-artisan:hover,
+.seller-dashboard-page .dashboard-content-area .form-card:hover,
+.dashboard-view-panel .kpi-card:hover,
+.dashboard-view-panel .chart-card:hover,
+.dashboard-view-panel .table-card:hover,
+.dashboard-view-panel .card-artisan:hover,
+.dashboard-view-panel .form-card:hover {
+  transform: translateY(-3px) !important;
+  border-color: #9C552E !important;
+  box-shadow: 0 12px 28px -4px rgba(74, 40, 22, 0.18),
+              0 4px 14px -2px rgba(125, 74, 43, 0.12),
+              0 0 0 1px rgba(184, 103, 55, 0.32) !important;
+}
+
+/* Enlighten inner section sub-cards across dashboard pages with minimal brown shade & line */
+.dashboard-content-area .impact-stat-card,
+.dashboard-content-area .patron-badge-card,
+.dashboard-content-area .card-artisan div[class*="anim-triplet"] {
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.dashboard-content-area .impact-stat-card:hover,
+.dashboard-content-area .patron-badge-card:hover,
+.dashboard-content-area .card-artisan div[class*="anim-triplet"]:hover {
+  transform: translateY(-2px) !important;
+  border-color: #B86737 !important;
+  box-shadow: 0 8px 20px -3px rgba(74, 40, 22, 0.16),
+              0 0 0 1px rgba(184, 103, 55, 0.28) !important;
+}
+
